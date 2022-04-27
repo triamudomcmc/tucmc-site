@@ -1,5 +1,12 @@
-import tw from '@tailwind'
+import tw, { combine } from "@tailwind"
+import { FC } from "react"
 
-const Landing = () => <h1 className={tw`text-blue-400`}>Hi friends!</h1>
+const Landing: FC = () => {
+  return (
+    <div className={combine(tw`p-10`, "something")}>
+      <h1 className={tw`text-TUCMC-gray-600`}>bruh</h1>
+    </div>
+  )
+}
 
 export default Landing
