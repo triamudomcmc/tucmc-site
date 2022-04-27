@@ -2,14 +2,14 @@
  * @jest-environment jsdom
  */
 
-import Landing from '@pages/index'
+import Landing from "@pages/index"
 
-import { render } from '@testing-library/react'
+import { render } from "@testing-library/react"
 
-describe('App', () => {
-    it('renders without crashing', () => {
-        const { baseElement } = render(<Landing />)
+describe("App", () => {
+  it("renders without crashing", () => {
+    const { baseElement } = render(<Landing />)
 
-        expect(baseElement).toBeTruthy()
-    })
+    expect(baseElement).toBeTruthy()
+  })
 })
