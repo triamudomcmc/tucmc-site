@@ -1,4 +1,3 @@
-import tw, { combine } from "@tailwind"
 import Image from "next/image"
 import { FC } from "react"
 
@@ -10,18 +9,18 @@ import { TopicCard } from "@components/index/TopicCard"
 
 const Landing: FC = () => {
   return (
-    <div className={tw`flex min-h-screen flex-col pb-8`}>
-      <main className={tw`relative`}>
-        <div className={tw`absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2`}>
-          <h1 className={tw`text-center text-6xl font-bold text-white`}>กช.</h1>
+    <div className="flex min-h-screen flex-col pb-8">
+      <main className="relative">
+        <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+          <h1 className="text-center text-6xl font-bold text-white">กช.</h1>
 
-          <p className={tw`mt-4 text-center text-2xl font-medium text-white`}>
+          <p className="mt-4 text-center text-2xl font-medium text-white">
             คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน โรงเรียนเตรียมอุดมศึกษา
           </p>
         </div>
 
         <Image
-          className={tw`max-h-6xl w-full object-cover`}
+          className="max-h-6xl w-full object-cover"
           src={TUCMCSrc}
           layout="responsive"
           // width={400}
