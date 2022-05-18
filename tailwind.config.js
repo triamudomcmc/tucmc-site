@@ -11,8 +11,7 @@ module.exports = {
     fontFamily: {
       sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       display: ["Inter var", "Noto Sans Thai", ...defaultTheme.fontFamily.sans],
-      texts: ["Bai Jamjuree"],
-      sarabun: ["TH Sarabun New"]
+      texts: ["Bai Jamjuree"]
     },
     extend: {
       backgroundColor: ["checked"],
@@ -69,7 +68,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ["hover"],
+      backgroundColor: ["hover", "group-hover"],
+      textColor: ["group-hover"],
       zIndex: ["hover"]
     }
   },
@@ -192,24 +192,6 @@ module.exports = {
             fontWeight: "400",
             fontDisplay: "swap",
             src: 'local("Bai Jamjuree"), local("BaiJamjuree"), url("/assets/fonts/BaiJamjuree-Regular.woff2") format("woff2")'
-          }
-        },
-        {
-          "@font-face": {
-            fontFamily: "TH Sarabun New",
-            fontStyle: "normal",
-            fontWeight: "400",
-            fontDisplay: "swap",
-            src: 'local("TH Sarabun New"), local("THSarabunNew"), url("/assets/fonts/THSarabunNew.woff2") format("woff2")'
-          }
-        },
-        {
-          "@font-face": {
-            fontFamily: "TH Sarabun New",
-            fontStyle: "normal",
-            fontWeight: "600",
-            fontDisplay: "swap",
-            src: 'local("TH Sarabun New Bold"), local("THSarabunNew-Bold"), url("/assets/fonts/THSarabunNew-Bold.woff2") format("woff2")'
           }
         }
       ])

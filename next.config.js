@@ -48,7 +48,10 @@ module.exports = withPlugins([[withOffline, offlineConfig], [withAnalyze], [with
       "@molecules": join(__dirname, "src/components/molecules"),
       "@organisms": join(__dirname, "src/components/organisms"),
       "@public": join(__dirname, "public"),
-      "@tailwind": join(__dirname, "src/services/tailwind")
+      "@tailwind": join(__dirname, "src/services/tailwind"),
+      "@vectors": join(__dirname, "src/vectors"),
+      "@utilities": join(__dirname, "src/utilities"),
+      "@images": join(__dirname, "src/images")
     }
 
     return config

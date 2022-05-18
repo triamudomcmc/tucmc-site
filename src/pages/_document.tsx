@@ -93,20 +93,6 @@ export default class Document extends NextDocument {
           />
           <link
             rel="preload"
-            href="/assets/fonts/THSarabun-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/assets/fonts/THSarabun.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
             href="/assets/fonts/BaiJamjuree-Regular.woff2"
             as="font"
             type="font/woff2"
