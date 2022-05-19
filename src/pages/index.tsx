@@ -25,16 +25,19 @@ const Landing: FC = () => {
             </p>
           </div>
 
-          <Image
-            className="max-h-6xl w-full object-cover"
-            src={TUCMCSrc}
-            layout="responsive"
-            // width={400}
-            height={450}
-            placeholder="blur"
-            blurDataURL={TUCMCSrc.blurDataURL}
-            alt="ประชาสัมพันธ์"
-          />
+          <div className="max-h-6xl h-[75vh]">
+            <Image
+              className="w-full object-cover"
+              src={TUCMCSrc}
+              layout="fill"
+              // layout="responsive"
+              // width={400}
+              // height={450}
+              placeholder="blur"
+              blurDataURL={TUCMCSrc.blurDataURL}
+              alt="ประชาสัมพันธ์"
+            />
+          </div>
         </main>
 
         <TopicCard mode="announcement" title="ประชาสัมพันธ์" actionText="เข้าชมงาน" imgSrc={announcementSrc} />
