@@ -603,7 +603,7 @@ const TUCMC = () => {
           <h1 className="text-center text-2xl font-bold text-white">อยากเป็น กช. ต้องทำยังไง ?</h1>
           <p className="mx-auto max-w-2xl px-5 pb-4 text-center text-white">
             คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 จะเปิดรับสมัครในเร็ว ๆ นี้ !
-            โดยจะมีการคัดเลือกผ่าน Google Form และสัมภาษณ์รายบุคคล
+            โดยจะมีการคัดเลือกผ่านการกรอกฟอร์ม และสัมภาษณ์รายบุคคล
             รอติดตามรายละเอียดการรับสมัครได้จากช่องทางการติดต่อข้างล่างนี้เลย
           </p>
           <div className="mx-auto h-[232px] w-[312px] rounded-t-[48px] bg-TUCMC-gray-900">
@@ -612,7 +612,7 @@ const TUCMC = () => {
                 <div className="z-10 h-[26px] w-[140px] rounded-b-[16px] bg-TUCMC-gray-900"></div>
               </div>
               <div className="relative h-[77px] w-[284px] rounded-t-[34px] bg-[#F6F6F6]">
-                <span className="absolute left-6 top-1.5 text-[14px] font-medium tracking-tight">18.06</span>
+                <span className="absolute left-6 top-1.5 text-[14px] font-medium tracking-tight">12.00</span>
                 <span className="absolute right-5 top-2.5 flex items-center space-x-[2px] text-[14px] font-medium tracking-tight">
                   <ChartBarIcon className="h-3.5 w-3.5" />
                   <WifiIcon className="h-3.5 w-3.5" />

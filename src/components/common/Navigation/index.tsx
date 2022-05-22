@@ -22,7 +22,8 @@ import {
   TerminalIcon,
   HeartIcon,
   LibraryIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  UsersIcon
 } from "@heroicons/react/outline"
 import { ChevronDownIcon, StarIcon } from "@heroicons/react/solid"
 import { isEmpty } from "@utilities/object"
@@ -119,8 +120,8 @@ const Navigation = () => {
               <Link passHref href="/">
                 <a className="text-white">หน้าแรก</a>
               </Link>
-              <Link passHref href="/instructions">
-                <a className="text-white">วิธีใช้</a>
+              <Link passHref href="/members">
+                <a className="text-white">บุคลากร</a>
               </Link>
               <Link passHref href="/clubs">
                 <a className="text-white">ชมรม</a>
@@ -176,15 +177,15 @@ const Navigation = () => {
             <span className={getClass("/", "font")}>หน้าแรก</span>
           </a>
         </Link>
-        <Link passHref href="/select">
+        <Link passHref href="/">
           <a
             className={classnames(
               "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/select", "bg")
+              getClass("/members", "bg")
             )}
           >
-            <HeartIcon className={classnames("h-7 w-7", getClass("/select", "icon"))} />{" "}
-            <span className={getClass("/select", "font")}>ลงทะเบียนชมรม</span>
+            <UsersIcon className={classnames("h-7 w-7", getClass("/members", "icon"))} />{" "}
+            <span className={getClass("/members", "font")}>บุคลากร</span>
           </a>
         </Link>
         <Link passHref href="/clubs">
@@ -196,17 +197,6 @@ const Navigation = () => {
           >
             <ClipboardListIcon className={classnames("h-7 w-7", getClass("/clubs", "icon"))} />{" "}
             <span className={getClass("/clubs", "font")}>รายชื่อชมรม</span>
-          </a>
-        </Link>
-        <Link passHref href="/instructions">
-          <a
-            className={classnames(
-              "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/instructions", "bg")
-            )}
-          >
-            <CalendarIcon className={classnames("h-7 w-7", getClass("/instructions", "icon"))} />{" "}
-            <span className={getClass("/info", "font")}>วิธีลงทะเบียน</span>
           </a>
         </Link>
         <Link passHref href="/FAQ">

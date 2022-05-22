@@ -41,8 +41,8 @@ const Footer = () => {
               <Link href="/">
                 <a>หน้าแรก</a>
               </Link>
-              <Link href="/instructions">
-                <a>วิธีใช้</a>
+              <Link href="/members">
+                <a>บุคลากร</a>
               </Link>
               <Link href="/clubs">
                 <a>ชมรม</a>

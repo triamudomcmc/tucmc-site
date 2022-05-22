@@ -9,7 +9,7 @@ export const TopicCard: FC<{ title: string; actionText: string; imgSrc: StaticIm
   mode
 }) => {
   return (
-    <section
+    <article
       className={combine(
         "mb-6 flex flex-col items-center justify-center space-y-4 py-16 px-4",
         mode === "announcement" ? "announcement-section" : ""
@@ -31,10 +31,10 @@ export const TopicCard: FC<{ title: string; actionText: string; imgSrc: StaticIm
           />
         </div>
 
-        <button className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-16 py-3 text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-colors group-hover:bg-gray-100">
+        <button className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-12 py-3 text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-colors group-hover:bg-gray-100 sm:px-8 sm:text-lg lg:px-10 lg:text-2xl">
           {actionText}
         </button>
       </div>
-    </section>
+    </article>
   )
 }
