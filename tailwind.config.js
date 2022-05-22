@@ -18,13 +18,6 @@ module.exports = {
       cursor: {
         magnify: "zoom-in"
       },
-      screens: {
-        minClubs2: "366px",
-        marg: "405px",
-        minClubs: "387px",
-        xs: "441px",
-        pic: "448px"
-      },
       colors: {
         "TUCMC-pink": {
           100: "#FFF5F7",
