@@ -19,12 +19,12 @@ const Landing: FC = () => {
       <div className="flex min-h-screen flex-col pb-8">
         <main className="relative">
           <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex flex-col justify-center space-y-12 space-x-0 text-center sm:flex-row sm:space-x-4 sm:space-y-0 sm:text-left">
+            <div className="flex flex-col justify-center space-y-14 space-x-0 text-center sm:flex-row sm:space-x-4 sm:space-y-0 sm:text-left">
               <h1 className="text-center text-[14rem] font-bold leading-[0.5] text-white">กช.</h1>
 
               <div className="mt-4 flex flex-col justify-center">
-                <p className="text-center text-4xl font-medium text-white sm:text-left">คืออะไร ?</p>
-                <p className="whitespace-nowrap text-center text-lg font-light text-white sm:text-left">
+                <p className="mt-4 text-center text-4xl font-medium text-white sm:text-left">คืออะไร ?</p>
+                <p className="mb-4 whitespace-nowrap text-center text-lg font-light text-white sm:text-left">
                   ทำอะไร ? มีตำแหน่งอะไรบ้าง ?
                 </p>
                 <Link href="/TUCMC" passHref>
