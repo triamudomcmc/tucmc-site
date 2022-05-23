@@ -6,20 +6,20 @@ import { useRouter } from "next/router"
 import classnames from "classnames"
 import { FC } from "react"
 
-const PageContainer: FC<{ footer?: boolean; hide?: boolean }> = ({ children, footer = true, hide = false }) => {
-  const router = useRouter()
-
-  const variants = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99]
-      }
+const variants = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99]
     }
   }
+}
+
+const PageContainer: FC<{ footer?: boolean; hide?: boolean }> = ({ children, footer = true, hide = false }) => {
+  const router = useRouter()
 
   return (
     <div className="font-display">
