@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { Dispatch, FC, SetStateAction } from "react"
 import { Zoomable } from "@components/common/Zoomable"
 import { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -6,11 +6,9 @@ import SwiperCore, { Pagination } from "swiper"
 import "swiper/swiper-bundle.css"
 
 SwiperCore.use([Pagination])
-export const AboutPage: FC = () => {
-  const [zoomOverlay, setZoomOverlay] = useState(<></>)
+export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
   return (
     <>
-      {zoomOverlay}
       <main className="space-y-36 bg-white pb-20 text-TUCMC-pink-500 md:space-y-44">
         <article className="space-y-4">
           <div className="relative">

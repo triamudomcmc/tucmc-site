@@ -16,6 +16,7 @@ module.exports = {
     "^@organisms(.*)$": "<rootDir>/src/organisms$1",
     "^@public(.*)$": "<rootDir>/public$1",
     "^@tailwind(.*)$": "<rootDir>/src/services/tailwind$1",
+    "^@map(.*)$": "<rootDir>/src/map$1",
     "^~(.*)$": "<rootDir>$1"
   },
   transform: {

@@ -12,7 +12,8 @@ export const Zoomable: FC<{
   priority?: boolean
   className: string
   updateOverlay: Dispatch<SetStateAction<JSX.Element>> | null
-}> = ({ src, width, height, onLoad = () => {}, priority = false, className = "", updateOverlay = null }) => {
+  alt?: string
+}> = ({ src, width, height, onLoad = () => {}, priority = false, className = "", updateOverlay = null, alt = "" }) => {
   const [zoom, toggleZoom] = useState(false)
   const ref = useRef(null)
   const [zoomedWidth, setZW] = useState(0)
@@ -53,7 +54,7 @@ export const Zoomable: FC<{
     if (zoom && updateOverlay) {
       updateOverlay(
         <div
-          style={{ paddingTop: `${activeTP}px` }}
+          // style={{ paddingTop: `${activeTP}px` }}
           className="min-w-screen fixed top-0 left-0 z-20 flex min-h-screen w-full select-none items-center justify-center bg-gray-600 bg-opacity-70"
         >
           <div className="relative" ref={ref}>
@@ -74,6 +75,7 @@ export const Zoomable: FC<{
               src={src}
               width={zoomedWidth}
               height={(zoomedWidth * height) / width}
+              alt={alt}
             />
           </div>
         </div>
@@ -105,6 +107,7 @@ export const Zoomable: FC<{
               src={src}
               width={zoomedWidth}
               height={(zoomedWidth * height) / width}
+              alt={alt}
             />
           </div>
         </div>
@@ -126,6 +129,7 @@ export const Zoomable: FC<{
           src={src}
           width={width}
           height={height}
+          alt={alt}
         />
       </div>
     </div>

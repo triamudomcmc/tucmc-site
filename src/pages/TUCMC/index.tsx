@@ -25,6 +25,7 @@ const variants = {
 type TabType = "about" | "positions"
 
 const TUCMC: NextPage = () => {
+  const [zoomOverlay, setZoomOverlay] = useState(<></>)
   const [tab, setTab] = useState<TabType>("about")
 
   const getTab = (tabName: TabType) => {
@@ -41,6 +42,7 @@ const TUCMC: NextPage = () => {
       Open House) ซึ่งเป็นงานที่จัดแสดงผลงานของชมรมทุกปีอีกด้วย"
       imgURL="/assets/images/TUCMC/bg.jpg"
     >
+      <div>{zoomOverlay}</div>
       <div className="bg-TUCMC-pink-500">
         <header className="flex flex-col items-center space-y-12 px-6 text-white md:space-y-16">
           <Image
@@ -88,7 +90,7 @@ const TUCMC: NextPage = () => {
 
         <div className="relative min-h-[500px] w-full bg-white">
           <motion.div initial="initial" animate="animate" variants={variants} key={tab}>
-            {tab === "about" && <AboutPage />}
+            {tab === "about" && <AboutPage setZoomOverlay={setZoomOverlay} />}
             {tab === "positions" && (
               <div className="relative bg-white">
                 <h1>Hi</h1>
