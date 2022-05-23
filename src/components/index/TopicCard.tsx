@@ -8,30 +8,28 @@ export const TopicCard: FC<{
   actionText: string
   imgSrc: StaticImageData
   href: string
-  mode?: "announcement"
-}> = ({ title, actionText, imgSrc, mode, href }) => {
+}> = ({ title, actionText, imgSrc, href }) => {
   return (
-    <article
-      className={combine(
-        "mb-6 flex flex-col items-center justify-center space-y-4 py-16 px-4",
-        mode === "announcement" ? "announcement-section" : ""
-      )}
-    >
+    <article className={combine("mb-6 flex flex-col items-center justify-center space-y-4 py-16 px-4")}>
       <h2 className="text-center text-xl text-TUCMC-gray-600">{title}</h2>
 
       <div className="group relative block cursor-pointer rounded-3xl">
         <div className="overflow-hidden rounded-3xl">
-          <Image
-            className="h-full w-full rounded-3xl shadow-md"
-            // style={{ borderRadius: "0.5rem" }}
-            src={imgSrc}
-            layout="intrinsic"
-            width={400}
-            height={400}
-            placeholder="blur"
-            blurDataURL={imgSrc.blurDataURL}
-            alt={title}
-          />
+          <Link href={href} passHref>
+            <a>
+              <Image
+                className="h-full w-full rounded-3xl shadow-md"
+                // style={{ borderRadius: "0.5rem" }}
+                src={imgSrc}
+                layout="intrinsic"
+                width={400}
+                height={400}
+                placeholder="blur"
+                blurDataURL={imgSrc.blurDataURL}
+                alt={title}
+              />
+            </a>
+          </Link>
         </div>
 
         <Link href={href} passHref>

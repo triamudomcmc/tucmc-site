@@ -47,7 +47,8 @@ const TUCMC = () => {
         </div>
         <div className="relative mt-36 space-y-36 bg-white pb-20 text-TUCMC-pink-500 md:mt-44 md:space-y-44">
           <div className="space-y-4">
-            <div className="relative -top-24 -mb-24">
+            {/* <div className="relative -top-24 -mb-24"> */}
+            <div className="relative">
               <Swiper
                 slidesPerView={"auto"}
                 centeredSlides={true}

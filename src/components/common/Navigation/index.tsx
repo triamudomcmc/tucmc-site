@@ -123,7 +123,7 @@ const Navigation = () => {
               <Link passHref href="/members">
                 <a className="text-white">บุคลากร</a>
               </Link>
-              <Link passHref href="/clubs">
+              <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
                 <a className="text-white">ชมรม</a>
               </Link>
               <Link passHref href="/FAQ">
@@ -188,7 +188,7 @@ const Navigation = () => {
             <span className={getClass("/members", "font")}>บุคลากร</span>
           </a>
         </Link>
-        <Link passHref href="/clubs">
+        <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
           <a
             className={classnames(
               "flex cursor-pointer flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",

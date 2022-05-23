@@ -12,6 +12,7 @@ import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import Link from "next/link"
 import { useWindowDimensions } from "@utilities/document"
 import { SM } from "@utilities/constants"
+import { AnnouncementSection } from "@components/index/AnnoucementSection"
 
 const Landing: FC = () => {
   const { width } = useWindowDimensions()
@@ -44,7 +45,7 @@ const Landing: FC = () => {
 
           <div className="max-h-6xl h-[75vh]">
             <Image
-              className="w-full object-cover blur-[1.5px] brightness-95"
+              className="w-full object-cover brightness-95"
               src={width > SM ? TUCMCSrc : TUCMCSQSrc}
               layout="fill"
               // layout="responsive"
@@ -52,17 +53,17 @@ const Landing: FC = () => {
               // height={450}
               placeholder="blur"
               blurDataURL={(width > SM ? TUCMCSrc : TUCMCSQSrc).blurDataURL}
-              alt="ประชาสัมพันธ์"
+              alt="กช. background"
             />
           </div>
         </main>
 
-        <TopicCard
-          href="https://openhouse.triamudom.ac.th/"
-          mode="announcement"
-          title="ประชาสัมพันธ์"
+        <AnnouncementSection
+          title="Triam Udom Open House 2022"
+          body="ปีนี้ กช. จัดงาน Triam Udom Online Open House ปีการศึกษา 2565 ไปดูกันได้เล้ยไปดูกันได้เล้ยไปดูกันได้เล้ยปีนี้ กช. จัดงาน Triam Udom Online Open House ปีการศึกษา 2565 ไปดูกันได้เล้ยไปดูกันได้เล้ยไปดูกันได้เล้ยปีนี้ กช. จัดงาน Triam Udom Online Open House ปีการศึกษา 2565 ไปดูกันได้เล้ยไปดูกันได้เล้ยไปดูกันได้เล้ยปีนี้ กช. จัดงาน Triam Udom Online Open House ปีการศึกษา 2565 ไปดูกันได้เล้ยไปดูกันได้เล้ยไปดูกันได้เล้ยปีนี้ กช. จัดงาน Triam Udom Online Open House ปีการศึกษา 2565 ไปดูกันได้เล้ยไปดูกันได้เล้ยไปดูกันได้เล้ย"
           actionText="เข้าชมงาน"
           imgSrc={announcementSrc}
+          href="https://openhouse.triamudom.ac.th"
         />
 
         <section className="grid grid-cols-1 sm:grid-cols-3 sm:px-6 md:px-24 lg:px-48">
