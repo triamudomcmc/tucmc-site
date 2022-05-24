@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="flex flex-col items-center px-6">
           <h1 className="mt-8 text-xl font-bold md:mt-16">ติดต่อ</h1>
           <div className="flex flex-col items-center md:flex-row">
-            <div className="mx-8 mt-6 flex flex-col items-start px-8 md:w-full md:max-w-6xl md:py-10 xl:px-0">
+            <div className="mt-6 flex flex-col items-start px-8 md:w-full md:max-w-6xl md:py-10 xl:px-0">
               <ContactSplash className="w-[250px] md:mr-12 md:mt-0 md:w-[300px] md:max-w-sm lg:max-w-none" />
             </div>
             <div className="my-8 flex flex-col items-start py-0 font-medium md:h-full md:max-h-96 md:w-full md:items-start md:py-5 lg:py-0">
