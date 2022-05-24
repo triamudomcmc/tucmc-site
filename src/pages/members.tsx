@@ -14,7 +14,7 @@ const PersonCard: FC<{
   role: string
 }> = ({ setZoomOverlay, imgURL, name, role }) => {
   return (
-    <div className="space-y-4">
+    <div className="flex flex-col items-center space-y-4 sm:items-start">
       <Zoomable
         width={256}
         height={256}
@@ -63,7 +63,9 @@ const MembersPage: NextPage = () => {
       <div>{zoomOverlay}</div>
       <div className="mx-auto max-w-[1440px] px-4 py-6 sm:px-10 xl:px-48">
         <section className="py-6">
-          <h2 className="pb-6 text-2xl font-medium text-TUCMC-gray-600">คณะครูงานกิจกรรมพัฒนาผู้เรียน</h2>
+          <h2 className="pb-6 text-center text-2xl font-medium text-TUCMC-gray-600 sm:text-left">
+            คณะครูงานกิจกรรมพัฒนาผู้เรียน
+          </h2>
 
           <article className="grid grid-cols-1 gap-8 sm:grid-cols-4">
             {Teachers.map((teacher) => {
@@ -83,10 +85,12 @@ const MembersPage: NextPage = () => {
         <hr className="border border-TUCMC-gray-400" />
 
         <section className="py-6">
-          <h2 className="pb-6 text-2xl font-medium text-TUCMC-gray-600">คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน</h2>
+          <h2 className="pb-6 text-center text-2xl font-medium text-TUCMC-gray-600 sm:text-left">
+            คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน
+          </h2>
 
-          <p className="pb-4 font-light text-TUCMC-gray-600">ปีการศึกษา</p>
-          <div className="flex flex-wrap gap-4 pb-8">
+          <p className="pb-4 text-center font-light text-TUCMC-gray-600 sm:text-left">ปีการศึกษา</p>
+          <div className="flex flex-wrap justify-center gap-4 pb-8 sm:justify-start">
             <button
               onClick={() => setTab("2564")}
               className={combine(getTab("2564"), "w-32 rounded-md px-6 py-2 text-center font-light")}
