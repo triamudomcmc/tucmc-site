@@ -27,7 +27,7 @@ export const Teachers: Array<{ name: string; role: string; imgURL: string }> = [
 ]
 
 export const StudentMembers: Record<string, Array<{ name: string; role: string; imgURL: string }>> = {
-  64: [
+  2564: [
     {
       name: "นายปณิธิ มักเที่ยงตรง",
       role: "สาราณียกร",
@@ -69,7 +69,7 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/placeholder/person.jpg"
     }
   ],
-  63: [
+  2563: [
     {
       name: "นายปณิธิ มักเที่ยงตรง",
       role: "สาราณียกร",
@@ -105,6 +105,20 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       role: "สาราณียกร",
       imgURL: "/assets/images/placeholder/person.jpg"
     },
+    {
+      name: "นายปณิธิ มักเที่ยงตรง",
+      role: "สาราณียกร",
+      imgURL: "/assets/images/placeholder/person.jpg"
+    }
+  ],
+  2562: [
+    {
+      name: "นายปณิธิ มักเที่ยงตรง",
+      role: "สาราณียกร",
+      imgURL: "/assets/images/placeholder/person.jpg"
+    }
+  ],
+  2561: [
     {
       name: "นายปณิธิ มักเที่ยงตรง",
       role: "สาราณียกร",

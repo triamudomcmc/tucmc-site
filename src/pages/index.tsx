@@ -13,6 +13,7 @@ import Link from "next/link"
 import { useWindowDimensions } from "@utilities/document"
 import { SM } from "@utilities/constants"
 import { AnnouncementSection } from "@components/index/AnnoucementSection"
+import { KorChor } from "@vectors/KorChor"
 
 const Landing: FC = () => {
   const { width } = useWindowDimensions()
@@ -25,11 +26,12 @@ const Landing: FC = () => {
     >
       <div className="flex min-h-screen flex-col pb-8">
         <main className="relative">
+          <h1 className="hidden">กช.</h1>
           <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex flex-col justify-center space-y-10 space-x-0 text-center sm:flex-row sm:space-x-4 sm:space-y-0 sm:text-left">
-              <h1 className="text-center text-[14rem] font-bold leading-[0.5] text-white">กช.</h1>
+            <div className="flex flex-col justify-center space-y-4 space-x-0 text-center sm:flex-row sm:items-center sm:space-x-10 sm:space-y-0 sm:text-left">
+              <KorChor className="h-full w-[250px] sm:w-[300px] xl:w-[350px]" />
 
-              <div className="mt-4 flex flex-col justify-center">
+              <div className="flex flex-col justify-center">
                 <p className="mt-4 text-center text-4xl font-medium text-white sm:text-left">คืออะไร ?</p>
                 <p className="mb-4 whitespace-nowrap text-center text-lg font-light text-white sm:text-left">
                   ทำอะไร ? มีตำแหน่งอะไรบ้าง ?

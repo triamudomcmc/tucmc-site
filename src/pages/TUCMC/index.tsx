@@ -29,7 +29,7 @@ const TUCMC: NextPage = () => {
   const [tab, setTab] = useState<TabType>("about")
 
   const getTab = (tabName: TabType) => {
-    return tab === tabName ? "border-TUCMC-pink-500 text-TUCMC-pink-500" : "text-TUCMC-gray-500 text-TUCMC-gray-500"
+    return tab === tabName ? "border-TUCMC-pink-500 text-TUCMC-pink-500" : "text-TUCMC-gray-500"
   }
 
   return (
