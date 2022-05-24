@@ -169,7 +169,7 @@ const Navigation = () => {
             <span className={getClass("/", "font")}>หน้าแรก</span>
           </a>
         </Link>
-        <Link passHref href="/">
+        <Link passHref href="/members">
           <a
             className={combine(
               "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
