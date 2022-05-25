@@ -45,7 +45,8 @@ const variants = {
   }
 }
 
-const YEARS = ["2564", "2563", "2562", "2561", "2560", "2559", "2558"]
+// const YEARS = ["2564", "2563", "2562", "2561", "2560", "2559", "2558"]
+const YEARS = ["2563", "2562", "2560", "2559", "2558"]
 
 const MembersPage: NextPage = () => {
   const [zoomOverlay, setZoomOverlay] = useState(<></>)
