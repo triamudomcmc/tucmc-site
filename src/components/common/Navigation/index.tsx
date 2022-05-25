@@ -92,20 +92,20 @@ const Navigation = () => {
               <Link passHref href="/">
                 <a className="text-white">หน้าแรก</a>
               </Link>
-              <Link passHref href="/committee">
-                <a className="text-white">บุคลากร</a>
-              </Link>
-              <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
-                <a className="text-white">ชมรม</a>
-              </Link>
               <Link passHref href="/work">
                 <a className="text-white">ผลงาน</a>
+              </Link>
+              <Link passHref href="/committee">
+                <a className="text-white">บุคลากร</a>
               </Link>
               <Link passHref href="/TUCMC">
                 <a className="text-white">กช.</a>
               </Link>
               <Link passHref href="/contact">
                 <a className="text-white">ติดต่อ</a>
+              </Link>
+              <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
+                <a className="text-white">ชมรม</a>
               </Link>
             </div>
             <div className="md:hidden">
@@ -144,28 +144,6 @@ const Navigation = () => {
             <span className={getClass("/", "font")}>หน้าแรก</span>
           </a>
         </Link>
-        <Link passHref href="/committee">
-          <a
-            className={combine(
-              "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/committee", "bg")
-            )}
-          >
-            <UsersIcon className={combine("h-7 w-7", getClass("/committee", "icon"))} />{" "}
-            <span className={getClass("/committee", "font")}>บุคลากร</span>
-          </a>
-        </Link>
-        <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
-          <a
-            className={combine(
-              "flex cursor-pointer flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/clubs", "bg")
-            )}
-          >
-            <ClipboardListIcon className={combine("h-7 w-7", getClass("/clubs", "icon"))} />{" "}
-            <span className={getClass("/clubs", "font")}>รายชื่อชมรม</span>
-          </a>
-        </Link>
         <Link passHref href="/work">
           <a
             className={combine(
@@ -175,6 +153,17 @@ const Navigation = () => {
           >
             <DocumentSearchIcon className={combine("h-7 w-7", getClass("/work", "icon"))} />{" "}
             <span className={getClass("/work", "font")}>ผลงาน</span>
+          </a>
+        </Link>
+        <Link passHref href="/committee">
+          <a
+            className={combine(
+              "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
+              getClass("/committee", "bg")
+            )}
+          >
+            <UsersIcon className={combine("h-7 w-7", getClass("/committee", "icon"))} />{" "}
+            <span className={getClass("/committee", "font")}>บุคลากร</span>
           </a>
         </Link>
         <Link passHref href="/TUCMC">
@@ -197,6 +186,17 @@ const Navigation = () => {
           >
             <MailIcon className={combine("h-7 w-7", getClass("/contact", "icon"))} />{" "}
             <span className={getClass("/contact", "font")}>ติดต่อ</span>
+          </a>
+        </Link>
+        <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
+          <a
+            className={combine(
+              "flex cursor-pointer flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
+              getClass("/clubs", "bg")
+            )}
+          >
+            <ClipboardListIcon className={combine("h-7 w-7", getClass("/clubs", "icon"))} />{" "}
+            <span className={getClass("/clubs", "font")}>รายชื่อชมรม</span>
           </a>
         </Link>
       </motion.div>
