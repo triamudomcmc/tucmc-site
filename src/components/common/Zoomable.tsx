@@ -3,6 +3,8 @@ import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from "react
 import { detectOuside, useWindowDimensions } from "@utilities/document"
 import { XIcon } from "@heroicons/react/solid"
 import classnames from "classnames"
+import { combine } from "@services/tailwind"
+import { SM } from "@utilities/constants"
 
 export const Zoomable: FC<{
   src: string
@@ -21,6 +23,8 @@ export const Zoomable: FC<{
   const [activeTP, setActiveTP] = useState(0)
   const squeezed = useRef(null)
 
+  const [actualZoomedWidth, setActualZoommedWidth] = useState(0)
+
   const dimension = useWindowDimensions()
 
   detectOuside(ref, true, () => {
@@ -34,13 +38,19 @@ export const Zoomable: FC<{
     let w = (dimension.width >= 768 ? 768 : dimension.width) - padding
     let h = (w * height) / width
 
-    // console.log(h, "e")
     if (dimension.height - (padding + tp * 3) < h) {
       w = dimension.height - ((padding + tp * 3) * width) / height - padding
       setActiveTP(tp)
     }
 
     setZW(w * (height > 800 ? 0.6 : 1))
+
+    if (width > height) {
+      setActualZoommedWidth(dimension.width > SM ? SM - padding + dimension.width / 12 : dimension.width - padding)
+    } else {
+      const zoomedHeight = height > dimension.height ? dimension.height - (padding + tp * 2) : height
+      setActualZoommedWidth((zoomedHeight / height) * width)
+    }
   }, [dimension.width, dimension.height, zoom])
 
   useEffect(() => {
@@ -73,8 +83,9 @@ export const Zoomable: FC<{
               blurDataURL={src}
               className={className}
               src={src}
-              width={zoomedWidth}
-              height={(zoomedWidth * height) / width}
+              layout="intrinsic"
+              width={actualZoomedWidth}
+              height={(actualZoomedWidth * height) / width}
               alt={alt}
             />
           </div>
@@ -105,9 +116,9 @@ export const Zoomable: FC<{
               blurDataURL={src}
               className={className}
               src={src}
+              alt={alt}
               width={zoomedWidth}
               height={(zoomedWidth * height) / width}
-              alt={alt}
             />
           </div>
         </div>

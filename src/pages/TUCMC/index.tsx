@@ -10,6 +10,7 @@ import { RefreshIcon } from "@heroicons/react/outline"
 import { ChartBarIcon, StarIcon, WifiIcon } from "@heroicons/react/solid"
 import { combine } from "@services/tailwind"
 import { useRouter } from "next/router"
+import { PositionsPage } from "@components/TUCMC/PositionsPage"
 
 const variants = {
   initial: { y: -20, opacity: 0 },
@@ -106,11 +107,7 @@ const TUCMC: NextPage = () => {
         <div className="relative min-h-[500px] w-full bg-white">
           <motion.div initial="initial" animate="animate" variants={variants} key={tab}>
             {tab === "about" && <AboutPage setZoomOverlay={setZoomOverlay} />}
-            {tab === "positions" && (
-              <div className="relative bg-white">
-                <h1>Hi</h1>
-              </div>
-            )}
+            {tab === "positions" && <PositionsPage setZoomOverlay={setZoomOverlay} />}
           </motion.div>
         </div>
 
