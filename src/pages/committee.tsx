@@ -1,11 +1,12 @@
 import { Zoomable } from "@components/common/Zoomable"
 import { DescribeRoute } from "@components/Meta/DescribeRoute"
-import { StudentMembers, Teachers } from "@map/members"
+import { StudentMembers, Teachers } from "@map/committee"
 import { NextPage } from "next"
 import Image from "next/image"
-import { Dispatch, FC, SetStateAction, useState } from "react"
+import { Dispatch, FC, SetStateAction, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { combine } from "@services/tailwind"
+import { Router, useRouter } from "next/router"
 
 const PersonCard: FC<{
   setZoomOverlay: Dispatch<SetStateAction<JSX.Element>>
@@ -14,7 +15,7 @@ const PersonCard: FC<{
   role: string
 }> = ({ setZoomOverlay, imgURL, name, role }) => {
   return (
-    <div className="flex flex-col items-center space-y-4 sm:items-start">
+    <div className="flex flex-col items-center space-y-4 md:items-start">
       <Zoomable
         width={256}
         height={256}
@@ -25,8 +26,8 @@ const PersonCard: FC<{
       />
 
       <div className="">
-        <h3 className="text-lg font-medium text-TUCMC-gray-600">{name}</h3>
-        <p className="font-light text-TUCMC-gray-500">{role}</p>
+        <h3 className="text-center text-lg font-medium text-TUCMC-gray-600 md:text-left">{name}</h3>
+        <p className="text-center font-light text-TUCMC-gray-500 md:text-left">{role}</p>
       </div>
     </div>
   )
@@ -44,9 +45,18 @@ const variants = {
   }
 }
 
+const YEARS = ["2564", "2563", "2562", "2561", "2560", "2559", "2558"]
+
 const MembersPage: NextPage = () => {
   const [zoomOverlay, setZoomOverlay] = useState(<></>)
+  const { query, replace } = useRouter()
   const [tab, setTab] = useState<string>("2564")
+
+  useEffect(() => {
+    if (query?.year && YEARS.includes(query?.year as string)) {
+      setTab(query?.year as string)
+    }
+  }, [query])
 
   const getTab = (tabName: string) => {
     return tab === tabName
@@ -58,16 +68,16 @@ const MembersPage: NextPage = () => {
     <DescribeRoute
       title="บุคลากร"
       description="บุคลากรคณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.)"
-      imgURL="/meta/banner.jpg"
+      imgURL="/meta/people.jpg"
     >
       <div>{zoomOverlay}</div>
       <div className="mx-auto max-w-[1440px] px-4 py-6 sm:px-10 xl:px-48">
         <section className="py-6">
-          <h2 className="pb-6 text-center text-2xl font-medium text-TUCMC-gray-600 sm:text-left">
+          <h2 className="pb-2 text-center text-lg font-medium text-TUCMC-gray-600 sm:pb-6 sm:text-left sm:text-2xl">
             คณะครูงานกิจกรรมพัฒนาผู้เรียน
           </h2>
 
-          <article className="grid grid-cols-1 gap-8 sm:grid-cols-4">
+          <article className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
             {Teachers.map((teacher) => {
               return (
                 <PersonCard
@@ -85,36 +95,26 @@ const MembersPage: NextPage = () => {
         <hr className="border border-TUCMC-gray-400" />
 
         <section className="py-6">
-          <h2 className="pb-6 text-center text-2xl font-medium text-TUCMC-gray-600 sm:text-left">
+          <h2 className="pb-2 text-center text-lg font-medium text-TUCMC-gray-600 sm:pb-6 sm:text-left sm:text-2xl">
             คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน
           </h2>
 
           <p className="pb-4 text-center font-light text-TUCMC-gray-600 sm:text-left">ปีการศึกษา</p>
           <div className="flex flex-wrap justify-center gap-4 pb-8 sm:justify-start">
-            <button
-              onClick={() => setTab("2564")}
-              className={combine(getTab("2564"), "w-32 rounded-md px-6 py-2 text-center font-light")}
-            >
-              2564
-            </button>
-            <button
-              onClick={() => setTab("2563")}
-              className={combine(getTab("2563"), "w-32 rounded-md px-6 py-2 text-center font-light")}
-            >
-              2563
-            </button>
-            <button
-              onClick={() => setTab("2562")}
-              className={combine(getTab("2562"), "w-32 rounded-md px-6 py-2 text-center font-light")}
-            >
-              2562
-            </button>
-            <button
-              onClick={() => setTab("2561")}
-              className={combine(getTab("2561"), "w-32 rounded-md px-6 py-2 text-center font-light")}
-            >
-              2561
-            </button>
+            {YEARS.map((year) => {
+              return (
+                <button
+                  key={year}
+                  onClick={() => {
+                    setTab(year)
+                    replace({ query: { year } }, undefined, { shallow: true })
+                  }}
+                  className={combine(getTab(year), "w-32 rounded-md px-6 py-2 text-center font-light")}
+                >
+                  {year}
+                </button>
+              )
+            })}
           </div>
 
           <motion.article
@@ -122,7 +122,7 @@ const MembersPage: NextPage = () => {
             animate="animate"
             variants={variants}
             key={tab}
-            className="grid grid-cols-1 gap-8 sm:grid-cols-4"
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"
           >
             {StudentMembers[tab].map((student, i) => {
               return (
