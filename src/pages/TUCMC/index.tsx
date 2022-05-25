@@ -4,11 +4,12 @@ import { motion } from "framer-motion"
 import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import { NextPage } from "next"
 import { AboutPage } from "@components/TUCMC/AboutPage"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { SocialFacebook, SocialInstagram } from "@vectors/icons/Socials"
 import { RefreshIcon } from "@heroicons/react/outline"
 import { ChartBarIcon, StarIcon, WifiIcon } from "@heroicons/react/solid"
 import { combine } from "@services/tailwind"
+import { useRouter } from "next/router"
 
 const variants = {
   initial: { y: -20, opacity: 0 },
@@ -27,6 +28,14 @@ type TabType = "about" | "positions"
 const TUCMC: NextPage = () => {
   const [zoomOverlay, setZoomOverlay] = useState(<></>)
   const [tab, setTab] = useState<TabType>("about")
+
+  const { query, replace } = useRouter()
+
+  useEffect(() => {
+    if (query?.type && ["about", "positions"].includes(query?.type as string)) {
+      setTab(query?.type as TabType)
+    }
+  }, [query])
 
   const getTab = (tabName: TabType) => {
     return tab === tabName ? "border-TUCMC-pink-500 text-TUCMC-pink-500" : "text-TUCMC-gray-500"
@@ -66,7 +75,10 @@ const TUCMC: NextPage = () => {
         <div className="relative mt-36 bg-white">
           <div className="mx-auto grid max-w-xl grid-cols-2 items-center justify-center py-12 px-2">
             <button
-              onClick={() => setTab("about")}
+              onClick={() => {
+                setTab("about")
+                replace({ query: { type: "about" } }, undefined, { shallow: true })
+              }}
               className={combine(
                 getTab("about"),
                 "flex items-center justify-center space-x-2 border-b px-6 pb-1 text-center"
@@ -76,7 +88,10 @@ const TUCMC: NextPage = () => {
               <span>กช. คืออะไร ?</span>
             </button>
             <button
-              onClick={() => setTab("positions")}
+              onClick={() => {
+                setTab("positions")
+                replace({ query: { type: "positions" } }, undefined, { shallow: true })
+              }}
               className={combine(
                 getTab("positions"),
                 "flex items-center justify-center space-x-2 border-b px-6 pb-1 text-center"
