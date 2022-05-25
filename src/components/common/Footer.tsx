@@ -10,21 +10,20 @@ const Footer = () => {
           <Link passHref href="/">
             <a>หน้าแรก</a>
           </Link>
-          <Link passHref href="/members">
+          <Link passHref href="/committee">
             <a>บุคลากร</a>
           </Link>
           <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
             <a>ชมรม</a>
           </Link>
-          <Link passHref href="/instructions">
-            <a>วิธีลงทะเบียน</a>
+          <Link passHref href="/work">
+            <a>ผลงาน</a>
           </Link>
-          <Link passHref href="/FAQ">
-            <a>คำถามที่พบบ่อย</a>
-          </Link>
-          <a>ข้อตกลงและเงื่อนไขการใช้งาน</a>
           <Link passHref href="/TUCMC">
             <a>ทำความรู้จัก กช.</a>
+          </Link>
+          <Link passHref href="/contact">
+            <a>ติดต่อ</a>
           </Link>
         </div>
         <div className="md:flex md:w-full md:justify-center">
@@ -41,14 +40,14 @@ const Footer = () => {
               <Link passHref href="/">
                 <a>หน้าแรก</a>
               </Link>
-              <Link passHref href="/members">
+              <Link passHref href="/committee">
                 <a>บุคลากร</a>
               </Link>
               <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
                 <a>ชมรม</a>
               </Link>
-              <Link passHref href="/FAQ">
-                <a>FAQ</a>
+              <Link passHref href="/work">
+                <a>ผลงาน</a>
               </Link>
               <Link passHref href="/TUCMC">
                 <a>กช.</a>

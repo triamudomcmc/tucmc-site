@@ -6,36 +6,11 @@ import Link from "next/link"
 import { detectOuside } from "@utilities/document"
 import Router, { useRouter } from "next/router"
 // import { useAuth } from "@client/auth"
-import {
-  AcademicCapIcon,
-  CalendarIcon,
-  ChatIcon,
-  ClipboardListIcon,
-  CogIcon,
-  DocumentTextIcon,
-  HomeIcon,
-  KeyIcon,
-  LoginIcon,
-  MailIcon,
-  LogoutIcon,
-  TerminalIcon,
-  HeartIcon,
-  LibraryIcon,
-  CheckCircleIcon,
-  UsersIcon
-} from "@heroicons/react/outline"
-import { ChevronDownIcon, StarIcon } from "@heroicons/react/solid"
-import { isEmpty } from "@utilities/object"
+import { ClipboardListIcon, HomeIcon, MailIcon, UsersIcon, DocumentSearchIcon } from "@heroicons/react/outline"
 import { combine } from "@services/tailwind"
 
 const Navigation = () => {
-  // const { onReady, signout } = useAuth()
-
-  // const { logged, userData } = onReady((logged, userData) => {
-  //   return { logged, userData }
-  // })
-
-  const [reveal, setReaveal] = useState(false)
+  const [reveal, setReveal] = useState(false)
   const [toggle, setToggle] = useState(false)
   const [animation, setAnimation] = useState(false)
   const [load, setLoad] = useState(true)
@@ -46,14 +21,14 @@ const Navigation = () => {
   const { pathname } = useRouter()
 
   detectOuside(panel, reveal, () => {
-    setReaveal(false)
+    setReveal(false)
   })
 
   useEffect(() => {
     setLoad(false)
     if (!initial) {
       if (!animation) {
-        setReaveal(!reveal)
+        setReveal(!reveal)
       }
     } else {
       setInitial(false)
@@ -117,14 +92,14 @@ const Navigation = () => {
               <Link passHref href="/">
                 <a className="text-white">หน้าแรก</a>
               </Link>
-              <Link passHref href="/members">
+              <Link passHref href="/committee">
                 <a className="text-white">บุคลากร</a>
               </Link>
               <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
                 <a className="text-white">ชมรม</a>
               </Link>
-              <Link passHref href="/FAQ">
-                <a className="text-white">FAQ</a>
+              <Link passHref href="/work">
+                <a className="text-white">ผลงาน</a>
               </Link>
               <Link passHref href="/TUCMC">
                 <a className="text-white">กช.</a>
@@ -169,15 +144,15 @@ const Navigation = () => {
             <span className={getClass("/", "font")}>หน้าแรก</span>
           </a>
         </Link>
-        <Link passHref href="/members">
+        <Link passHref href="/committee">
           <a
             className={combine(
               "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/members", "bg")
+              getClass("/committee", "bg")
             )}
           >
-            <UsersIcon className={combine("h-7 w-7", getClass("/members", "icon"))} />{" "}
-            <span className={getClass("/members", "font")}>บุคลากร</span>
+            <UsersIcon className={combine("h-7 w-7", getClass("/committee", "icon"))} />{" "}
+            <span className={getClass("/committee", "font")}>บุคลากร</span>
           </a>
         </Link>
         <Link passHref href="https://register.clubs.triamudom.ac.th/clubs">
@@ -191,15 +166,15 @@ const Navigation = () => {
             <span className={getClass("/clubs", "font")}>รายชื่อชมรม</span>
           </a>
         </Link>
-        <Link passHref href="/FAQ">
+        <Link passHref href="/work">
           <a
             className={combine(
               "flex flex-row items-center space-x-4 border-l-2 py-3 pl-4 pr-8",
-              getClass("/FAQ", "bg")
+              getClass("/work", "bg")
             )}
           >
-            <ChatIcon className={combine("h-7 w-7", getClass("/FAQ", "icon"))} />{" "}
-            <span className={getClass("/FAQ", "font")}>คำถามที่พบบ่อย</span>
+            <DocumentSearchIcon className={combine("h-7 w-7", getClass("/work", "icon"))} />{" "}
+            <span className={getClass("/work", "font")}>ผลงาน</span>
           </a>
         </Link>
         <Link passHref href="/TUCMC">
