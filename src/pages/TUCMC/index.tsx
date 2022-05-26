@@ -39,7 +39,9 @@ const TUCMC: NextPage = () => {
   }, [query])
 
   const getTab = (tabName: TabType) => {
-    return tab === tabName ? "border-TUCMC-pink-500 text-TUCMC-pink-500" : "text-TUCMC-gray-500"
+    return tab === tabName
+      ? "bg-TUCMC-pink-500 text-white hover:bg-TUCMC-pink-600"
+      : "bg-white text-TUCMC-pink-500 hover:bg-TUCMC-gray-100"
   }
 
   return (
@@ -74,35 +76,37 @@ const TUCMC: NextPage = () => {
         </header>
 
         <div className="relative mt-36 bg-white">
-          <div className="mx-auto grid max-w-xl grid-cols-2 items-center justify-center py-12 px-2">
-            <button
-              type="button"
-              onClick={() => {
-                setTab("about")
-                replace({ query: { type: "about" } }, undefined, { shallow: true })
-              }}
-              className={combine(
-                getTab("about"),
-                "flex items-center justify-center space-x-2 border-b px-6 pb-1 text-center"
-              )}
-            >
-              {tab === "about" && <StarIcon className="h-5 w-5" />}
-              <span>กช. คืออะไร ?</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setTab("positions")
-                replace({ query: { type: "positions" } }, undefined, { shallow: true })
-              }}
-              className={combine(
-                getTab("positions"),
-                "flex items-center justify-center space-x-2 border-b px-6 pb-1 text-center"
-              )}
-            >
-              {tab === "positions" && <StarIcon className="h-5 w-5" />}
-              <span>ตำแหน่ง</span>
-            </button>
+          <div className="mx-auto max-w-xl py-12 px-2">
+            <div className="grid grid-cols-2 items-center justify-center rounded-lg border border-TUCMC-gray-400">
+              <button
+                type="button"
+                onClick={() => {
+                  setTab("about")
+                  replace({ query: { type: "about" } }, undefined, { shallow: true })
+                }}
+                className={combine(
+                  getTab("about"),
+                  "flex items-center justify-center space-x-2 rounded-l-lg px-12 py-3 text-center transition-all"
+                )}
+              >
+                {tab === "about" && <StarIcon className="h-5 w-5" />}
+                <span>กช. คืออะไร ?</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setTab("positions")
+                  replace({ query: { type: "positions" } }, undefined, { shallow: true })
+                }}
+                className={combine(
+                  getTab("positions"),
+                  "flex items-center justify-center space-x-2 rounded-r-lg px-12 py-3 text-center transition-all"
+                )}
+              >
+                {tab === "positions" && <StarIcon className="h-5 w-5" />}
+                <span>ตำแหน่ง</span>
+              </button>
+            </div>
           </div>
         </div>
 
