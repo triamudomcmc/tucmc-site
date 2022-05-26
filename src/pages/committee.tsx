@@ -75,11 +75,26 @@ const MembersPage: NextPage = () => {
       <div className="mx-auto max-w-[1440px] px-4 py-6 sm:px-10 xl:px-48">
         <section className="py-6">
           <h2 className="pb-2 text-center text-lg font-medium text-TUCMC-gray-600 sm:pb-6 sm:text-left sm:text-2xl">
-            คณะครูงานกิจกรรมพัฒนาผู้เรียน
+            ครูงานกิจกรรมพัฒนาผู้เรียน
           </h2>
 
+          <div className="mb-6 flex flex-row items-center space-x-8">
+            <Zoomable
+              width={256}
+              height={256}
+              updateOverlay={setZoomOverlay}
+              src={Teachers[0].imgURL}
+              className="rounded-2xl object-cover"
+              alt={Teachers[0].name}
+            />
+
+            <div className="">
+              <h3 className="text-center text-2xl font-medium text-TUCMC-gray-600 md:text-left">{Teachers[0].name}</h3>
+              <p className="text-center font-light text-TUCMC-gray-500 md:text-left">{Teachers[0].role}</p>
+            </div>
+          </div>
           <article className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {Teachers.map((teacher) => {
+            {Teachers.slice(1).map((teacher) => {
               return (
                 <PersonCard
                   setZoomOverlay={setZoomOverlay}
@@ -97,7 +112,7 @@ const MembersPage: NextPage = () => {
 
         <section className="py-6">
           <h2 className="pb-2 text-center text-lg font-medium text-TUCMC-gray-600 sm:pb-6 sm:text-left sm:text-2xl">
-            คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน
+            นักเรียนงานกิจกรรมพัฒนาผู้เรียน
           </h2>
 
           <p className="pb-4 text-center font-light text-TUCMC-gray-600 sm:text-left">ปีการศึกษา</p>
