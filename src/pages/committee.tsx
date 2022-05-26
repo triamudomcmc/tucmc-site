@@ -78,7 +78,7 @@ const MembersPage: NextPage = () => {
             ครูงานกิจกรรมพัฒนาผู้เรียน
           </h2>
 
-          <div className="mb-6 flex flex-row items-center space-x-8">
+          <div className="mb-6 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8">
             <Zoomable
               width={256}
               height={256}
@@ -89,7 +89,9 @@ const MembersPage: NextPage = () => {
             />
 
             <div className="">
-              <h3 className="text-center text-2xl font-medium text-TUCMC-gray-600 md:text-left">{Teachers[0].name}</h3>
+              <h3 className="sm:Ptext-2xl text-center text-lg font-medium text-TUCMC-gray-600 md:text-left">
+                {Teachers[0].name}
+              </h3>
               <p className="text-center font-light text-TUCMC-gray-500 md:text-left">{Teachers[0].role}</p>
             </div>
           </div>

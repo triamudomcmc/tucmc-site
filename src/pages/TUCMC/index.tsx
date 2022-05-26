@@ -86,7 +86,7 @@ const TUCMC: NextPage = () => {
                 }}
                 className={combine(
                   getTab("about"),
-                  "flex items-center justify-center space-x-2 rounded-l-lg px-12 py-3 text-center transition-all"
+                  "flex h-full items-center justify-center space-x-2 rounded-l-lg px-2 py-3 text-center transition-all sm:px-12"
                 )}
               >
                 {tab === "about" && <StarIcon className="h-5 w-5" />}
@@ -100,7 +100,7 @@ const TUCMC: NextPage = () => {
                 }}
                 className={combine(
                   getTab("positions"),
-                  "flex items-center justify-center space-x-2 rounded-r-lg px-12 py-3 text-center transition-all"
+                  "flex h-full items-center justify-center space-x-2 rounded-r-lg px-2 py-3 text-center transition-all sm:px-12"
                 )}
               >
                 {tab === "positions" && <StarIcon className="h-5 w-5" />}

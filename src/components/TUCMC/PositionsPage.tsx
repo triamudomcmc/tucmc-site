@@ -106,10 +106,10 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
               }}
               className={combine(
                 getTab(pos),
-                "rounded-lg px-6 py-4 text-center shadow-md transition-all hover:scale-105"
+                "rounded-lg px-6 py-4 text-center text-sm shadow-md transition-all hover:scale-105 sm:text-base"
               )}
             >
-              <p className="text-lg font-normal">{Positions[pos].nameEN}</p>
+              <p className="text-base font-normal sm:text-lg">{Positions[pos].nameEN}</p>
               <p className="font-light">{Positions[pos].nameTH}</p>
             </button>
           )
