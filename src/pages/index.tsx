@@ -29,7 +29,11 @@ const Landing: FC = () => {
           <h1 className="hidden">กช.</h1>
           <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
             <div className="flex flex-col justify-center space-y-4 space-x-0 text-center sm:flex-row sm:items-center sm:space-x-10 sm:space-y-0 sm:text-left">
-              <KorChor className="h-full w-[250px] sm:w-[300px] xl:w-[350px]" />
+              <Link href="/TUCMC" passHref>
+                <a className="transition-transform hover:scale-105">
+                  <KorChor className="h-full w-[250px] sm:w-[300px] xl:w-[350px]" />
+                </a>
+              </Link>
 
               <div className="flex flex-col justify-center">
                 <p className="mt-4 text-center text-4xl font-medium text-white sm:text-left">คืออะไร ?</p>
@@ -75,7 +79,7 @@ const Landing: FC = () => {
           }
           actionText="ดูข้อมูลเพิ่มเติม"
           imgSrc={announcementSrc}
-          href="https://instagram.com/tucmc_official"
+          href="/TUCMC?type=positions"
         />
 
         <section className="grid grid-cols-1 sm:grid-cols-3 sm:px-6 md:px-24 lg:px-48">
