@@ -128,7 +128,8 @@ export const Positions: Record<string, PositionData> = {
     nameEN: "Cameraman",
     nameTH: "ช่างกล้อง",
     count: "1",
-    foreword: "ค่อยคิดคำโปรย",
+    foreword:
+      "A person who is capable of doing anything video related. From videography to video editing, the cameraman does it all.",
     job_description: ["เป็นช่างกล้องถ่ายคลิปวิดีโอ และผู้จัดทำคลิปวิดีโอของ กช.", "ทำงานร่วมกับกรรมการกลาง"],
     requirements: [
       "เป็นนักเรียนชั้น ม.4-6 ในปีการศึกษา 2565",
