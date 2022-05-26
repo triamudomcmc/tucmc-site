@@ -5,7 +5,7 @@ const Path: FC<any> = (props) => <motion.path strokeLinecap="round" strokeLinejo
 
 const Toggle: FC<{ toggle: () => void }> = ({ toggle }) => {
   return (
-    <a className="cursor-pointer" onClick={toggle}>
+    <button onClick={toggle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 pt-1"
@@ -34,7 +34,7 @@ const Toggle: FC<{ toggle: () => void }> = ({ toggle }) => {
           }}
         />
       </svg>
-    </a>
+    </button>
   )
 }
 

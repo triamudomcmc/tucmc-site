@@ -12,6 +12,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module"
   },
+  globals: {
+    JSX: true
+  },
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "import/no-unresolved": 0,
@@ -30,7 +33,20 @@ module.exports = {
     "import/extensions": 0,
     "consistent-return": 0,
     "prefer-template": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "no-unused-vars": 0,
+    "no-unused-expressions": 0,
+    "react/require-default-props": 0,
+    "no-use-before-define": 0,
+    "import/no-duplicates": 0,
+    "react/button-has-type": 0,
+    "react/self-closing-comp": 0,
+    "react/no-danger": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-boolean-value": 0,
+    "react/self-closing-comp": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-prototype-builtins": 0
   },
   ignorePatterns: [
     "__tests__",

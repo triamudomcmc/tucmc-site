@@ -62,6 +62,8 @@ const Navigation = () => {
           return ""
         case "icon":
           return ""
+        default:
+          return ""
       }
     } else {
       switch (part) {
@@ -71,6 +73,8 @@ const Navigation = () => {
           return "text-TUCMC-gray-800"
         case "icon":
           return "text-TUCMC-gray-500"
+        default:
+          return ""
       }
     }
   }

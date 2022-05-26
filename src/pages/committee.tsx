@@ -125,11 +125,11 @@ const MembersPage: NextPage = () => {
             key={tab}
             className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"
           >
-            {StudentMembers[tab].map((student, i) => {
+            {StudentMembers[tab].map((student) => {
               return (
                 <PersonCard
                   setZoomOverlay={setZoomOverlay}
-                  key={`${i}-${student.name}`}
+                  key={`${student.role}-${student.name}`}
                   imgURL={student.imgURL}
                   name={student.name}
                   role={student.role}

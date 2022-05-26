@@ -14,10 +14,10 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
           <div className="relative">
             <Swiper
               slidesPerView={"auto"}
-              centeredSlides={true}
+              centeredSlides
               spaceBetween={30}
               initialSlide={4}
-              loop={true}
+              loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               <SwiperSlide style={{ width: "256px" }}>
@@ -139,10 +139,10 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
           <div>
             <Swiper
               slidesPerView={"auto"}
-              centeredSlides={true}
+              centeredSlides
               spaceBetween={30}
               initialSlide={5}
-              loop={true}
+              loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               <SwiperSlide style={{ width: "256px" }}>
@@ -288,10 +288,10 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
           <div>
             <Swiper
               slidesPerView={"auto"}
-              centeredSlides={true}
+              centeredSlides
               spaceBetween={30}
               initialSlide={5}
-              loop={true}
+              loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               <SwiperSlide style={{ width: "256px" }}>
@@ -438,10 +438,10 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
           <div>
             <Swiper
               slidesPerView={"auto"}
-              centeredSlides={true}
+              centeredSlides
               spaceBetween={30}
               initialSlide={4}
-              loop={true}
+              loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               <SwiperSlide style={{ width: "256px" }}>

@@ -76,6 +76,7 @@ const TUCMC: NextPage = () => {
         <div className="relative mt-36 bg-white">
           <div className="mx-auto grid max-w-xl grid-cols-2 items-center justify-center py-12 px-2">
             <button
+              type="button"
               onClick={() => {
                 setTab("about")
                 replace({ query: { type: "about" } }, undefined, { shallow: true })
@@ -89,6 +90,7 @@ const TUCMC: NextPage = () => {
               <span>กช. คืออะไร ?</span>
             </button>
             <button
+              type="button"
               onClick={() => {
                 setTab("positions")
                 replace({ query: { type: "positions" } }, undefined, { shallow: true })
@@ -121,7 +123,7 @@ const TUCMC: NextPage = () => {
           <div className="mx-auto h-[232px] w-[312px] rounded-t-[48px] bg-TUCMC-gray-900">
             <div className="relative left-[14px] top-[14px] h-[218px] w-[284px] rounded-t-[34px] bg-white">
               <div className="absolute top-0 flex w-full justify-center">
-                <div className="z-10 h-[26px] w-[140px] rounded-b-[16px] bg-TUCMC-gray-900"></div>
+                <div className="z-10 h-[26px] w-[140px] rounded-b-[16px] bg-TUCMC-gray-900" />
               </div>
               <div className="relative h-[77px] w-[284px] rounded-t-[34px] bg-[#F6F6F6]">
                 <span className="absolute left-6 top-1.5 text-[14px] font-medium tracking-tight">12.00</span>
@@ -151,13 +153,23 @@ const TUCMC: NextPage = () => {
               <div className="mx-12 mt-8 space-y-4">
                 <div className="flex space-x-4">
                   <SocialFacebook className="h-6 w-6" />
-                  <a target="_blank" href="https://www.facebook.com/triamudomclubs" className="hover:underline">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.facebook.com/triamudomclubs"
+                    className="hover:underline"
+                  >
                     TUCMC
                   </a>
                 </div>
                 <div className="flex space-x-4">
                   <SocialInstagram className="h-6 w-6" />
-                  <a target="_blank" href="https://instagram.com/tucmc_official" className="hover:underline">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://instagram.com/tucmc_official"
+                    className="hover:underline"
+                  >
                     tucmc_official
                   </a>
                 </div>

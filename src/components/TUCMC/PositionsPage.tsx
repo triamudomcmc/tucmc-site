@@ -16,7 +16,7 @@ const ReviewItem: FC<{ review: Review }> = ({ review }) => {
           <div className="mt-6 ml-4 flex flex-row md:mt-0 md:flex-col">
             <div className="h-20 w-20 md:h-24 md:w-24">
               <Image
-                priority={true}
+                priority
                 quality={50}
                 placeholder="blur"
                 src={review.profileURL}
@@ -72,17 +72,17 @@ const variants = {
 
 export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
   const [tab, setTab] = useState<string>("GeneralCommittee")
-  const [positionData, setPositionData] = useState<PositionData>(Positions["GeneralCommittee"])
+  const [positionData, setPositionData] = useState<PositionData>(Positions.GeneralCommittee)
   const { query, replace } = useRouter()
 
   useEffect(() => {
-    if (Positions.hasOwnProperty(tab)) {
+    if (Object.prototype.hasOwnProperty.call(Positions, tab)) {
       setPositionData(Positions[tab])
     }
   }, [tab])
 
   useEffect(() => {
-    if (Positions.hasOwnProperty(query?.pos as string)) {
+    if (Object.prototype.hasOwnProperty.call(Positions, query?.pos as string)) {
       setTab(query?.pos as string)
     }
   }, [query])
@@ -99,10 +99,10 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
         {Object.keys(Positions).map((pos, i) => {
           return (
             <button
-              key={`${pos}-${i}`}
+              key={`${pos}-${Positions[pos].nameEN}`}
               onClick={() => {
                 setTab(pos)
-                replace({ query: { ...query, pos: pos } }, undefined, { shallow: true })
+                replace({ query: { ...query, pos } }, undefined, { shallow: true })
               }}
               className={combine(
                 getTab(pos),
@@ -145,7 +145,7 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
             <h3 className="mb-3 text-xl font-normal text-TUCMC-gray-700">หน้าที่</h3>
             <ol className="list-decimal space-y-2 pl-10">
               {positionData.job_description.map((d, i) => (
-                <li key={`${d}-${i}`}>{d}</li>
+                <li key={d}>{d}</li>
               ))}
             </ol>
           </section>
@@ -154,7 +154,7 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
             <h3 className="mb-3 text-xl font-normal text-TUCMC-gray-700">คุณสมบัติ</h3>
             <ol className="list-decimal space-y-2 pl-10">
               {positionData.requirements.map((d, i) => (
-                <li key={`${d}-${i}`}>{d}</li>
+                <li key={d}>{d}</li>
               ))}
             </ol>
 
@@ -166,9 +166,9 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
             <div className="space-y-2">
               {positionData.FAQ.map((faq, i) => (
                 <Accordion
-                  key={`${faq.question}-${faq.answer}-${i}`}
+                  key={`${faq.question}-${faq.answer}`}
                   Icon={AccordionIcon.Chevron}
-                  id={`${faq.question}-${faq.answer}-${i}`}
+                  id={`${faq.question}-${faq.answer}`}
                   title={faq.question}
                 >
                   <Accordion.Answer>{faq.answer}</Accordion.Answer>
@@ -182,7 +182,7 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
               <h3 className="mb-3 text-xl font-normal text-TUCMC-gray-700">รีวิวจากรุ่นพี่</h3>
               <div className="space-y-4">
                 {positionData.reviews.map((review, i) => (
-                  <ReviewItem key={`${review.name}-${i}`} review={review} />
+                  <ReviewItem key={`${review.name}-${review.contact}`} review={review} />
                 ))}
               </div>
             </section>

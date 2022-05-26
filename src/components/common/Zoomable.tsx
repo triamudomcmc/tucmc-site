@@ -68,14 +68,14 @@ export const Zoomable: FC<{
           className="min-w-screen fixed top-0 left-0 z-20 flex min-h-screen w-full select-none items-center justify-center bg-gray-600 bg-opacity-70"
         >
           <div className="relative" ref={ref}>
-            <div
+            <button
               onClick={() => {
                 toggleZoom(false)
               }}
               className="absolute -top-6 -right-6 cursor-pointer rounded-full bg-TUCMC-gray-900 bg-opacity-40 px-1 py-1"
             >
               <XIcon className="h-4 w-4 cursor-pointer text-white" />
-            </div>
+            </button>
             <Image
               priority={priority}
               onLoad={onLoad}
@@ -101,14 +101,14 @@ export const Zoomable: FC<{
       {!updateOverlay && zoom && (
         <div className="min-w-screen fixed top-0 left-0 z-20 flex min-h-screen w-full items-center justify-center bg-gray-600 bg-opacity-70">
           <div className="relative" ref={ref}>
-            <div
+            <button
               onClick={() => {
                 toggleZoom(false)
               }}
               className="absolute -top-6 -right-6 cursor-pointer rounded-full bg-TUCMC-gray-900 bg-opacity-40 px-1 py-1"
             >
               <XIcon className="h-4 w-4 cursor-pointer text-white" />
-            </div>
+            </button>
             <Image
               priority={priority}
               onLoad={onLoad}
@@ -123,7 +123,7 @@ export const Zoomable: FC<{
           </div>
         </div>
       )}
-      <div
+      <button
         ref={squeezed}
         onClick={() => {
           sqPercent < 80 && toggleZoom((prev) => !prev)
@@ -142,7 +142,7 @@ export const Zoomable: FC<{
           height={height}
           alt={alt}
         />
-      </div>
+      </button>
     </div>
   )
 }

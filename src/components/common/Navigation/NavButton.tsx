@@ -7,7 +7,7 @@ const Path: FC<any> = (props) => (
 
 const NavButton: FC<{ toggle: () => void }> = ({ toggle }) => {
   return (
-    <a className="cursor-pointer" onClick={toggle}>
+    <button className="cursor-pointer" onClick={toggle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-8 w-8 pt-1 text-white"
@@ -36,7 +36,7 @@ const NavButton: FC<{ toggle: () => void }> = ({ toggle }) => {
           }}
         />
       </svg>
-    </a>
+    </button>
   )
 }
 

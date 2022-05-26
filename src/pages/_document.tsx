@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
         <Head>
           <meta charSet="utf-8" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icon.png"></link>
+          <link rel="apple-touch-icon" href="/icon.png" />
           <link
             rel="preload"
             href="/assets/fonts/Inter-roman.var.woff2"
@@ -98,7 +98,7 @@ export default class Document extends NextDocument {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QG2P5KQQ"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QG2P5KQQ" />
           <script
             dangerouslySetInnerHTML={{
               __html: `

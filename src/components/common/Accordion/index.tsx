@@ -34,9 +34,10 @@ export const Accordion: FC<{ defaultExpanded?: boolean; title: string; id?: stri
       <button
         aria-expanded={expanded}
         aria-controls={id ? `${id}-panel` : id}
+        type="button"
         onClick={(e) => {
           e.preventDefault()
-          setExpand((e) => !e)
+          setExpand((c) => !c)
         }}
         id={id ? `${id}-header` : undefined}
         className="mb-1 flex w-full items-start justify-between rounded-lg bg-white px-8 py-6 shadow-md"
@@ -64,7 +65,7 @@ const Answer: FC = ({ children }) => (
   <div
     className="accordion-text px-8 py-4 text-TUCMC-gray-600"
     dangerouslySetInnerHTML={{ __html: String(children) }}
-  ></div>
+  />
 )
 Answer.displayName = "Answer"
 Accordion.Answer = Answer

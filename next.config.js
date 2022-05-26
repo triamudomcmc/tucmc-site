@@ -8,7 +8,7 @@ const withPrefresh = require("@prefresh/next")
 const withPlugins = require("next-compose-plugins")
 
 const useStyles = require("./tools/useStyles")
-const usePreact = require("./tools/usePreact")
+// const usePreact = require("./tools/usePreact")
 const offlineConfig = require("./tools/withOffline")
 
 module.exports = withPlugins([[withOffline, offlineConfig], [withAnalyze], [withPrefresh]], {
@@ -32,7 +32,7 @@ module.exports = withPlugins([[withOffline, offlineConfig], [withAnalyze], [with
     loader: "default"
   },
   webpack(config, options) {
-    usePreact(config, options)
+    // usePreact(config, options)
     useStyles(config, options)
 
     config.resolve.alias = {

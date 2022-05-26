@@ -19,13 +19,23 @@ const Contact = () => {
                 <div className="mb-1">งานกิจกรรมพัฒนาผู้เรียน (กช.)</div>
                 <div className="flex flex-row space-x-2">
                   <SocialFacebook className="h-6 w-6 text-black" />
-                  <a target="_blank" href="https://www.facebook.com/triamudomclubs" className="hover:underline">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.facebook.com/triamudomclubs"
+                    className="hover:underline"
+                  >
                     TUCMC
                   </a>
                 </div>
                 <div className="flex flex-row space-x-2">
                   <SocialInstagram className="h-6 w-6 text-black" />
-                  <a target="_blank" href="https://instagram.com/tucmc_official" className="hover:underline">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://instagram.com/tucmc_official"
+                    className="hover:underline"
+                  >
                     tucmc_official
                   </a>
                 </div>

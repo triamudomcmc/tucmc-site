@@ -10,7 +10,7 @@
     "analyze": "ANALYZE=true next build",
     "export": "next export",
     "test": "jest",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint": "next lint",
     "format": "prettier . --check --write"
   },
   "dependencies": {

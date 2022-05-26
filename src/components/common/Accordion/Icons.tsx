@@ -1,7 +1,7 @@
-import Toggle from "./Toggle"
 import { ChevronUpIcon } from "@heroicons/react/outline"
 import { motion, Variants } from "framer-motion"
 import { FC } from "react"
+import Toggle from "./Toggle"
 
 export type TAccordionIcon = FC<{ expanded: boolean }>
 

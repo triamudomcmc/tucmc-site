@@ -29,10 +29,10 @@ const Footer = () => {
         <div className="md:flex md:w-full md:justify-center">
           <div className="flex flex-col items-center space-y-8 md:w-full md:max-w-6xl md:flex-row-reverse md:justify-between md:space-y-0 md:px-6">
             <div className="flex flex-row space-x-6 md:space-x-3">
-              <a target="_blank" href="https://www.facebook.com/triamudomclubs">
+              <a rel="noreferrer" target="_blank" href="https://www.facebook.com/triamudomclubs">
                 <SocialFacebook className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
-              <a target="_blank" href="https://instagram.com/tucmc_official">
+              <a rel="noreferrer" target="_blank" href="https://instagram.com/tucmc_official">
                 <SocialInstagram className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
             </div>
@@ -57,9 +57,9 @@ const Footer = () => {
               </Link>
             </div>
             <Link passHref href="/">
-              <div className="cursor-pointer">
+              <a>
                 <WhiteLogo />
-              </div>
+              </a>
             </Link>
           </div>
         </div>
