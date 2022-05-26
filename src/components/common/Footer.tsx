@@ -29,13 +29,49 @@ const Footer = () => {
         <div className="md:flex md:w-full md:justify-center">
           <div className="flex flex-col items-center space-y-8 md:w-full md:max-w-6xl md:flex-row-reverse md:justify-between md:space-y-0 md:px-6">
             <div className="flex flex-row space-x-6 md:space-x-3">
-              <a rel="noreferrer" target="_blank" href="https://www.facebook.com/triamudomclubs">
+              <a
+                onClick={(e) => {
+                  // @ts-ignore
+                  window.gtag("event", "social_click", {
+                    event_category: "social_click",
+                    event_label: "Facebook",
+                    type: "Facebook"
+                  })
+                }}
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.facebook.com/triamudomclubs"
+              >
                 <SocialFacebook className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
-              <a rel="noreferrer" target="_blank" href="https://instagram.com/tucmc_official">
+              <a
+                onClick={(e) => {
+                  // @ts-ignore
+                  window.gtag("event", "social_click", {
+                    event_category: "social_click",
+                    event_label: "Instagram",
+                    type: "Instagram"
+                  })
+                }}
+                rel="noreferrer"
+                target="_blank"
+                href="https://instagram.com/tucmc_official"
+              >
                 <SocialInstagram className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
-              <a rel="noreferrer" target="_blank" href="https://github.com/triamudomcmc">
+              <a
+                onClick={(e) => {
+                  // @ts-ignore
+                  window.gtag("event", "social_click", {
+                    event_category: "social_click",
+                    event_label: "GitHub",
+                    type: "GitHub"
+                  })
+                }}
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/triamudomcmc"
+              >
                 <SocialGitHub className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
             </div>

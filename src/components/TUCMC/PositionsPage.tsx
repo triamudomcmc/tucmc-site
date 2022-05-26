@@ -103,6 +103,12 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
               onClick={() => {
                 setTab(pos)
                 replace({ query: { ...query, pos } }, undefined, { shallow: true })
+                // @ts-ignore
+                window.gtag("event", "tucmc_position_tab", {
+                  event_category: "tucmc_position_tab",
+                  event_label: pos,
+                  position: pos
+                })
               }}
               className={combine(
                 getTab(pos),

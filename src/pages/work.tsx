@@ -2,6 +2,7 @@ import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import { NextPage } from "next"
 
 const WorkPage: NextPage = () => {
+  // add gtag for link click
   return (
     <DescribeRoute
       title="ผลงานของเรา"
