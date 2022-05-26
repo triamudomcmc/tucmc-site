@@ -70,14 +70,24 @@ export const Positions: Record<string, PositionData> = {
           "หลังจากที่ประชุมสรุปงานกันแล้ว ส่วนมากจะแบ่งงานกันตามความถนัดของแต่ละคน พอแบ่งงานกันแล้วถ้าใครมีปัญหาก็ช่วยเหลือกันได้"
       }
     ],
-    reviews: []
+    reviews: [
+      {
+        profileURL: "/assets/images/positions/GeneralCommittee/review-64.jpg",
+        contact: "IG: charmingten",
+        name: "ท๊อปเทน",
+        reviewText:
+          "“กรรมการกลาง” ตำแหน่งที่ตอบยากที่สุดเวลามีคนถามว่าทำหน้าที่อะไร เพราะตำแหน่งเราไม่มีหน้าที่ชัดเจนตายตัว แต่ถ้าบอกให้ทำอะไรต้องสามารถทำได้ทุกอย่าง5555 หลัก ๆ พวกเราจะเป็นคนคอยวางแผนและออกไอเดียในการประชุม คอยประสานงานระหว่างหน่วยงานทั้งในและนอกองค์กร รวมถึงงานอื่น ๆ เช่น การออกแบบ mini game ในเว็บไซต์ การวาง storyboard และกำกับการถ่ายคลิปวิดีโอที่ฉายในงาน Triam Udom Online Open House ทุกงานต้องดึงเอา soft skills และ hard skills ออกมาใช้อย่างเต็มที่ จนบางทีต้องประชุมติดกันหลายชั่วโมง เรียกได้ว่าเป็นงานที่หนักและเหนื่อยมาก ๆ แต่การได้มาทำงานในตรงนี้ มันก็ทำให้เราเติบโตขึ้น เราได้พัฒนาในหลายทักษะ เราตัดสินใจได้เด็ดขาดมากขึ้น เรารู้วิธีรับมือกับคนหลากหลายรูปแบบ เราทำงานได้ภายใต้ความกดดัน และที่สำคัญที่สุดเลยคือมิตรภาพดี ๆ ที่ได้กลับมา เพราะเรามีกันแค่ 12 คน เวลาเกิดอะไรขึ้นก็ต้องผ่านมันไปด้วยกัน ปลอบกันในวันที่ร้องไห้ ฉลองกันในวันที่มีความสุข รู้ตัวอีกทีทุกคนก็กลายมาเป็นคนสำคัญในชีวิตเราไปแล้ว555555 เรียกได้ว่าทุกวินาทีในฐานะ กช. มันสนุกและมีค่ามากจริง ๆ กล้าพูดได้เลยว่าไม่เคยเสียใจเลยซักครั้งที่ได้มาเป็น กช. ก็สำหรับใครที่สนใจก็อยากให้ลองมาสมัครดูนะคะ รับรองว่านี่จะเป็นประสบการณ์ที่ประทับใจและหาไม่ได้จากที่อื่น",
+        year: "กช.64"
+      }
+    ]
   },
   Secretary: {
     mainImgURL: "/assets/images/placeholder/position.jpg",
     nameEN: "Secretary",
     nameTH: "เลขานุการ",
     count: "1",
-    foreword: "ค่อยคิดคำโปรย",
+    foreword:
+      "Someone who excels at writing paper documents. Their worktable typically gets covered by enormous piles of paperwork.",
     job_description: [
       "ดูแลและรับผิดชอบงานเอกสารทั้งหมดของ กช.",
       "ทำสรุปประชุมกับประธานชมรมและหน่วยงานต่าง ๆ ในโรงเรียน",
@@ -104,7 +114,7 @@ export const Positions: Record<string, PositionData> = {
     ],
     reviews: [
       {
-        profileURL: "/assets/images/placeholder/person.jpg",
+        profileURL: "/assets/images/positions/Secretary/review-64.jpg",
         contact: "IG: noodeendd",
         name: "หนูดี",
         reviewText:
@@ -139,13 +149,13 @@ export const Positions: Record<string, PositionData> = {
     ],
     reviews: []
   },
-  Graphic: {
+  GraphicDesigner: {
     mainImgURL: "/assets/images/placeholder/position.jpg",
     nameEN: "Graphic Designer",
     nameTH: "กราฟิกดีไซเนอร์",
     count: "3",
     foreword:
-      "A person with the ability to make 20 posts per week and enjoys being corrected all the time. For them, the word “deadline” means nothing.",
+      "People with the ability to make 20 posts per week and enjoys being corrected all the time. For them, the word “deadline” means nothing.",
     job_description: [
       "นำข้อมูลมาจัดทำสื่อประชาสัมพันธ์ในรูปแบบต่าง ๆ เช่น อินโฟกราฟิก โปสเตอร์กิจกรรม ออกแบบเว็บไซต์",
       "ออกแบบสิ่งต่าง ๆ ตามที่ได้รับมอบหมาย เช่น ของรางวัลในงาน Triam Udom Open House",
@@ -194,7 +204,7 @@ export const Positions: Record<string, PositionData> = {
     ],
     reviews: [
       {
-        profileURL: "/assets/images/placeholder/person.jpg",
+        profileURL: "/assets/images/positions/GraphicDesigner/review-64.jpg",
         contact: "IG: _ggrxcw",
         name: "เกรซ",
         reviewText:
@@ -210,7 +220,7 @@ export const Positions: Record<string, PositionData> = {
     count: "1",
     note: "**มีการคัดเลือกจากผลงานและการทำโจทย์คัดเลือก**",
     foreword:
-      "A person who specializes in communicating` with the public on behalf of an organization. They act as both the master of ceremonies and the “Google“ of the organization.",
+      "Someone person who specializes in communication with the public on behalf of an organization. They act as both the master of ceremonies and the “Google“ of the organization.",
     job_description: [
       "พิธีกรในงานต่าง ๆ ของ กช.",
       "ดูแลและรับผิดชอบแพลตฟอร์มการประชาสัมพันธ์ของ กช.  (Facebook, Instagram, Twitter และ Youtube)",
@@ -237,7 +247,7 @@ export const Positions: Record<string, PositionData> = {
     ],
     reviews: [
       {
-        profileURL: "/assets/images/placeholder/person.jpg",
+        profileURL: "/assets/images/positions/PR/review-64.jpg",
         contact: "IG: gunaeng.hr",
         name: "กันย์",
         reviewText:
@@ -288,7 +298,7 @@ export const Positions: Record<string, PositionData> = {
     ],
     reviews: [
       {
-        profileURL: "/assets/images/placeholder/person.jpg",
+        profileURL: "/assets/images/positions/IT/review-64.jpg",
         contact: "IG: ttthhheeeeeeeee",
         name: "ธี",
         reviewText:

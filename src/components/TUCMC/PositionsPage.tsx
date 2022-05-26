@@ -121,18 +121,18 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
         <main className="relative mx-auto flex max-w-[1440px] flex-col space-y-8 bg-white px-4 pb-10 font-light text-TUCMC-gray-600 sm:px-10 xl:px-48">
           <section className="flex flex-col items-center">
             <h2 className="text-2xl font-normal text-TUCMC-gray-700">{positionData.nameEN}</h2>
-            <p className="mb-6 text-center text-lg font-light text-TUCMC-gray-600">
+            <p className="mb-2 text-center text-lg font-light text-TUCMC-gray-600">
               {positionData.nameTH} | {positionData.count} ตำแหน่ง
             </p>
 
-            <Zoomable
+            {/* <Zoomable
               width={350}
               height={350}
               updateOverlay={setZoomOverlay}
-              src="/assets/images/placeholder/position.jpg"
+              src={positionData.mainImgURL}
               className="rounded-2xl object-cover"
-              alt="Graphic Designerer"
-            />
+              alt={positionData.nameEN}
+            /> */}
           </section>
 
           <p>
