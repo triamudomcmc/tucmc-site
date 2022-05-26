@@ -16,7 +16,7 @@ export const AnnouncementSection: FC<{
   return (
     <article className="announcement-section mb-6 py-16 px-4">
       <div className="mx-auto flex max-w-[1000px] flex-col items-center justify-center space-y-4">
-        <h2 className="mb-4 text-center text-xl text-TUCMC-gray-600">ประขาสัมพันธ์</h2>
+        <h2 className="mb-4 text-center text-xl text-TUCMC-gray-600">ประชาสัมพันธ์</h2>
 
         <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
           <div className="group relative block cursor-pointer rounded-3xl">
