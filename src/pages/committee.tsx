@@ -89,7 +89,7 @@ const MembersPage: NextPage = () => {
             />
 
             <div className="">
-              <h3 className="sm:Ptext-2xl text-center text-lg font-medium text-TUCMC-gray-600 md:text-left">
+              <h3 className="text-center text-lg font-medium text-TUCMC-gray-600 sm:text-2xl md:text-left">
                 {Teachers[0].name}
               </h3>
               <p className="text-center font-light text-TUCMC-gray-500 md:text-left">{Teachers[0].role}</p>

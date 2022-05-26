@@ -379,8 +379,8 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2559/15.jpg"
     },
     {
-      name: "นายปรรพากร ศิริพานิช",
-      role: "ผู้ดูแลระบบเว็บไซต์",
+      name: "นางสาวมาริสา ปัญญาวุฒิชัย",
+      role: "ศิลปกรรม",
       imgURL: "/assets/images/committee/2559/16.jpg"
     },
     {
