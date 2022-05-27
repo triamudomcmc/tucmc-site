@@ -222,13 +222,13 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
             <div className="flex flex-col items-center">
               <h1 className="text-6xl font-bold">04</h1>
               <div className="w-min text-center text-xl font-bold leading-5 md:flex">
-                <p className="whitespace-nowrap">ตารางสอนและ</p>
+                <p className="whitespace-nowrap">ตารางเรียนและ</p>
                 <p className="whitespace-nowrap">ตารางสอบ</p>
               </div>
             </div>
             <p className="text-center">
               กช.
-              ได้นำตารางสอนและตารางสอบที่โรงเรียนเป็นผู้จัดทำมาสร้างสรรค์ในรูปแบบใหม่ให้น่าอ่านและเข้าใจง่ายมากยิ่งขึ้น
+              ได้นำตารางเรียนและตารางสอบที่โรงเรียนเป็นผู้จัดทำมาสร้างสรรค์ในรูปแบบใหม่ให้น่าอ่านและเข้าใจง่ายมากยิ่งขึ้น
               โดยนำมาปรับขนาดให้เหมาะกับการตั้งเป็น wallpaper หน้าจอบน Smart Phone / iPad
               ในส่วนของตารางสอบได้มีการทำแยกตามสายการเรียนต่าง ๆ เพื่อให้เกิดความสะดวกต่อการใช้งานของนักเรียน
             </p>
