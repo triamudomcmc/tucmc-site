@@ -11,7 +11,7 @@ const WorkPage: NextPage = () => {
     >
       <main className="relative mx-auto min-h-screen max-w-[1440px] px-4 py-10 sm:px-10 xl:px-48">
         <h1 className="text-2xl font-medium text-TUCMC-gray-700">ผลงานของเรา</h1>
-        <p className="font-light text-TUCMC-gray-600">Work In Progress...</p>
+        <p className="font-light text-TUCMC-gray-600">Coming Soon...</p>
       </main>
     </DescribeRoute>
   )
