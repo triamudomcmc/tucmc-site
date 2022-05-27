@@ -40,7 +40,7 @@ export const AnnouncementSection: FC<{
             {width <= SM && (
               <Link href={href} passHref>
                 <a className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-12 py-3 text-center text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-colors group-hover:bg-gray-100 sm:px-8 sm:text-lg lg:px-10 lg:text-2xl">
-                  เข้าชมงาน
+                  {actionText}
                 </a>
               </Link>
             )}
