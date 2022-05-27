@@ -164,7 +164,7 @@ export const Positions: Record<string, PositionData> = {
     mainImgURL: "/assets/images/placeholder/position.jpg",
     nameEN: "Graphic Designer",
     nameTH: "กราฟิกดีไซเนอร์",
-    count: "3",
+    count: "2-3",
     foreword:
       "People with the ability to make 20 posts per week and enjoys being corrected all the time. For them, the word “deadline” means nothing.",
     job_description: [
@@ -210,7 +210,7 @@ export const Positions: Record<string, PositionData> = {
       {
         question:
           "นอกเหนือจากงานที่ได้รับมอบหมายแล้ว สามารถสร้างสรรค์ผลงานเพิ่มเติมหรือทำคอนเทนต์ของตัวเองได้หรือไม่ ?",
-        answer: "<b>ได้ !</b> กราฟิกดีไซน์เนอร์สามารถทำคอนเทนต์ใหม่ขึ้นมาตามความสนใจของตัวเองได้"
+        answer: "<b>ได้ !</b> กราฟิกดีไซเนอร์สามารถทำคอนเทนต์ใหม่ขึ้นมาตามความสนใจของตัวเองได้"
       }
     ],
     reviews: [
@@ -315,7 +315,7 @@ export const Positions: Record<string, PositionData> = {
       {
         question: "กช. ใช้ภาษาคอมพิวเตอร์อะไรบ้างในการทำงาน ถ้าไม่เคยใช้ภาษาเหล่านี้สามารถสมัครได้ไหม ?",
         answer:
-          "<b>สมัครได้ !</b> สำหรับปีนี้ในส่วนของเว็บไซต์ Front End ใช้ Javascript และในส่วนของ Back End ใช้ Javascript ในส่วนอื่น ๆ นอกจากการพัฒนาเว็บไซต์ เช่น การจัดการข้อมูลทั่วไป ส่วนใหญ่จะใช้ Javascript (ภาษาที่ใช้เขียนในการโปรแกรมจัดการข้อมูลสามารถเปลี่ยนได้ตามความถนัดของผู้ดูแลระบบแต่ละคน)"
+          "<b>สมัครได้ !</b> สำหรับปีนี้ในส่วนของเว็บไซต์ Front End ใช้ JavaScript และในส่วนของ Back End ใช้ JavaScript ในส่วนอื่น ๆ นอกจากการพัฒนาเว็บไซต์ เช่น การจัดการข้อมูลทั่วไป ส่วนใหญ่จะใช้ JavaScript (ภาษาที่ใช้เขียนในการโปรแกรมจัดการข้อมูลสามารถเปลี่ยนได้ตามความถนัดของผู้ดูแลระบบแต่ละคน)"
       }
     ],
     reviews: [
