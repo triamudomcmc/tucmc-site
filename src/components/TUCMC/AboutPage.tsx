@@ -20,105 +20,31 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
               loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_0241.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_0503.jpeg"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_0508.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_7249.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_8053.jpeg"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_7251.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_7252.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_7253.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ClubActivities/IMG_7250.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
+              {[
+                "/assets/images/TUCMC/ClubActivities/IMG_0241.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_0503.jpeg",
+                "/assets/images/TUCMC/ClubActivities/IMG_0508.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_7249.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_8053.jpeg",
+                "/assets/images/TUCMC/ClubActivities/IMG_7251.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_7252.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_7253.png",
+                "/assets/images/TUCMC/ClubActivities/IMG_7250.png"
+              ].map((imgURL) => {
+                return (
+                  <SwiperSlide key={imgURL} style={{ width: "256px" }}>
+                    <div className="w-[256px]">
+                      <Zoomable
+                        width={456}
+                        height={302}
+                        updateOverlay={setZoomOverlay}
+                        src={imgURL}
+                        className="object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
             </Swiper>
           </div>
           <div className="mx-auto max-w-2xl space-y-5 px-6">
@@ -145,127 +71,33 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
               loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7254.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7255.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7256.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7257.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7258.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7260.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7259.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7261.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7262.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7301.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/CharityActivities/IMG_7302.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
+              {[
+                "/assets/images/TUCMC/CharityActivities/IMG_7254.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7255.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7256.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7257.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7258.JPG",
+                "/assets/images/TUCMC/CharityActivities/IMG_7260.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7259.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7261.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7262.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7301.png",
+                "/assets/images/TUCMC/CharityActivities/IMG_7302.png"
+              ].map((imgURL) => {
+                return (
+                  <SwiperSlide key={imgURL} style={{ width: "256px" }}>
+                    <div className="w-[256px]">
+                      <Zoomable
+                        width={456}
+                        height={302}
+                        updateOverlay={setZoomOverlay}
+                        src={imgURL}
+                        className="object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
             </Swiper>
           </div>
           <div className="mx-auto max-w-2xl space-y-5 px-6">
@@ -294,127 +126,38 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
               loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7263.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7264.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7265.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7266.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7267.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7286.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7269.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7270.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7276.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7282.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={302}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/OpenHouse/IMG_7268.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
+              {[
+                "/assets/images/TUCMC/OpenHouse/IMG_7263.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_7264.JPG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7265.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_7266.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_7267.JPG",
+                "/assets/images/TUCMC/OpenHouse/5802DF05-5722-4164-BBA6-CE4BCB82B0C7-min.jpg",
+                "/assets/images/TUCMC/OpenHouse/DSCF4135-min.JPG",
+                "/assets/images/TUCMC/OpenHouse/DSCF4309-min.JPG",
+                "/assets/images/TUCMC/OpenHouse/DSCF3957-min.JPG",
+                "/assets/images/TUCMC/OpenHouse/DSCF4393-min.JPG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7286.PNG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7269.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_7270.JPG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7276.PNG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7282.PNG",
+                "/assets/images/TUCMC/OpenHouse/IMG_7268.png"
+              ].map((imgURL) => {
+                return (
+                  <SwiperSlide key={imgURL} style={{ width: "256px" }}>
+                    <div className="w-[256px]">
+                      <Zoomable
+                        width={456}
+                        height={302}
+                        updateOverlay={setZoomOverlay}
+                        src={imgURL}
+                        className="object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
             </Swiper>
           </div>
           <div className="mx-auto max-w-2xl space-y-5 px-6">
@@ -444,105 +187,35 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
               loop
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7271.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7272.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7274.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7275.JPG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/MueNgae.png"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7279.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7280.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7284.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "256px" }}>
-                <div className="w-[256px]">
-                  <Zoomable
-                    width={456}
-                    height={862}
-                    updateOverlay={setZoomOverlay}
-                    src="/assets/images/TUCMC/ArtWorks/IMG_7278.PNG"
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
+              {[
+                "/assets/images/TUCMC/ArtWorks/IMG_7272.JPG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7275.JPG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7274.JPG",
+                "/assets/images/TUCMC/ArtWorks/sum_1_2564.jpg",
+                "/assets/images/TUCMC/ArtWorks/final_1_2564.jpg",
+                "/assets/images/TUCMC/ArtWorks/final_2_2564.jpg",
+                "/assets/images/TUCMC/ArtWorks/saphap.jpg",
+                "/assets/images/TUCMC/ArtWorks/MueNgae.png",
+                "/assets/images/TUCMC/ArtWorks/IMG_7279.PNG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7280.PNG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7284.PNG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7278.PNG",
+                "/assets/images/TUCMC/ArtWorks/IMG_7271.JPG"
+              ].map((imgURL) => {
+                return (
+                  <SwiperSlide key={imgURL} style={{ width: "256px" }}>
+                    <div className="w-[256px]">
+                      <Zoomable
+                        width={456}
+                        height={862}
+                        updateOverlay={setZoomOverlay}
+                        src={imgURL}
+                        className="object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
             </Swiper>
           </div>
           <div className="mx-auto max-w-2xl space-y-5 px-6">
