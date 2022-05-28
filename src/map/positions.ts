@@ -282,7 +282,7 @@ export const Positions: Record<string, PositionData> = {
     mainImgURL: "/assets/images/positions/IT/cover.jpg",
     nameEN: "Web Developer",
     nameTH: "ผู้ดูแลระบบเว็บไซต์",
-    count: "2-3",
+    count: "1-3",
     foreword:
       "People who are responsible for developing websites and have their own jargon that nobody understands. They always say “เว็บไม่ล่มครับ”",
     job_description: [
