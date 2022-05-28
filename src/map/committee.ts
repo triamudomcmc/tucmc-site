@@ -126,7 +126,7 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2563/7.jpg"
     },
     {
-      name: "นางสาวสปันดา นามาภานันท์",
+      name: "นางสาวสปันดา นามาภินันท์",
       role: "สาราณียกร",
       imgURL: "/assets/images/committee/2563/8.jpg"
     },
