@@ -11,6 +11,7 @@ import { ChartBarIcon, StarIcon, WifiIcon } from "@heroicons/react/solid"
 import { combine } from "@services/tailwind"
 import { useRouter } from "next/router"
 import { PositionsPage } from "@components/TUCMC/PositionsPage"
+import Link from "next/link"
 
 const variants = {
   initial: { y: -20, opacity: 0 },
@@ -118,12 +119,20 @@ const TUCMC: NextPage = () => {
         </div>
 
         <article className="space-y-6 pt-10">
-          <h1 className="text-center text-2xl font-bold text-white">อยากเป็น กช. ต้องทำยังไง ?</h1>
-          <p className="mx-auto max-w-2xl px-5 pb-4 text-center text-white">
-            คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 จะเปิดรับสมัครในเร็ว ๆ นี้ !
-            โดยจะมีการคัดเลือกผ่านการกรอกฟอร์ม และสัมภาษณ์รายบุคคล
-            รอติดตามรายละเอียดการรับสมัครได้จากช่องทางการติดต่อข้างล่างนี้เลย
-          </p>
+          <div className="flex flex-col items-center space-y-6">
+            <h1 className="text-center text-2xl font-bold text-white">อยากเป็น กช. ต้องทำยังไง ?</h1>
+            <p className="mx-auto max-w-2xl px-5 pb-4 text-center text-white">
+              คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 เปิดรับสมัครแล้ว !
+              โดยจะมีการคัดเลือกผ่านการกรอกฟอร์ม และสัมภาษณ์รายบุคคล
+            </p>
+
+            <Link href="https://tucm.cc/admission" passHref>
+              <a className="w-64 whitespace-nowrap rounded-full bg-white px-12 py-3 text-center text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-all hover:scale-105 hover:bg-TUCMC-gray-100 sm:px-8 sm:text-lg lg:px-10 lg:text-2xl">
+                สมัครเลย
+              </a>
+            </Link>
+          </div>
+
           <div className="mx-auto h-[232px] w-[312px] rounded-t-[48px] bg-TUCMC-gray-900">
             <div className="relative left-[14px] top-[14px] h-[218px] w-[284px] rounded-t-[34px] bg-white">
               <div className="absolute top-0 flex w-full justify-center">
