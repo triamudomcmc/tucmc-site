@@ -131,14 +131,14 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
               {positionData.nameTH} | {positionData.count} ตำแหน่ง
             </p>
 
-            {/* <Zoomable
+            <Zoomable
               width={350}
               height={350}
               updateOverlay={setZoomOverlay}
               src={positionData.mainImgURL}
               className="rounded-2xl object-cover"
               alt={positionData.nameEN}
-            /> */}
+            />
           </section>
 
           <p>

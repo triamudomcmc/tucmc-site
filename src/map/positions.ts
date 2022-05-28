@@ -26,7 +26,7 @@ export interface PositionData {
 
 export const Positions: Record<string, PositionData> = {
   GeneralCommittee: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/GeneralCommittee/cover.jpg",
     nameEN: "General Committee",
     nameTH: "กรรมการกลาง",
     count: "4-6",
@@ -82,7 +82,7 @@ export const Positions: Record<string, PositionData> = {
     ]
   },
   Secretary: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/Secretary/cover.jpg",
     nameEN: "Secretary",
     nameTH: "เลขานุการ",
     count: "1",
@@ -95,7 +95,7 @@ export const Positions: Record<string, PositionData> = {
     ],
     requirements: [
       "เป็นนักเรียนชั้น ม.4 หรือ ม.5 ในปีการศึกษา 2565",
-      "มีความสามารถและเชี่ยวชาญในการใช้โปรแกรม Microsoft Word, Google Docs, Google Sheets, Google Slides, Excel ฯลฯ ในการจัดทำสรุปและจัดทำเอกสารอย่างน้อย 1 โปรแกรม",
+      "มีความสามารถและเชี่ยวชาญในการใช้โปรแกรม Microsoft Word, Microsoft Excel, Google Docs, Google Sheets ฯลฯ ในการจัดทำสรุปและจัดทำเอกสารอย่างน้อย 1 โปรแกรม",
       "สามารถพิสูจน์อักษรและใช้ภาษาไทยได้เป็นอย่างดี",
       "มีทักษะในการสื่อสารและเลือกใช้ระดับภาษาให้เหมาะสมกับงานและบุคคล",
       "ละเอียด รอบคอบ สามารถแก้ไขปัญหาเฉพาะหน้าได้ดี"
@@ -124,7 +124,7 @@ export const Positions: Record<string, PositionData> = {
     ]
   },
   Cameraman: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/Cameraman/cover.jpg",
     nameEN: "Cameraman",
     nameTH: "ช่างกล้อง",
     count: "1",
@@ -161,7 +161,7 @@ export const Positions: Record<string, PositionData> = {
     reviews: []
   },
   GraphicDesigner: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/GraphicDesigner/cover.jpg",
     nameEN: "Graphic Designer",
     nameTH: "กราฟิกดีไซเนอร์",
     count: "2-3",
@@ -225,7 +225,7 @@ export const Positions: Record<string, PositionData> = {
     ]
   },
   PR: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/PR/cover.jpg",
     nameEN: "Public Relations",
     nameTH: "ประชาสัมพันธ์",
     count: "1",
@@ -243,7 +243,7 @@ export const Positions: Record<string, PositionData> = {
       "มีประสบการณ์ด้านการพูดในที่สาธารณะ เช่น การทำพิธีกร การเป็นผู้ดำเนินรายการ",
       "มีไหวพริบและความมุ่งมั่นในการทำงานและสร้างสรรค์สิ่งใหม่ ๆ",
       "มีมนุษยสัมพันธ์ดี สามารถติดต่อสื่อสารและทำงานร่วมกับบุคคลอื่นทั้งในและนอกองค์กรได้อย่างดีเยี่ยม",
-      "มีความรู้และความเข้าใจในสื่อ Social Media ที่กำลังเป็นที่นิยมในปัจจุบันได้เป็นอย่างดี เช่น Instagram, Facebook, Line, Twitter, Youtube, TikTok, Clubhouse ฯลฯ",
+      "มีความรู้และความเข้าใจในสื่อ Social Media ที่กำลังเป็นที่นิยมในปัจจุบันได้เป็นอย่างดี เช่น Instagram, Facebook, LINE, Twitter, Youtube, TikTok, Clubhouse ฯลฯ",
       "ติดตามข่าวสาร อัปเดตกระแสใหม่ ๆ ในสังคมอยู่เสมอ"
     ],
     FAQ: [
@@ -279,7 +279,7 @@ export const Positions: Record<string, PositionData> = {
     ]
   },
   IT: {
-    mainImgURL: "/assets/images/placeholder/position.jpg",
+    mainImgURL: "/assets/images/positions/IT/cover.jpg",
     nameEN: "Web Developer",
     nameTH: "ผู้ดูแลระบบเว็บไซต์",
     count: "2-3",

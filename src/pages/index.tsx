@@ -67,19 +67,25 @@ const Landing: FC = () => {
         <AnnouncementSection
           title="รับสมัคร กช.65"
           body={
-            <p>
-              𝐂𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧 ⟢ รับสมัคร กช.65 🕹🚖
-              <br />
-              ติดตามเพื่อรับข้อมูลข่าวสารการ Audition ได้ทาง
-              <br />
-              Instagram: tucmc_official
-              <br />
-              Facebook page: TUCMC
-            </p>
+            <div>
+              <h3 className="mb-4">⌜ ⎯ 🫴🏻 𝐏𝐈𝐂𝐊 𝐘𝐎𝐔𝐑 𝐑𝐈𝐆𝐇𝐓 𝐃𝐑𝐈𝐍𝐊 𝐀𝐍𝐃 𝐒𝐄𝐈𝐙𝐄 𝐓𝐇𝐄 𝐎𝐏𝐏𝐎𝐑𝐓𝐔𝐍𝐈𝐓𝐘 🍾 ⌝.</h3>
+              <p className="my-2">
+                Insert coin ✧˖° เลือกเครื่องดื่มของคุณในการคัดเลือก ✱ คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.)
+                ประจำปีการศึกษา 2565
+              </p>
+              <p className="my-2">
+                𓏔🍹 ตำแหน่งที่เปิดรับ 🍒 ✳️ ꒱ ⌗ กรรมการกลาง 4-6 ตำแหน่ง ⌗ เลขานุการ 1 ตำแหน่ง ⌗ ช่างกล้อง 1 ตำแหน่ง ⌗
+                ประชาสัมพันธ์ 1 ตำแหน่ง ⌗ ผู้พัฒนาเว็บไซต์ 1-3 ตำแหน่ง ⌗ กราฟิกดีไซเนอร์ 2-3 ตำแหน่ง
+              </p>
+              <p className="my-2">กรอกใบสมัครได้ตั้งแต่วันนี้ - 3 มิถุนายน 2565</p>
+              <p className="my-2">🕹 สอบถามข้อมูลเกี่ยวกับการคัดเลือกเพิ่มเติมได้ที่</p>
+              <p className="mt-2">IG: tucmc_official</p>
+              <p className="mb-2">FB: TUCMC</p>
+            </div>
           }
-          actionText="ดูข้อมูลเพิ่มเติม"
+          actionText="สมัครเลย"
           imgSrc={announcementSrc}
-          href="/TUCMC?type=positions"
+          href="https://forms.gle/YvCJNK1gZzr12pbJ9"
         />
 
         <section className="grid grid-cols-1 sm:grid-cols-3 sm:px-6 md:px-24 lg:px-48">
