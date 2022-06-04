@@ -7,6 +7,8 @@ import { Dispatch, FC, SetStateAction, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { combine } from "@services/tailwind"
 import { Router, useRouter } from "next/router"
+import { SM } from "@utilities/constants"
+import { useWindowDimensions } from "@utilities/document"
 
 const PersonCard: FC<{
   setZoomOverlay: Dispatch<SetStateAction<JSX.Element>>
@@ -52,6 +54,7 @@ const MembersPage: NextPage = () => {
   const [zoomOverlay, setZoomOverlay] = useState(<></>)
   const { query, replace } = useRouter()
   const [tab, setTab] = useState<string>("2563")
+  const { width } = useWindowDimensions()
 
   useEffect(() => {
     if (query?.year && YEARS.includes(query?.year as string)) {
@@ -80,8 +83,8 @@ const MembersPage: NextPage = () => {
 
           <div className="mb-6 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8">
             <Zoomable
-              width={240}
-              height={240}
+              width={width > SM ? 240 : 256}
+              height={width > SM ? 240 : 256}
               updateOverlay={setZoomOverlay}
               src={Teachers[0].imgURL}
               className="rounded-2xl object-cover"
