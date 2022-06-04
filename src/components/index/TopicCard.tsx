@@ -18,7 +18,7 @@ export const TopicCard: FC<{
           <Link href={href} passHref>
             <a>
               <Image
-                className="h-full w-full rounded-3xl shadow-md"
+                className="h-full w-full rounded-3xl object-cover shadow-md"
                 // style={{ borderRadius: "0.5rem" }}
                 src={imgSrc}
                 layout="intrinsic"
