@@ -125,12 +125,6 @@ const TUCMC: NextPage = () => {
               คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 เปิดรับสมัครแล้ว !
               โดยจะมีการคัดเลือกผ่านการกรอกฟอร์ม และสัมภาษณ์รายบุคคล
             </p>
-
-            <Link href="https://tucm.cc/admission" passHref>
-              <a className="w-64 whitespace-nowrap rounded-full bg-white px-12 py-3 text-center text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-all hover:scale-105 hover:bg-TUCMC-gray-100 sm:px-8 sm:text-lg lg:px-10 lg:text-2xl">
-                สมัครเลย
-              </a>
-            </Link>
           </div>
 
           <div className="mx-auto h-[232px] w-[312px] rounded-t-[48px] bg-TUCMC-gray-900">
