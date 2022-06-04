@@ -80,8 +80,8 @@ const MembersPage: NextPage = () => {
 
           <div className="mb-6 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8">
             <Zoomable
-              width={256}
-              height={256}
+              width={240}
+              height={240}
               updateOverlay={setZoomOverlay}
               src={Teachers[0].imgURL}
               className="rounded-2xl object-cover"
