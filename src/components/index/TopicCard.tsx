@@ -8,9 +8,15 @@ export const TopicCard: FC<{
   actionText: string
   imgSrc: StaticImageData
   href: string
-}> = ({ title, actionText, imgSrc, href }) => {
+  className?: string
+}> = ({ title, actionText, imgSrc, href, className }) => {
   return (
-    <article className={combine("mb-6 flex flex-col items-center justify-center space-y-4 py-16 px-4")}>
+    <article
+      className={combine(
+        className ? className : "",
+        "mb-6 flex flex-col items-center justify-center space-y-4 py-4 px-4"
+      )}
+    >
       <h2 className="text-center text-xl text-TUCMC-gray-600">{title}</h2>
 
       <div className="group relative block cursor-pointer rounded-3xl">

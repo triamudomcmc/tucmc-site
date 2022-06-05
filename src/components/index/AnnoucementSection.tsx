@@ -14,7 +14,7 @@ export const AnnouncementSection: FC<{
   const { width } = useWindowDimensions()
 
   return (
-    <article className="announcement-section mb-6 py-16 px-4">
+    <article className="py-16 px-4">
       <div className="mx-auto flex max-w-[1000px] flex-col items-center justify-center space-y-4">
         <h2 className="mb-4 text-center text-xl text-TUCMC-gray-600">ประชาสัมพันธ์</h2>
 
