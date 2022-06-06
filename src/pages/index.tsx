@@ -67,23 +67,17 @@ const Landing: FC = () => {
 
         <section className="announcement-section py-6">
           <AnnouncementSection
-            title="รับสมัคร กช.65"
+            title="ประกาศรายชื่อผู้มีสิทธิ์สัมภาษณ์ กช.65"
             body={
               <div>
-                <h3 className="mb-4">⌜ ⎯ 🫴🏻 𝐏𝐈𝐂𝐊 𝐘𝐎𝐔𝐑 𝐑𝐈𝐆𝐇𝐓 𝐃𝐑𝐈𝐍𝐊 𝐀𝐍𝐃 𝐒𝐄𝐈𝐙𝐄 𝐓𝐇𝐄 𝐎𝐏𝐏𝐎𝐑𝐓𝐔𝐍𝐈𝐓𝐘 🍾 ⌝.</h3>
                 <p className="my-2">
-                  Insert coin ✧˖° เลือกเครื่องดื่มของคุณในการคัดเลือก ✱ คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.)
-                  ประจำปีการศึกษา 2565
+                  ผู้ที่ผ่านการคัดเลือกรอบที่ 1 ต้องเข้ากลุ่มไลน์เพื่อจองเวลาเข้ารับการสัมภาษณ์ภายในวันที่ 6 มิ.ย. 65
                 </p>
-                <p className="my-2">กรอกใบสมัครได้ตั้งแต่วันนี้ - 3 มิถุนายน 2565</p>
-                <p className="my-2">🕹 สอบถามข้อมูลเกี่ยวกับการคัดเลือกเพิ่มเติมได้ที่</p>
-                <p className="mt-2">IG: tucmc_official</p>
-                <p className="mb-2">FB: TUCMC</p>
               </div>
             }
-            actionText="สมัครเลย"
+            actionText="ตรวจสอบรายชื่อ"
             imgSrc={announcementSrc}
-            href="https://forms.gle/YvCJNK1gZzr12pbJ9"
+            href="https://drive.google.com/file/d/1jsJyC8F9fqqRwMTRS5ZaWsZuhN3maZvy/view?usp=sharing"
           />
         </section>
 
