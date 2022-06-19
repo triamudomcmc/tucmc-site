@@ -154,14 +154,8 @@ const WorkPage: NextPage<{
   stickerImgPaths: { name: string; path: string }[]
   backgroundImgPaths: Array<BackgroundImageType>
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
-  // add gtag for link click
-
   return (
-    <DescribeRoute
-      title="ผลงานของเรา"
-      description="ผลงานทั้งหมดของคณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.)"
-      imgURL="/meta/work.jpg"
-    >
+    <DescribeRoute title="From TUCMC ♡" description="ผลงานทั้งหมดจาก กช." imgURL="/meta/work.jpg">
       <main className="relative mx-auto min-h-screen max-w-[1440px] px-4 py-10 sm:px-10 xl:px-48">
         <h1 className="text-2xl font-medium text-TUCMC-gray-700">From TUCMC ♡</h1>
 
