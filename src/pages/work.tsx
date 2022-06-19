@@ -8,7 +8,7 @@ import { readdir } from "fs/promises"
 
 const StickerImage: FC<{ src: string; name: string }> = ({ src, name }) => {
   function downloadFile() {
-    //@ts-ignore
+    // @ts-ignore
     window.gtag("event", `download_sticker_${name}`, { name })
     const a = document.createElement("a")
     a.href = src
@@ -47,7 +47,7 @@ type BackgroundImageType = [
 
 const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
   function downloadFile(src: string, name: string) {
-    //@ts-ignore
+    // @ts-ignore
     window.gtag("event", `download_background_${name}`, { name })
     const a = document.createElement("a")
     a.href = src

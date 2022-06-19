@@ -46,7 +46,12 @@ module.exports = {
     "react/jsx-boolean-value": 0,
     "react/self-closing-comp": 0,
     "jsx-a11y/no-static-element-interactions": 0,
-    "no-prototype-builtins": 0
+    "no-prototype-builtins": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "spaced-comment": 0,
+    "no-irregular-whitespace": 0,
+    "no-unneeded-ternary": 0
   },
   ignorePatterns: [
     "__tests__",
