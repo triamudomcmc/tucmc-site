@@ -51,7 +51,9 @@ module.exports = {
     "react/jsx-no-useless-fragment": 0,
     "spaced-comment": 0,
     "no-irregular-whitespace": 0,
-    "no-unneeded-ternary": 0
+    "no-unneeded-ternary": 0,
+    "no-await-in-loop": 0,
+    "no-restricted-syntax": 0
   },
   ignorePatterns: [
     "__tests__",

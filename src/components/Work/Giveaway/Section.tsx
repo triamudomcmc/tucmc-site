@@ -1,9 +1,9 @@
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import { FC, useState } from "react"
-import { BackgroundImage, StickerImage } from "./Elements"
-import { BackgroundImageType } from "./types"
 import { AnimatePresence, motion } from "framer-motion"
 import { DownloadIcon } from "@heroicons/react/solid"
+import { BackgroundImageType } from "./types"
+import { BackgroundImage, StickerImage } from "./Elements"
 
 const PNGGiveaway: FC<{ stickerImgPaths: { name: string; path: string }[] }> = ({ stickerImgPaths }) => {
   const [show, setShow] = useState(true)
