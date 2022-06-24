@@ -85,7 +85,7 @@ const BGGiveaway: FC<{ backgroundImgPaths: BackgroundImageType[] }> = ({ backgro
   return (
     <>
       <div className="flex items-end justify-between">
-        <h2 className="mt-6 text-lg font-light text-TUCMC-gray-600">แจก PNG Sticker</h2>
+        <h2 className="mt-6 text-lg font-light text-TUCMC-gray-600">แจก Wallpaper/Background</h2>
 
         <motion.button
           variants={{
