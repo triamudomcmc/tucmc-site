@@ -76,9 +76,13 @@ const WorkPage: NextPage<{
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
   const { replace, query } = useRouter()
 
-  const [workTab, setWorkTab] = useState<TabType>(
-    query?.type && ["projects", "giveaway"].includes(query?.type as string) ? (query?.type as TabType) : "projects"
-  )
+  const [workTab, setWorkTab] = useState<TabType>("projects")
+
+  useEffect(() => {
+    if (query?.type && ["projects", "giveaway"].includes(query?.type as string)) {
+      setWorkTab(query?.type as TabType)
+    }
+  }, [query?.type])
 
   const getTab = (tabName: TabType) => {
     return workTab === tabName
