@@ -7,7 +7,7 @@ export const GiveawaySection: FC<{
   backgroundImgPaths: Array<BackgroundImageType>
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
   return (
-    <div>
+    <>
       <h2 className="mt-6 text-lg font-light text-TUCMC-gray-600">แจก PNG Sticker</h2>
 
       <section className="my-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -23,6 +23,6 @@ export const GiveawaySection: FC<{
           return <BackgroundImage key={img[1].path} img={img} />
         })}
       </section>
-    </div>
+    </>
   )
 }
