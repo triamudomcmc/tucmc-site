@@ -101,7 +101,7 @@ const WorkPage: NextPage<{
                 type="button"
                 onClick={() => {
                   setWorkTab("projects")
-                  replace({ query: { type: "projects" } }, undefined, { shallow: true })
+                  replace({ query: { ...query, type: "projects" } }, undefined, { shallow: true })
                 }}
                 className={combine(
                   getTab("projects"),
@@ -115,7 +115,7 @@ const WorkPage: NextPage<{
                 type="button"
                 onClick={() => {
                   setWorkTab("giveaway")
-                  replace({ query: { type: "giveaway" } }, undefined, { shallow: true })
+                  replace({ query: { ...query, type: "giveaway" } }, undefined, { shallow: true })
                 }}
                 className={combine(
                   getTab("giveaway"),

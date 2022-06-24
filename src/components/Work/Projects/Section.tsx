@@ -5,7 +5,8 @@ import { useWindowDimensions } from "@utilities/document"
 import { splitArray } from "@utilities/splitArray"
 import Image from "next/image"
 import Link from "next/link"
-import { FC, useState } from "react"
+import { useRouter } from "next/router"
+import { FC, useEffect, useState } from "react"
 
 const YEARS = ["2564", "2563", "2562"]
 
@@ -24,7 +25,15 @@ const sortByDate = (works: TTUCMCWork[]) => {
 }
 
 export const TUCMCProjectsSection: FC = () => {
-  const [tab, setTab] = useState("2564")
+  const { query, replace } = useRouter()
+
+  const [tab, setTab] = useState(YEARS[0])
+
+  useEffect(() => {
+    if (YEARS.includes(query?.year as string)) {
+      setTab(query?.year as string)
+    }
+  }, [query?.year])
 
   const getTab = (tabName: string) => {
     return tab === tabName
@@ -45,6 +54,7 @@ export const TUCMCProjectsSection: FC = () => {
               key={year}
               onClick={() => {
                 setTab(year)
+                replace({ query: { ...query, year } }, undefined, { shallow: true })
               }}
               className={combine(getTab(year), "w-32 rounded-md px-6 py-2 text-center font-light")}
             >
