@@ -16,7 +16,7 @@ const dateSortFunc = (a: TTUCMCWork, b: TTUCMCWork) => {
   const date1 = new Date(+y1, +m1 - 1, +d1)
   const date2 = new Date(+y2, +m2 - 1, +d2)
 
-  return date1.getTime() - date2.getTime()
+  return date2.getTime() - date1.getTime()
 }
 
 const sortByDate = (works: TTUCMCWork[]) => {
