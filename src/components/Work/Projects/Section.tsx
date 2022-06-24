@@ -53,7 +53,7 @@ export const TUCMCProjectsSection: FC = () => {
                   <div className="relative p-4">
                     <h3 className="mb-2 text-xl text-TUCMC-gray-800">{work.name}</h3>
                     <p className="text-TUCMC-gray-600">{work.date}</p>
-                    <p className="mt-2 text-TUCMC-gray-500">{work.description}</p>
+                    <p className="mt-2 whitespace-pre-wrap text-TUCMC-gray-500">{work.description}</p>
                   </div>
                 </article>
               </a>
