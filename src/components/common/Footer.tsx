@@ -70,7 +70,7 @@ const Footer = () => {
                 }}
                 rel="noreferrer"
                 target="_blank"
-                href="https://github.com/triamudomcmc"
+                href="https://github.com/triamudomcmc/tucmc-site"
               >
                 <SocialGitHub className="h-10 w-10 text-white md:h-6 md:w-6" />
               </a>
