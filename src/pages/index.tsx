@@ -96,12 +96,12 @@ const Landing: FC = () => {
         </section>
 
         <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
-          <TopicCard href="/TUCMC" title="กช. คืออะไร​ ?" actionText="หาคำตอบได้ที่นี่" imgSrc={WhatIsTUCMCSrc} />
+          <TopicCard href="/TUCMC" title="กช. คืออะไร​ ?" actionText="เกี่ยวกับ กช." imgSrc={WhatIsTUCMCSrc} />
           <TopicCard href="/committee" title="ทำความรู้จักพวกเรา" actionText="บุคลากร" imgSrc={peopleSrc} />
         </section>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
-          <TopicCard href="/work" title="ผลงานของเรา" actionText="ดูผลงาน" imgSrc={projectSrc} />
+          <TopicCard href="/work" title="ผลงานของเรา" actionText="From TUCMC ♡" imgSrc={projectSrc} />
           <TopicCard
             href="https://register.clubs.triamudom.ac.th/clubs"
             title="กิจกรรมชมรม"
