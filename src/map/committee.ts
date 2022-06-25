@@ -54,13 +54,13 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2564/5.jpg"
     },
     {
-      name: "นางสาวณัฐฏ์ณิชชา อัครปิยโภคิน",
-      role: "กราฟิกดีไซเนอร์",
+      name: "นางสาวสกุลกาญจน์ ไกรนรา",
+      role: "เลขานุการ",
       imgURL: "/assets/images/committee/2564/6.jpg"
     },
     {
-      name: "นางสาวสกุลกาญจน์ ไกรนรา",
-      role: "เลขานุการ",
+      name: "นางสาวณัฐฏ์ณิชชา อัครปิยโภคิน",
+      role: "กราฟิกดีไซเนอร์",
       imgURL: "/assets/images/committee/2564/7.jpg"
     },
     {
@@ -79,8 +79,8 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2564/10.jpg"
     },
     {
-      name: "นายปณิธิ มักเที่ยงตรง",
-      role: "สาราณียกร",
+      name: "นายภัทรกูล คำสะอาด",
+      role: "ประชาสัมพันธ์",
       imgURL: "/assets/images/committee/2564/11.jpg"
     },
     {
