@@ -93,7 +93,7 @@ const WorkPage: NextPage<{
   return (
     <DescribeRoute title="From TUCMC ♡" description="ผลงานทั้งหมดจาก กช." imgURL="/meta/work.jpg">
       <main className="relative mx-auto min-h-screen max-w-[1440px] px-4 py-10 sm:px-10 xl:px-48">
-        <h1 className="text-center text-2xl font-medium text-TUCMC-gray-700">From TUCMC ♡</h1>
+        <h1 className="text-center text-2xl font-medium text-TUCMC-gray-700">From ♡ TUCMC ♡</h1>
         <div className="relative mt-4 bg-white">
           <div className="mx-auto max-w-xl py-2 px-2">
             <div className="grid grid-cols-2 items-center justify-center rounded-lg border border-TUCMC-gray-400">
