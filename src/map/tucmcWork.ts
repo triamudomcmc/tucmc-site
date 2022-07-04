@@ -190,7 +190,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     },
     {
       id: "2564-4",
-      thumbnailURL: "/assets/images/projects/2564/4.jpg",
+      thumbnailURL: "/assets/images/projects/2564/4.png",
       name: "GIveaway: Mood Tracker",
       link: "https://drive.google.com/drive/folders/1-D3W2rAk7tzwIfAC9QFLf-64hfhpAi5o",
       date: "27/8/2021",
