@@ -101,7 +101,7 @@ const Footer = () => {
               </a>
             </Link>
 
-            <a href="https://vercel.com" target="_blank" className="md:hidden">
+            {/* <a rel="noreferrer" href="https://vercel.com" target="_blank" className="md:hidden">
               <svg
                 className="h-full w-48"
                 width="212"
@@ -118,11 +118,11 @@ const Footer = () => {
                 <path d="M23.3248 13L32.6497 29H14L23.3248 13Z" fill="white" />
                 <line x1="43.5" y1="2.18557e-08" x2="43.5" y2="44" stroke="#5E5E5E" />
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
 
-        <a href="https://vercel.com" target="_blank" className="hidden pt-6 sm:block">
+        {/* <a rel="noreferrer" href="https://vercel.com" target="_blank" className="hidden pt-6 sm:block">
           <svg
             className="h-full w-48"
             width="212"
@@ -139,7 +139,7 @@ const Footer = () => {
             <path d="M23.3248 13L32.6497 29H14L23.3248 13Z" fill="white" />
             <line x1="43.5" y1="2.18557e-08" x2="43.5" y2="44" stroke="#5E5E5E" />
           </svg>
-        </a>
+        </a> */}
       </div>
     </>
   )
