@@ -101,7 +101,7 @@ const Landing: FC = () => {
         </section>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
-          <TopicCard href="/work" title="ผลงานของเรา" actionText="From TUCMC ♡" imgSrc={projectSrc} />
+          <TopicCard href="/work" title="ผลงานของเรา" actionText="From ♡ TUCMC ♡" imgSrc={projectSrc} />
           <TopicCard
             href="https://register.clubs.triamudom.ac.th/clubs"
             title="กิจกรรมชมรม"
