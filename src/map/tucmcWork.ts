@@ -199,7 +199,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     },
     {
       id: "2564-5",
-      thumbnailURL: "/assets/images/projects/2564/5.jpg",
+      thumbnailURL: "/assets/images/projects/2564/5.png",
       name: "GIveaway: Monthly Planner",
       link: "https://drive.google.com/drive/folders/1-NdiX098KhZ6jZfpWg2_hqN9OiX9NA-v?usp=sharing",
       date: "31/8/2021",
