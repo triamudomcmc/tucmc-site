@@ -122,8 +122,8 @@ const TUCMC: NextPage = () => {
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-center text-2xl font-bold text-white">อยากเป็น กช. ต้องทำยังไง ?</h1>
             <p className="mx-auto max-w-2xl px-5 pb-4 text-center text-white">
-              คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 เปิดรับสมัครแล้ว !
-              โดยจะมีการคัดเลือกผ่านการกรอกฟอร์ม และสัมภาษณ์รายบุคคล
+              คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2565 ปิดรับสมัครแล้ว
+              ขอบคุณทุกคนที่ให้ความสนใจกับการคัดเลือกในครั้งนี้
             </p>
           </div>
 

@@ -14,6 +14,11 @@ module.exports = {
       texts: ["Bai Jamjuree"]
     },
     extend: {
+      aspectRatio: {
+        square: "1 / 1",
+        video: "16 / 9",
+        auto: "auto"
+      },
       backgroundColor: ["checked"],
       cursor: {
         magnify: "zoom-in"

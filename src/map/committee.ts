@@ -30,17 +30,17 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
   2564: [
     {
       name: "นายพงศ์ภัค เต็งพิพัฒน์",
-      role: "ประธานคณะกรรมการฯ",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2564/1.jpg"
     },
     {
       name: "นางสาวรมัณยา กมุทะรัตน์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2564/2.jpg"
     },
     {
       name: "นางสาวสปันดา นามาภินันท์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2564/3.jpg"
     },
     {
@@ -59,50 +59,50 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2564/6.jpg"
     },
     {
-      name: "นางสาวสกุลกาญจน์ ไกรนรา",
-      role: "เลขานุการ",
-      imgURL: "/assets/images/committee/2564/7.jpg"
-    },
-    {
       name: "นางสาวนพรดา สุวรรณนุรักษ์",
       role: "กราฟิกดีไซเนอร์",
-      imgURL: "/assets/images/committee/2564/8.jpg"
+      imgURL: "/assets/images/committee/2564/7.jpg"
     },
     {
       name: "นางสาวณัฐธิรา จุฑารัตน์",
       role: "กราฟิกดีไซเนอร์",
-      imgURL: "/assets/images/committee/2564/9.jpg"
+      imgURL: "/assets/images/committee/2564/8.jpg"
     },
     {
       name: "นางสาวอัญชลีพร อภิภัทรชัยวงศ์",
       role: "โมชันกราฟิกดีไซเนอร์",
+      imgURL: "/assets/images/committee/2564/9.jpg"
+    },
+    {
+      name: "นายภัทรกูล คำสะอาด",
+      role: "ประชาสัมพันธ์",
       imgURL: "/assets/images/committee/2564/10.jpg"
     },
     {
       name: "นายปณิธิ มักเที่ยงตรง",
-      role: "สาราณียกร",
+      role: "ผู้ดูแลระบบเว็บไซต์",
       imgURL: "/assets/images/committee/2564/11.jpg"
     },
     {
-      name: "นายปณิธิ มักเที่ยงตรง",
-      role: "ผู้ดูแลระบบเว็บไซต์",
+      name: "นางสาวสกุลกาญจน์ ไกรนรา",
+      role: "เลขานุการ",
       imgURL: "/assets/images/committee/2564/12.jpg"
     }
   ],
   2563: [
     {
       name: "นายพีรดนย์ สาเงิน",
-      role: "ประธานคณะกรรมการฯ",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2563/1.jpg"
     },
     {
       name: "นางสาวณภัทร พิพัฒน์ปัทมา",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2563/2.jpg"
     },
     {
       name: "นายณัฐพงษ์ ดิสสานนท์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2563/3.jpg"
     },
     {
@@ -121,33 +121,33 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
       imgURL: "/assets/images/committee/2563/6.jpg"
     },
     {
-      name: "นางสาวลิตา ตันติประภาส",
-      role: "เลขานุการ",
-      imgURL: "/assets/images/committee/2563/7.jpg"
-    },
-    {
       name: "นางสาวสปันดา นามาภินันท์",
       role: "สาราณียกร",
-      imgURL: "/assets/images/committee/2563/8.jpg"
+      imgURL: "/assets/images/committee/2563/7.jpg"
     },
     {
       name: "นางสาวพิชญาณ์มญชุ์ ชนไพโรจน์",
       role: "สาราณียกร",
-      imgURL: "/assets/images/committee/2563/9.jpg"
+      imgURL: "/assets/images/committee/2563/8.jpg"
     },
     {
       name: "นางสาวนิซาอ์ ด่านพิทักษ์ศาสน์",
       role: "ประชาสัมพันธ์",
-      imgURL: "/assets/images/committee/2563/10.jpg"
+      imgURL: "/assets/images/committee/2563/9.jpg"
     },
     {
       name: "นายนครเขต ตินตะบุระ",
       role: "ผู้ดูแลระบบเว็บไซต์",
-      imgURL: "/assets/images/committee/2563/11.jpg"
+      imgURL: "/assets/images/committee/2563/10.jpg"
     },
     {
       name: "นายพงศ์ภัค เต็งพิพัฒน์",
       role: "ผู้ดูแลระบบเว็บไซต์",
+      imgURL: "/assets/images/committee/2563/11.jpg"
+    },
+    {
+      name: "นางสาวลิตา ตันติประภาส",
+      role: "เลขานุการ",
       imgURL: "/assets/images/committee/2563/12.jpg"
     }
   ],
@@ -205,30 +205,90 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
   ],
   2561: [
     {
-      name: "นายปณิธิ มักเที่ยงตรง",
-      role: "สาราณียกร",
+      name: "นางสาวกัปปิยนารถ วรรณสิริวิไล",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2561/1.jpg"
+    },
+    {
+      name: "นางสาวชัญญา มิตรตระกูลกิจ",
+      role: "รองประธานคณะกรรมการ",
+      imgURL: "/assets/images/committee/2561/2.jpg"
+    },
+    {
+      name: "นางสาวอิงวรา อังคกษมรัตน์",
+      role: "รองประธานคณะกรรมการ",
+      imgURL: "/assets/images/committee/2561/3.jpg"
+    },
+    {
+      name: "นางสาวชนากานต์ ลิ้มธงเจริญ",
+      role: "รองประธานคณะกรรมการ",
+      imgURL: "/assets/images/committee/2561/4.jpg"
+    },
+    {
+      name: "นางสาวอรจิรา ดำพร้อม",
+      role: "เลขานุการ",
+      imgURL: "/assets/images/committee/2561/5.jpg"
+    },
+    {
+      name: "นางสาวพลอย พรไพศาลวิจิต",
+      role: "เลขานุการ",
+      imgURL: "/assets/images/committee/2561/6.jpg"
+    },
+    {
+      name: "นายสุทธินัย งามมั่นคงตั้งกิจ",
+      role: "เหรัญญิก",
+      imgURL: "/assets/images/committee/2561/7.jpg"
+    },
+    {
+      name: "นางสาวนิชาภา ทองไล้",
+      role: "ปฏิคมและสวัสดิการ",
+      imgURL: "/assets/images/committee/2561/8.jpg"
+    },
+    {
+      name: "นายวิทวัส ก่อเจริญวัฒน์",
+      role: "ปฏิคมและสวัสดิการ",
+      imgURL: "/assets/images/committee/2561/9.jpg"
+    },
+    {
+      name: "นางสาวจณิสตา แก้วสีหาวงษ์",
+      role: "ประชาสัมพันธ์",
+      imgURL: "/assets/images/committee/2561/10.jpg"
+    },
+    {
+      name: "นางสาวนภัสสร พงษ์จะโปะ",
+      role: "สาราณียกร",
+      imgURL: "/assets/images/committee/2561/11.jpg"
+    },
+    {
+      name: "นางสาวสาริศา ลือชาธรรม",
+      role: "ถ่ายภาพ",
+      imgURL: "/assets/images/committee/2561/12.jpg"
+    },
+    {
+      name: "นายพศวัต สุขใส",
+      role: "ผู้ดูแลระบบเว็บไซต์",
+      imgURL: "/assets/images/committee/2561/13.jpg"
     }
   ],
   2560: [
     {
       name: "นายสิรวิชญ์ กรุณา",
-      role: "ประธานคณะกรรมการฯ",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2560/1.jpg"
     },
     {
       name: "นางสาวทรายงาม ไชยบุญเรือง",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2560/2.jpg"
     },
     {
       name: "นางสาวรฐาธิป ขำนุรักษ์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2560/3.jpg"
     },
     {
       name: "นางสาวพิมพิกา ธาราทรัพย์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2560/4.jpg"
     },
     {
@@ -305,22 +365,22 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
   2559: [
     {
       name: "นางสาวนวันดา เรืองไทย",
-      role: "ประธานคณะกรรมการฯ",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2559/1.jpg"
     },
     {
       name: "นายภูมิรพี เสรีขจรจารุ",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2559/2.jpg"
     },
     {
       name: "นางสาวณัฐณิชา บุญเทียน",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2559/3.jpg"
     },
     {
       name: "นางสาวสิทธินันท์ อิ่มอักษร",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2559/4.jpg"
     },
     {
@@ -397,17 +457,17 @@ export const StudentMembers: Record<string, Array<{ name: string; role: string; 
   2558: [
     {
       name: "นายปัญญธร วรดี",
-      role: "ประธานคณะกรรมการฯ",
+      role: "ประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2558/1.jpg"
     },
     {
       name: "นางสาวณาฐสมา ฤกษ์พิสุทธิ์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2558/2.jpg"
     },
     {
       name: "นางสาวติณณา สารภักดิ์",
-      role: "รองประธานคณะกรรมการฯ",
+      role: "รองประธานคณะกรรมการ",
       imgURL: "/assets/images/committee/2558/3.jpg"
     },
     {

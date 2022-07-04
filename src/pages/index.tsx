@@ -8,12 +8,12 @@ import clubsSrc from "@images/index/clubs.jpg"
 import WhatIsTUCMCSrc from "@images/index/whatistucmc.jpg"
 import TUCMCSrc from "@images/index/tucmc.jpg"
 import TUCMCSQSrc from "@images/index/tucmc-sq.jpg"
-import { TopicCard } from "@components/index/TopicCard"
+import { TopicCard } from "@components/IndexPage/TopicCard"
 import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import Link from "next/link"
 import { useWindowDimensions } from "@utilities/document"
 import { SM } from "@utilities/constants"
-import { AnnouncementSection } from "@components/index/AnnoucementSection"
+import { AnnouncementSection } from "@components/IndexPage/AnnoucementSection"
 import { KorChor } from "@vectors/KorChor"
 
 const Landing: FC = () => {
@@ -96,12 +96,12 @@ const Landing: FC = () => {
         </section>
 
         <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
-          <TopicCard href="/TUCMC" title="กช. คืออะไร​ ?" actionText="หาคำตอบได้ที่นี่" imgSrc={WhatIsTUCMCSrc} />
+          <TopicCard href="/TUCMC" title="กช. คืออะไร​ ?" actionText="เกี่ยวกับ กช." imgSrc={WhatIsTUCMCSrc} />
           <TopicCard href="/committee" title="ทำความรู้จักพวกเรา" actionText="บุคลากร" imgSrc={peopleSrc} />
         </section>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
-          <TopicCard href="/work" title="ผลงานของเรา" actionText="ดูผลงาน" imgSrc={projectSrc} />
+          <TopicCard href="/work" title="ผลงานของเรา" actionText="From TUCMC ♡" imgSrc={projectSrc} />
           <TopicCard
             href="https://register.clubs.triamudom.ac.th/clubs"
             title="กิจกรรมชมรม"
