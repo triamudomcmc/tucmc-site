@@ -191,7 +191,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2564-4",
       thumbnailURL: "/assets/images/projects/2564/4.jpg",
-      name: "GIveaway: Mood Tracker",
+      name: "Giveaway: Mood Tracker",
       link: "https://drive.google.com/drive/folders/1-D3W2rAk7tzwIfAC9QFLf-64hfhpAi5o",
       date: "27/8/2021",
       description:
@@ -200,7 +200,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2564-5",
       thumbnailURL: "/assets/images/projects/2564/5.png",
-      name: "GIveaway: Monthly Planner",
+      name: "Giveaway: Monthly Planner",
       link: "https://drive.google.com/drive/folders/1-NdiX098KhZ6jZfpWg2_hqN9OiX9NA-v?usp=sharing",
       date: "31/8/2021",
       description: "✴︎ 🤸🏻 เริ่มต้นเดือนใหม่ ด้วยอะไรใหม่ ๆ ミ💡\n𓂋✨ New month, New me ˎˊ˗"
