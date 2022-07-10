@@ -22,3 +22,5 @@ test-timings.json
 out
 public/sw.js.map
 functions/node_modules
+package-lock.json
+.vscode/launch.json
