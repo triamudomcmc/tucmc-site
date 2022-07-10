@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production next start",
     "analyze": "ANALYZE=true next build",
     "export": "next export",
-    "test": "next lint",
+    "test": "jest",
     "lint": "next lint",
     "format": "prettier . --check --write",
     "prepare": "husky install"
