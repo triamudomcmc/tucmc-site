@@ -9,9 +9,10 @@
     "start": "NODE_ENV=production next start",
     "analyze": "ANALYZE=true next build",
     "export": "next export",
-    "test": "jest",
+    "test": "next lint",
     "lint": "next lint",
-    "format": "prettier . --check --write"
+    "format": "prettier . --check --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "1-classname": "^1.2.0",
@@ -54,6 +55,7 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-react": "^0.0.4",
+    "husky": "^8.0.0",
     "jest": "^27.3.1",
     "next-compose-plugins": "^2.2.1",
     "next-offline": "^5.0.5",

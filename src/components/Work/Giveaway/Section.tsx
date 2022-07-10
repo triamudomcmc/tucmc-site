@@ -1,10 +1,10 @@
+import { StickerNames } from "@map/tucmcWork"
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import { FC, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { DownloadIcon } from "@heroicons/react/solid"
 import { BackgroundImageType } from "./types"
 import { BackgroundImage, StickerImage } from "./Elements"
-import { StickerNames } from "@map/tucmcWork"
 
 const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: string }[]> }> = ({
   stickerImgPaths
