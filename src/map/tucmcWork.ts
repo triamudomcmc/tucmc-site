@@ -7,6 +7,13 @@ export type TTUCMCWork = {
   thumbnailURL: string
 }
 
+export const StickerNames: Record<string, string> = {
+  "22-07-10": "Sum Crisis PNG Stickers 1/2565",
+  "21-07-19": "Sum Crisis PNG Stickers 1/2564",
+  "21-07-06": "Giveaway PNG Stickers",
+  "21-01-30": "Triam Udom Open House 2021 PNG Stickers"
+}
+
 export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
   2562: [
     {

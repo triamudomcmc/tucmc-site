@@ -10,23 +10,31 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { StarIcon } from "@heroicons/react/solid"
 import { combine } from "@services/tailwind"
+import { readdirSync } from "fs"
+
+function sortByDate(a: string, b: string) {
+  // format yy-mm-dd
+
+  const aDate = new Date(+a.split("-")[0], +a.split("-")[1] - 1, +a.split("-")[2])
+  const bDate = new Date(+b.split("-")[0], +b.split("-")[1] - 1, +b.split("-")[2])
+
+  return bDate.getTime() - aDate.getTime()
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const stickerDirectory = path.join(process.cwd(), "public/assets/images/work/stickers")
   const stickerFolderNames = await readdir(stickerDirectory)
 
-  const allStickerFileNames = (
-    await Promise.all(
-      stickerFolderNames.map(async (folderName) => {
-        const currFolderPath = path.join(stickerDirectory, folderName)
-        const currFileNames = await readdir(currFolderPath)
+  const allStickerFileNames = stickerFolderNames.sort(sortByDate).reduce((acc: Record<string, any[]>, folderName) => {
+    const currFolderPath = path.join(stickerDirectory, folderName)
+    const currFileNames = readdirSync(currFolderPath)
 
-        return currFileNames.map((f) => {
-          return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
-        })
-      })
-    )
-  ).flat(2)
+    acc[folderName] = currFileNames.map((f) => {
+      return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
+    })
+
+    return acc
+  }, {})
 
   const backgroundDirectory = path.join(process.cwd(), "public/assets/images/work/backgrounds")
   const backgroundFolderNames = await readdir(backgroundDirectory)
@@ -71,7 +79,7 @@ const variants = {
 type TabType = "projects" | "giveaway"
 
 const WorkPage: NextPage<{
-  stickerImgPaths: { name: string; path: string }[]
+  stickerImgPaths: Record<string, { name: string; path: string }[]>
   backgroundImgPaths: Array<BackgroundImageType>
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
   const { replace, query } = useRouter()
