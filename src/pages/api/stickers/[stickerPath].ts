@@ -11,6 +11,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const basePath = `${process.cwd()}/public/assets/images/work/stickers/${stickerPath}`
 
+  if (!fs.existsSync(basePath)) return res.status(404).send("Not found")
+
   const zip = new JSZip()
   const files = await fs.promises.readdir(basePath)
 
