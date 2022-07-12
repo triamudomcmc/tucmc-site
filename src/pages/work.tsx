@@ -25,16 +25,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const stickerDirectory = path.join(process.cwd(), "public/assets/images/work/stickers")
   const stickerFolderNames = await readdir(stickerDirectory)
 
-  const allStickerFileNames = stickerFolderNames.sort(sortByDate).reduce((acc: Record<string, any[]>, folderName) => {
-    const currFolderPath = path.join(stickerDirectory, folderName)
-    const currFileNames = readdirSync(currFolderPath)
+  const allStickerFileNames = stickerFolderNames
+    .filter((e) => !e.endsWith(".zip"))
+    .sort(sortByDate)
+    .reduce((acc: Record<string, any[]>, folderName) => {
+      const currFolderPath = path.join(stickerDirectory, folderName)
+      const currFileNames = readdirSync(currFolderPath)
 
-    acc[folderName] = currFileNames.map((f) => {
-      return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
-    })
+      acc[folderName] = currFileNames.map((f) => {
+        return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
+      })
 
-    return acc
-  }, {})
+      return acc
+    }, {})
 
   const backgroundDirectory = path.join(process.cwd(), "public/assets/images/work/backgrounds")
   const backgroundFolderNames = await readdir(backgroundDirectory)
