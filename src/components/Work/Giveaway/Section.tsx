@@ -16,7 +16,8 @@ const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: st
     window.gtag("event", `download_all_stickers`)
 
     const a = document.createElement("a")
-    a.href = `/api/stickers/${imgCategoryPath}`
+    // a.href = `/api/stickers/${imgCategoryPath}`
+    a.href = `/assets/images/work/stickers/${imgCategoryPath}.zip`
     a.download = `TUCMC-stickers`
     document.body.appendChild(a)
     a.click()

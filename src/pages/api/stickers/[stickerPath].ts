@@ -4,31 +4,33 @@ import JSZip from "jszip"
 import path from "path"
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { stickerPath } = req.query
+  // const { stickerPath } = req.query
 
-  res.setHeader("Content-Type", "application/zip")
-  res.setHeader("Content-Disposition", "attachment; filename=TUCMC-stickers.zip")
+  // res.setHeader("Content-Type", "application/zip")
+  // res.setHeader("Content-Disposition", "attachment; filename=TUCMC-stickers.zip")
 
-  const basePath = `${process.cwd()}/public/assets/images/work/stickers/${stickerPath}`
+  // const basePath = `${process.cwd()}/public/assets/images/work/stickers/${stickerPath}`
 
-  // check if zip file already exists
-  if (fs.existsSync(`${basePath}.zip`)) {
-    const zipBuffer = fs.readFileSync(`${basePath}.zip`)
-    res.end(zipBuffer)
-  } else {
-    // create zip file
-    if (!fs.existsSync(basePath)) return res.status(404).send("Not found")
+  // // check if zip file already exists
+  // if (fs.existsSync(`${basePath}.zip`)) {
+  //   const zipBuffer = fs.readFileSync(`${basePath}.zip`)
+  //   res.end(zipBuffer)
+  // } else {
+  //   // create zip file
+  //   if (!fs.existsSync(basePath)) return res.status(404).send("Not found")
 
-    const zip = new JSZip()
-    const files = await fs.promises.readdir(basePath)
+  //   const zip = new JSZip()
+  //   const files = await fs.promises.readdir(basePath)
 
-    for (const file of files) {
-      const filePath = path.join(basePath, file)
-      const content = await fs.promises.readFile(filePath)
-      zip.file(file, content)
-    }
+  //   for (const file of files) {
+  //     const filePath = path.join(basePath, file)
+  //     const content = await fs.promises.readFile(filePath)
+  //     zip.file(file, content)
+  //   }
 
-    const zipBuffer = await zip.generateAsync({ type: "nodebuffer" })
-    res.end(zipBuffer)
-  }
+  //   const zipBuffer = await zip.generateAsync({ type: "nodebuffer" })
+  //   res.end(zipBuffer)
+  // }
+
+  res.send("hello")
 }
