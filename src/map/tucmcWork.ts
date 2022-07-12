@@ -19,7 +19,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2562-1",
       thumbnailURL: "/assets/images/projects/2562/1.jpg",
-      name: "ตารางสอบ Final Crisis 1/2562",
+      name: "Giveaway: ตารางสอบ Final Crisis 1/2562",
       link: "https://drive.google.com/drive/folders/1EPk8FG5nxkl4f9vnrNCSA7AyvDvw96xz?usp=sharing",
       date: "3/9/2019",
       description:
@@ -46,7 +46,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2562-4",
       thumbnailURL: "/assets/images/projects/2562/4.jpg",
-      name: "ตารางสอบ Final Crisis 2/2562",
+      name: "Giveaway: ตารางสอบ Final Crisis 2/2562",
       link: "https://drive.google.com/drive/folders/1MkX1a2jZvewroYmYmo5ai9m1GmlOPG7H?usp=sharing",
       date: "27/1/2020",
       description:
@@ -64,7 +64,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2562-6",
       thumbnailURL: "/assets/images/projects/2562/6.jpg",
-      name: "IG Filter : สุ่มชมรม",
+      name: "IG Filter: สุ่มชมรม",
       link: "https://www.facebook.com/triamudomclubs/videos/609382266359723/",
       date: "3/7/2020",
       description: "ฟิลเตอร์สุ่มชมรม โดยคณะกรรมการกลางงานกิจกรรมพัฒนาผู้เรียนโรงเรียนเตรียมอุดมศึกษา 💖"
@@ -72,7 +72,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2562-7",
       thumbnailURL: "/assets/images/projects/2562/7.jpg",
-      name: "ตารางสอบ SUM Crisis 1/2563",
+      name: "Giveaway: ตารางสอบ SUM Crisis 1/2563",
       link: "https://drive.google.com/drive/folders/1y9UKo2FxQ8bzGUNFbM6ViTOxCzzT57Y8?usp=sharing",
       date: "9/8/2020",
       description:
@@ -83,7 +83,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2563-1",
       thumbnailURL: "/assets/images/projects/2563/1.jpg",
-      name: "Daily Planner",
+      name: "Giveaway: Daily Planner",
       link: "https://drive.google.com/drive/folders/1-3IYXQQoRu3F2xL3y3wj7aSwsJ4JJcL_?usp=sharing",
       date: "19/8/2020",
       description:
@@ -92,7 +92,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2563-2",
       thumbnailURL: "/assets/images/projects/2563/2.jpg",
-      name: "ตารางสอบ Final Crisis 1/2563",
+      name: "Giveaway: ตารางสอบ Final Crisis 1/2563",
       link: "https://drive.google.com/drive/folders/1-PRFkyhkwjtqXMKsTAOKU8Y6dk4FVBbA?usp=sharing",
       date: "2/10/2020",
       description:
@@ -101,7 +101,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2563-3",
       thumbnailURL: "/assets/images/projects/2563/3.jpg",
-      name: "ตารางเรียน 2/2563",
+      name: "Giveaway: ตารางเรียน 2/2563",
       link: "http://tucm.cc/r/?l=sc63",
       date: "15/12/2020",
       description:
@@ -110,7 +110,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2563-4",
       thumbnailURL: "/assets/images/projects/2563/4.jpg",
-      name: "ตารางสอบ Sum Crisis 2/2563",
+      name: "Giveaway: ตารางสอบ Sum Crisis 2/2563",
       link: "https://tucm.cc/L8cD",
       date: "17/1/2021",
       description:
@@ -137,7 +137,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2563-7",
       thumbnailURL: "/assets/images/projects/2563/7.jpg",
-      name: "ตารางเรียนออนไลน์ สำหรับนักเรียนชั้น ม.6 ปีการศึกษา 2563",
+      name: "Giveaway: ตารางเรียนออนไลน์ สำหรับนักเรียนชั้น ม.6 ปีการศึกษา 2563",
       link: "https://drive.google.com/drive/folders/1kVcEuBchA3_tCDMN5zx9q4d0Y0HuE9we?usp=sharing",
       date: "1/2/2021",
       description:
@@ -189,7 +189,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2564-3",
       thumbnailURL: "/assets/images/projects/2564/3.jpg",
-      name: "IG Filter : ความลับของดวงดาว",
+      name: "IG Filter: ความลับของดวงดาว",
       link: "https://www.facebook.com/triamudomclubs/videos/1220896388333997/",
       date: "23/8/2021",
       description:
@@ -223,7 +223,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2564-7",
       thumbnailURL: "/assets/images/projects/2564/7.jpg",
-      name: "ตารางสอบ Final Crisis 1/2564",
+      name: "Giveaway: ตารางสอบ Final Crisis 1/2564",
       link: "https://drive.google.com/drive/folders/1mxRXsnmuR0q6b8hiUR1K8YzfffO_5hgG",
       date: "25/9/2021",
       description: "꒰ Giveaway ꒱ ตารางสอบ Final 1/2564 🍰\nꕊ📔 We will make it through. 🧤ˈ"
@@ -231,7 +231,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
     {
       id: "2564-8",
       thumbnailURL: "/assets/images/projects/2564/8.jpg",
-      name: "ระบบสร้างตารางเรียน",
+      name: "Giveaway: ระบบสร้างตารางเรียนออนไลน์ 2/2564",
       link: "https://schedule.tucm.cc/",
       date: "31/10/2021",
       description: "✳︎ ตารางเรียนจาก กช. ปีนี้พิเศษกว่าปีไหน ๆ ถ้าอยากรู้ว่าพิเศษยังไงต้องไปดู 👀"
@@ -253,6 +253,26 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
       date: "14/1/2022",
       description:
         "🚏Get ready for Triam Udom Online Open House 2022 ⟢\n— Interstellar Odyssey 🪐🪄✨\n\nꔚ จักรวาลแห่งนี้รอทุกคนอยู่ แพ็คกระเป๋าแล้วขึ้นยานอวกาศมาค้นหาดวงดาวของน้อง ๆ ไปด้วยกันในวันที่ 14-15 มกราคมนี้ 🕵🏻𓏭"
+    }
+  ],
+  2565: [
+    {
+      id: "2565-1",
+      thumbnailURL: "/assets/images/projects/2565/1.jpg",
+      name: "Giveaway: ตารางเรียนภาคเรียนที่ 1/2565",
+      link: "https://schedule.tucm.cc?type=learn",
+      date: "7/7/2022",
+      description:
+        "🎌 ญี่ปุ่นมีเทศกาลทานาบาตะ ꔛ\nแล้วเธออะ มีตารางเรียน กช. ยัง❕\n\n‎˗ˏˋ Giveaway ´ˎ˗ ตารางเรียนภาคเรียนที่ 1/2565 สำหรับนักเรียนทุกระดับชั้น เลือกสีที่ชอบได้ด้วย~ ดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR code ในโพสต์ได้เลย ꕤ.\n\n🎋 พิเศษ ! ฉลองเทศกาลทานาบาตะ ทุกคนสามารถแชร์กระดาษคำอวยพรลง story และเขียนคำอวยพรให้ตัวเองหรือคนพิเศษของใจก็ได้ ʚ♡⃛ɞ\n\n🎐 ขอให้พรที่ทุกคนขอเป็นจริงนะ ! ถ้าพร้อมแล้ว…มา make a wish กันเถอะ ★ ∗˚\n\n#เลือกสีได้ด้วยนะ #ก็เปลี่ยนสีไปเลยสิคะ"
+    },
+    {
+      id: "2565-2",
+      thumbnailURL: "/assets/images/projects/2565/2.jpg",
+      name: "Giveaway: ตารางสอบ Summative 1/2565",
+      link: "https://schedule.tucm.cc?type=exam",
+      date: "12/7/2022",
+      description:
+        "🗯 Are you ready to receive a receipt? 🧾\n\n꒰ Giveaway ꒱ ตารางสอบ Summative 1/2565 ˚ ༘\nสามารถดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR code ในรูปถัดไป 🛒\n\n⌯﹡⋆ Wish you all of the best luck and get a good score. 💯"
     }
   ]
 }

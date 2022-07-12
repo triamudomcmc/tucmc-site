@@ -8,7 +8,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { FC, useEffect, useState } from "react"
 
-const YEARS = ["2564", "2563", "2562"]
+const YEARS = Object.keys(TUCMCWork).sort((a, b) => +b - +a)
 
 const dateSortFunc = (a: TTUCMCWork, b: TTUCMCWork) => {
   const [d1, m1, y1] = a.date.split("/")
