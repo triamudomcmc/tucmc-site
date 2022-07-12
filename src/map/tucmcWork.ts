@@ -269,7 +269,7 @@ export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
       id: "2565-2",
       thumbnailURL: "/assets/images/projects/2565/2.jpg",
       name: "Giveaway: ตารางสอบ Summative 1/2565",
-      link: "https://schedule.tucm.cc?type=exam",
+      link: "https://drive.google.com/drive/folders/1onZOOKrDg4_6sOExNY27OvOZCNWlXa4a?usp=sharing",
       date: "12/7/2022",
       description:
         "🗯 Are you ready to receive a receipt? 🧾\n\n꒰ Giveaway ꒱ ตารางสอบ Summative 1/2565 ˚ ༘\nสามารถดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR code ในรูปถัดไป 🛒\n\n⌯﹡⋆ Wish you all of the best luck and get a good score. 💯"
