@@ -11,17 +11,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const basePath = `${process.cwd()}/public/assets/images/work/stickers/${stickerPath}`
 
-  if (!fs.existsSync(basePath)) return res.status(404).send("Not found")
+  // check if zip file already exists
+  if (fs.existsSync(`${basePath}.zip`)) {
+    const zipBuffer = fs.readFileSync(`${basePath}.zip`)
+    res.end(zipBuffer)
+  } else {
+    // create zip file
+    if (!fs.existsSync(basePath)) return res.status(404).send("Not found")
 
-  const zip = new JSZip()
-  const files = await fs.promises.readdir(basePath)
+    const zip = new JSZip()
+    const files = await fs.promises.readdir(basePath)
 
-  for (const file of files) {
-    const filePath = path.join(basePath, file)
-    const content = await fs.promises.readFile(filePath)
-    zip.file(file, content)
+    for (const file of files) {
+      const filePath = path.join(basePath, file)
+      const content = await fs.promises.readFile(filePath)
+      zip.file(file, content)
+    }
+
+    const zipBuffer = await zip.generateAsync({ type: "nodebuffer" })
+    res.end(zipBuffer)
   }
-
-  const zipBuffer = await zip.generateAsync({ type: "nodebuffer" })
-  res.end(zipBuffer)
 }
