@@ -192,6 +192,7 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
                 "/assets/images/TUCMC/ArtWorks/IMG_7275.JPG",
                 "/assets/images/TUCMC/ArtWorks/IMG_7274.JPG",
                 "/assets/images/TUCMC/ArtWorks/sum_1_2564.jpg",
+                "/assets/images/TUCMC/ArtWorks/sum_1_2565.jpg",
                 "/assets/images/TUCMC/ArtWorks/final_1_2564.jpg",
                 "/assets/images/TUCMC/ArtWorks/final_2_2564.jpg",
                 "/assets/images/TUCMC/ArtWorks/saphap.jpg",
