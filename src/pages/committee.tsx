@@ -47,7 +47,7 @@ const variants = {
   }
 }
 
-const YEARS = ["2564", "2563", "2562", "2561", "2560", "2559", "2558"]
+const YEARS = Object.keys(StudentMembers).sort((a, b) => +b - +a)
 
 const MembersPage: NextPage = () => {
   const [zoomOverlay, setZoomOverlay] = useState(<></>)
