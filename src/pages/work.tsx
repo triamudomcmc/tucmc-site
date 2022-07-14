@@ -26,15 +26,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const stickerFolderNames = await readdir(stickerDirectory)
 
   const allStickerFileNames = stickerFolderNames
-    .filter((e) => !e.endsWith(".zip"))
+    .filter((e) => !e.endsWith(".zip") && e !== ".DS_Store")
     .sort(sortByDate)
     .reduce((acc: Record<string, any[]>, folderName) => {
       const currFolderPath = path.join(stickerDirectory, folderName)
       const currFileNames = readdirSync(currFolderPath)
 
-      acc[folderName] = currFileNames.map((f) => {
-        return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
-      })
+      acc[folderName] = currFileNames
+        .filter((fileName) => fileName !== ".DS_Store")
+        .map((f) => {
+          return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
+        })
 
       return acc
     }, {})
@@ -57,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
           const newCurrFileNames = readdirSync(newCurrFolderPath)
 
           return newCurrFileNames
-            .filter((folderName3) => folderName3 !== ".DS_Store")
+            .filter((fileName2) => fileName2 !== ".DS_Store")
             .map((f2) => {
               return {
                 name: `${f1}-${path.parse(f2).name}`,
