@@ -51,7 +51,7 @@ export const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
 
   return (
     <div className="relative flex flex-col items-center justify-center rounded-md border border-gray-300">
-      <div className="relative h-full min-h-[250px] w-full">
+      <div className="relative h-full min-h-[400px] w-full">
         <Image
           className="object-cover"
           layout="fill"
@@ -60,7 +60,7 @@ export const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
         />
       </div>
 
-      <div className="grid w-full grid-cols-2">
+      <div className="absolute bottom-0 grid w-full grid-cols-2">
         <button
           onClick={() => {
             downloadFile(
@@ -68,7 +68,7 @@ export const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
               `${img.find((i) => i.type === "landscape")?.name}`
             )
           }}
-          className="flex w-full flex-col items-center justify-center gap-1 rounded-bl-md border-r border-gray-300 bg-pink-400 py-3 px-4 text-center text-white backdrop-blur-md transition-colors hover:bg-pink-500"
+          className="flex w-full flex-col items-center justify-center gap-1 rounded-bl-md border-r border-gray-300 bg-gray-500 bg-opacity-60 py-3 px-4 text-center text-white backdrop-blur-md transition-all hover:brightness-110"
         >
           <DesktopComputerIcon className="h-8 w-8" />
           <p className="text-sm md:text-base">
@@ -84,7 +84,7 @@ export const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
               `${img.find((i) => i.type === "portrait")?.name}`
             )
           }}
-          className="flex w-full flex-col items-center justify-center gap-1 rounded-br-md bg-pink-400 py-3 px-4 text-center text-white backdrop-blur-md transition-colors hover:bg-pink-500"
+          className="flex w-full flex-col items-center justify-center gap-1 rounded-br-md bg-gray-500 bg-opacity-60 py-3 px-4 text-center text-white backdrop-blur-md transition-all hover:brightness-110"
         >
           <DeviceMobileIcon className="h-8 w-8" />
           <p className="text-sm md:text-base">
