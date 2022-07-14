@@ -44,6 +44,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const allBackgroundFileNames = backgroundFolderNames
     .filter((folderName) => folderName !== ".DS_Store")
+    .sort(sortByDate)
     .reduce((acc: Record<string, any[]>, folderName) => {
       const currFolderPath = path.join(backgroundDirectory, folderName)
       const currFileNames = readdirSync(currFolderPath)
