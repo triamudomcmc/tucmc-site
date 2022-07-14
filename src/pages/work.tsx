@@ -42,22 +42,32 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const backgroundDirectory = path.join(process.cwd(), "public/assets/images/work/backgrounds")
   const backgroundFolderNames = await readdir(backgroundDirectory)
 
-  const allBackgroundFileNames = await Promise.all(
-    backgroundFolderNames
-      .filter((folderName) => folderName !== ".DS_Store")
-      .map(async (folderName) => {
-        const currFolderPath = path.join(backgroundDirectory, folderName)
-        const currFileNames = await readdir(currFolderPath)
+  const allBackgroundFileNames = backgroundFolderNames
+    .filter((folderName) => folderName !== ".DS_Store")
+    .reduce((acc: Record<string, any[]>, folderName) => {
+      const currFolderPath = path.join(backgroundDirectory, folderName)
+      const currFileNames = readdirSync(currFolderPath)
 
-        return currFileNames.map((f) => {
-          return {
-            name: `${folderName}-${path.parse(f).name}`,
-            type: path.parse(f).name,
-            path: path.join("/assets/images/work/backgrounds", folderName, f)
-          }
+      acc[folderName] = currFileNames
+        .filter((folderName2) => folderName2 !== ".DS_Store")
+        .map((f1) => {
+          // backgrounds/{time}/{fileName}
+          const newCurrFolderPath = path.join(backgroundDirectory, folderName, f1)
+          const newCurrFileNames = readdirSync(newCurrFolderPath)
+
+          return newCurrFileNames
+            .filter((folderName3) => folderName3 !== ".DS_Store")
+            .map((f2) => {
+              return {
+                name: `${f1}-${path.parse(f2).name}`,
+                type: path.parse(f2).name,
+                path: path.join("/assets/images/work/backgrounds", folderName, f1, f2)
+              }
+            })
         })
-      })
-  )
+
+      return acc
+    }, {})
 
   return {
     props: {
@@ -83,7 +93,7 @@ type TabType = "projects" | "giveaway"
 
 const WorkPage: NextPage<{
   stickerImgPaths: Record<string, { name: string; path: string }[]>
-  backgroundImgPaths: Array<BackgroundImageType>
+  backgroundImgPaths: Record<string, BackgroundImageType[]>
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
   const { replace, query } = useRouter()
 

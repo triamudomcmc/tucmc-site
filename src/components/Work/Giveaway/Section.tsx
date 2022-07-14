@@ -1,4 +1,4 @@
-import { StickerNames } from "@map/tucmcWork"
+import { BackgroundNames, StickerNames } from "@map/tucmcWork"
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import { FC, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
@@ -28,7 +28,7 @@ const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: st
     <>
       <div className="flex items-end justify-between">
         <div className="mt-6">
-          <h2 className="text-lg font-light text-TUCMC-gray-600">แจก PNG Sticker</h2>
+          <h2 className="text-lg font-light text-TUCMC-gray-700">แจก PNG Sticker</h2>
         </div>
 
         <motion.button
@@ -94,13 +94,13 @@ const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: st
   )
 }
 
-const BGGiveaway: FC<{ backgroundImgPaths: BackgroundImageType[] }> = ({ backgroundImgPaths }) => {
+const BGGiveaway: FC<{ backgroundImgPaths: Record<string, BackgroundImageType[]> }> = ({ backgroundImgPaths }) => {
   const [show, setShow] = useState(true)
 
   return (
     <>
       <div className="flex items-end justify-between">
-        <h2 className="mt-6 text-lg font-light text-TUCMC-gray-600">แจก Wallpaper/Background</h2>
+        <h2 className="mt-6 text-lg font-light text-TUCMC-gray-700">แจก Wallpaper/Background</h2>
 
         <motion.button
           variants={{
@@ -135,10 +135,21 @@ const BGGiveaway: FC<{ backgroundImgPaths: BackgroundImageType[] }> = ({ backgro
               opacity: 0,
               height: "0"
             }}
-            className="my-4 grid grid-cols-1 gap-4 sm:grid-cols-2"
+            className="my-4 flex flex-col"
           >
-            {backgroundImgPaths.map((img) => {
-              return <BackgroundImage key={img[1].path} img={img} />
+            {Object.keys(backgroundImgPaths).map((imgArrName) => {
+              return (
+                <article className="my-4" key={imgArrName}>
+                  <div className="mb-6 flex flex-col justify-center gap-2 sm:flex-row sm:items-center sm:justify-start sm:gap-6">
+                    <h3 className="text-lg font-light text-TUCMC-gray-600">{BackgroundNames[imgArrName]}</h3>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {backgroundImgPaths[imgArrName].map((img) => {
+                      return <BackgroundImage key={img[1].path} img={img} />
+                    })}
+                  </div>
+                </article>
+              )
             })}
           </motion.section>
         )}
@@ -149,7 +160,7 @@ const BGGiveaway: FC<{ backgroundImgPaths: BackgroundImageType[] }> = ({ backgro
 
 export const GiveawaySection: FC<{
   stickerImgPaths: Record<string, { name: string; path: string }[]>
-  backgroundImgPaths: BackgroundImageType[]
+  backgroundImgPaths: Record<string, BackgroundImageType[]>
 }> = ({ stickerImgPaths, backgroundImgPaths }) => {
   return (
     <>
