@@ -14,6 +14,11 @@ export const StickerNames: Record<string, string> = {
   "21-01-30": "Triam Udom Open House 2021 PNG Stickers"
 }
 
+export const BackgroundNames: Record<string, string> = {
+  "22-01-14": "Triam Udom Open House 2022 Wallpapers",
+  "22-07-14": "Sum Crisis 1/2565 Wallpapers"
+}
+
 export const TUCMCWork: Record<string, Array<TTUCMCWork>> = {
   2562: [
     {
