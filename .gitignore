@@ -21,6 +21,7 @@ packages/next-env/**/*.d.ts
 test-timings.json
 out
 public/sw.js.map
+public/sw.js
 functions/node_modules
 package-lock.json
 .vscode/launch.json

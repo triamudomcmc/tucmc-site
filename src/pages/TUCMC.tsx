@@ -20,9 +20,9 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 }
 
 type TabType = "about" | "positions"
@@ -60,6 +60,7 @@ const TUCMC: NextPage = () => {
         <header className="flex flex-col items-center space-y-12 px-6 text-white md:space-y-16">
           <Image
             src="/assets/images/TUCMC/bg.jpg"
+            alt=""
             placeholder="blur"
             blurDataURL="/assets/images/TUCMC/bg.jpg"
             objectFit="cover"

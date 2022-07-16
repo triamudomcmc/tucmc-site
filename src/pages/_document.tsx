@@ -1,4 +1,5 @@
 import NextDocument, { Html, Head, Main, NextScript, DocumentContext } from "next/document"
+import Script from "next/script"
 import React from "react"
 
 export default class Document extends NextDocument {
@@ -12,8 +13,10 @@ export default class Document extends NextDocument {
       <Html lang="th">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icon.png" />
+          <link rel="manifest" href="/meta/site.webmanifest" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png" />
           <link
             rel="preload"
             href="/assets/fonts/Inter-roman.var.woff2"
@@ -98,8 +101,9 @@ export default class Document extends NextDocument {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QG2P5KQQ" />
-          <script
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QG2P5KQQ" />
+          <Script
+            id="google-analytics"
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -107,7 +111,7 @@ export default class Document extends NextDocument {
               gtag('js', new Date());
             
               gtag('config', 'G-M6QG2P5KQQ');
-          `
+          `,
             }}
           />
         </Head>

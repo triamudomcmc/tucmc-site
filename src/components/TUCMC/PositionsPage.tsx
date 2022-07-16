@@ -20,6 +20,7 @@ const ReviewItem: FC<{ review: Review }> = ({ review }) => {
                 quality={50}
                 placeholder="blur"
                 src={review.profileURL}
+                alt={review.name}
                 blurDataURL={review.profileURL}
                 width="128"
                 height="128"
@@ -42,7 +43,7 @@ const ReviewItem: FC<{ review: Review }> = ({ review }) => {
               </div>
               <article
                 dangerouslySetInnerHTML={{
-                  __html: review.reviewText
+                  __html: review.reviewText,
                 }}
                 className="club-article ql-container ql-editor font-texts text-[1.05rem] text-gray-500"
               ></article>
@@ -65,9 +66,9 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 }
 
 export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
@@ -107,7 +108,7 @@ export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Ele
                 window.gtag("event", "tucmc_position_tab", {
                   event_category: "tucmc_position_tab",
                   event_label: pos,
-                  position: pos
+                  position: pos,
                 })
               }}
               className={combine(
