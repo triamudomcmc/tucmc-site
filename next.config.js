@@ -1,59 +1,36 @@
+/** @type {import('next').NextConfig} */
+const withPWA = require("next-pwa")
 const { join } = require("path")
 
-const withOffline = require("next-offline")
-const withAnalyze = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true"
-})
-const withPrefresh = require("@prefresh/next")
-const withPlugins = require("next-compose-plugins")
-
-const useStyles = require("./tools/useStyles")
-// const usePreact = require("./tools/usePreact")
-const offlineConfig = require("./tools/withOffline")
-
-module.exports = withPlugins([[withOffline, offlineConfig], [withAnalyze], [withPrefresh]], {
-  swcMinify: true,
-  async rewrites() {
-    return [
-      {
-        source: "/service-worker.js",
-        destination: "/_next/static/service-worker.js"
-      }
-    ]
-  },
-  experimental: {
-    modern: true,
-    polyfillsOptimization: true
-  },
-  images: {
-    deviceSizes: [640, 750, 828, 1080],
-    imageSizes: [16, 32, 48, 64, 96],
-    path: "/_next/image",
-    loader: "default"
+module.exports = withPWA({
+  reactStrictMode: true,
+  pwa: {
+    dest: "public",
+    swSrc: "service-worker.js",
   },
   webpack(config, options) {
-    // usePreact(config, options)
-    useStyles(config, options)
-
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@pages": join(__dirname, "src/pages"),
-      "@layouts": join(__dirname, "src/layouts"),
-      "@components": join(__dirname, "src/components"),
       "@styles": join(__dirname, "src/styles"),
-      "@services": join(__dirname, "src/services"),
-      "@models": join(__dirname, "src/models"),
-      "@stores": join(__dirname, "src/stores"),
-      "@atoms": join(__dirname, "src/components/atoms"),
-      "@molecules": join(__dirname, "src/components/molecules"),
-      "@organisms": join(__dirname, "src/components/organisms"),
-      "@public": join(__dirname, "public"),
-      "@tailwind": join(__dirname, "src/services/tailwind"),
-      "@vectors": join(__dirname, "src/vectors"),
+      "@components": join(__dirname, "src/components"),
+      "@pages": join(__dirname, "src/pages"),
+      "@helpers": join(__dirname, "src/helpers"),
+      "@types": join(__dirname, "src/types"),
+      "@types": join(__dirname, "src/types"),
+      "@modules": join(__dirname, "src/modules"),
+      "@utils": join(__dirname, "src/utils"),
       "@utilities": join(__dirname, "src/utilities"),
-      "@images": join(__dirname, "src/images")
+      "@handlers": join(__dirname, "src/handlers"),
+      "@config": join(__dirname, "src/config"),
+      "@models": join(__dirname, "src/models"),
+      "@hooks": join(__dirname, "src/hooks"),
+      "@lib": join(__dirname, "src/lib"),
+      "@services": join(__dirname, "src/services"),
+      "@vectors": join(__dirname, "src/vectors"),
+      "@images": join(__dirname, "src/images"),
+      "@map/*": join(__dirname, "src/map"),
     }
 
     return config
-  }
+  },
 })

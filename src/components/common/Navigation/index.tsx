@@ -28,12 +28,12 @@ const Navigation = () => {
     setLoad(false)
     if (!initial) {
       if (!animation) {
-        setReveal(!reveal)
+        setReveal((r) => !r)
       }
     } else {
       setInitial(false)
     }
-  }, [toggle])
+  }, [initial, animation, toggle])
 
   const variants = {
     open: {
@@ -41,16 +41,16 @@ const Navigation = () => {
       opacity: 1,
       transition: {
         type: "tween",
-        stiffness: 100
-      }
+        stiffness: 100,
+      },
     },
     close: {
       x: "-100%",
       transition: {
         type: "tween",
-        stiffness: 100
-      }
-    }
+        stiffness: 100,
+      },
+    },
   }
 
   const getClass = (expected: string, part: "font" | "icon" | "bg") => {

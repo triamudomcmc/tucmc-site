@@ -1,59 +1,26 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "eslint:recommended", "eslint-config-prettier"],
+  extends: ["eslint:recommended", "eslint-config-prettier", "next/core-web-vitals"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module"
+    sourceType: "module",
   },
   globals: {
-    JSX: true
+    JSX: true,
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-    "import/no-unresolved": 0,
-    "import/prefer-default-export": 0,
-    "prefer-const": 0,
-    "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }],
-    "react/jsx-props-no-spreading": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/jsx-indent": 0,
-    "react/jsx-indent-props": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "react/jsx-closing-tag-location": 0,
-    "react/destructuring-assignment": 0,
-    "jsx-a11y/anchor-is-valid": 0,
-    "import/extensions": 0,
-    "consistent-return": 0,
-    "prefer-template": 0,
-    "arrow-body-style": 0,
-    "no-unused-vars": 0,
-    "no-unused-expressions": 0,
-    "react/require-default-props": 0,
-    "no-use-before-define": 0,
-    "import/no-duplicates": 0,
-    "react/button-has-type": 0,
-    "react/self-closing-comp": 0,
-    "react/no-danger": 0,
-    "react/jsx-curly-brace-presence": 0,
-    "react/jsx-boolean-value": 0,
-    "react/self-closing-comp": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
-    "no-prototype-builtins": 0,
-    "react/function-component-definition": 0,
-    "react/jsx-no-useless-fragment": 0,
-    "spaced-comment": 0,
-    "no-irregular-whitespace": 0,
-    "no-unneeded-ternary": 0,
-    "no-await-in-loop": 0,
-    "no-restricted-syntax": 0
+    "no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-irregular-whitespace": "off",
   },
   ignorePatterns: [
     "__tests__",
@@ -62,6 +29,6 @@ module.exports = {
     "jest.config.js",
     "jest.setup.js",
     "postcss.config.js",
-    "tailwind.config.js"
-  ]
+    "tailwind.config.js",
+  ],
 }
