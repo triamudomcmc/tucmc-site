@@ -33,7 +33,7 @@ const Navigation = () => {
     } else {
       setInitial(false)
     }
-  }, [initial, animation, toggle])
+  }, [toggle])
 
   const variants = {
     open: {
