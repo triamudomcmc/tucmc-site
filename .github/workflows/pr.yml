@@ -28,9 +28,9 @@ jobs:
       - name: "Init: Install dependencies"
         run: |
           yarn install
-      - name: "Test: Run test suite"
+      - name: "Test: Run test build"
         run: |
-          yarn test
+          yarn build
       - name: "Test: Code linting"
         run: |
-          yarn test:lint
+          yarn lint
