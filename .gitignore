@@ -1,36 +1,27 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+.next
 .DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# vercel
-.vercel
-
-/public/sw.js
+yarn-error.log
+node_modules
+**/.next/**
+**/_next/**
+**/dist/**
+packages/next/bundles/webpack/packages/*.runtime.js
+packages/next/compiled/**
+packages/react-refresh-utils/**/*.js
+packages/react-refresh-utils/**/*.d.ts
+packages/react-dev-overlay/lib/**
+**/__tmp__/**
+lerna.json
+.github/actions/next-stats-action/.work
+packages/next-codemod/transforms/__testfixtures__/**/*
+packages/next-codemod/transforms/__tests__/**/*
+packages/next-codemod/**/*.js
+packages/next-codemod/**/*.d.ts
+packages/next-env/**/*.d.ts
+test-timings.json
+out
+public/sw.js.map
+public/sw.js
+functions/node_modules
+package-lock.json
+.vscode/launch.json
