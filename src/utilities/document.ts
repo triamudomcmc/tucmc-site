@@ -1,5 +1,4 @@
-import { RefObject } from "preact"
-import { MutableRefObject, useEffect, useState } from "react"
+import { MutableRefObject, RefObject, useEffect, useState } from "react"
 
 export const detectOuside = (ref: RefObject<HTMLElement>, dep: boolean, callback: () => void) => {
   useEffect(() => {
