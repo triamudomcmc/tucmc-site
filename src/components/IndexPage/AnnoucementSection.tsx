@@ -51,7 +51,7 @@ export const AnnouncementSection: FC<{
             <div className="font-texts leading-loose text-TUCMC-gray-600">{body}</div>
             {width > SM && (
               <Link href={href} passHref>
-                <a className="w-64 whitespace-nowrap rounded-full bg-white px-12 py-3 text-center text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-all hover:scale-105 hover:bg-TUCMC-gray-100 sm:px-8 sm:text-lg lg:px-10 lg:text-2xl">
+                <a className="w-64 whitespace-nowrap rounded-full bg-white px-12 py-3 text-center text-2xl font-semibold text-TUCMC-pink-600 shadow-md transition-all hover:scale-105 hover:bg-TUCMC-gray-100 sm:px-8 sm:text-lg lg:w-72 lg:px-10 lg:text-2xl">
                   {actionText}
                 </a>
               </Link>
