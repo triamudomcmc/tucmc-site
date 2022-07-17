@@ -1,11 +1,10 @@
 import { Dispatch, FC, SetStateAction } from "react"
 import { Zoomable } from "@components/common/Zoomable"
 import { useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Pagination } from "swiper"
-import "swiper/swiper-bundle.css"
 
-SwiperCore.use([Pagination])
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+
 export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
   return (
     <>
@@ -29,7 +28,7 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
                 "/assets/images/TUCMC/ClubActivities/IMG_7251.png",
                 "/assets/images/TUCMC/ClubActivities/IMG_7252.png",
                 "/assets/images/TUCMC/ClubActivities/IMG_7253.png",
-                "/assets/images/TUCMC/ClubActivities/IMG_7250.png"
+                "/assets/images/TUCMC/ClubActivities/IMG_7250.png",
               ].map((imgURL) => {
                 return (
                   <SwiperSlide key={imgURL} style={{ width: "256px" }}>
@@ -82,7 +81,7 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
                 "/assets/images/TUCMC/CharityActivities/IMG_7261.png",
                 "/assets/images/TUCMC/CharityActivities/IMG_7262.png",
                 "/assets/images/TUCMC/CharityActivities/IMG_7301.png",
-                "/assets/images/TUCMC/CharityActivities/IMG_7302.png"
+                "/assets/images/TUCMC/CharityActivities/IMG_7302.png",
               ].map((imgURL) => {
                 return (
                   <SwiperSlide key={imgURL} style={{ width: "256px" }}>
@@ -142,7 +141,7 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
                 "/assets/images/TUCMC/OpenHouse/IMG_7270.JPG",
                 "/assets/images/TUCMC/OpenHouse/IMG_7276.PNG",
                 "/assets/images/TUCMC/OpenHouse/IMG_7282.PNG",
-                "/assets/images/TUCMC/OpenHouse/IMG_7268.png"
+                "/assets/images/TUCMC/OpenHouse/IMG_7268.png",
               ].map((imgURL) => {
                 return (
                   <SwiperSlide key={imgURL} style={{ width: "256px" }}>
@@ -201,7 +200,7 @@ export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element
                 "/assets/images/TUCMC/ArtWorks/IMG_7280.PNG",
                 "/assets/images/TUCMC/ArtWorks/IMG_7284.PNG",
                 "/assets/images/TUCMC/ArtWorks/IMG_7278.PNG",
-                "/assets/images/TUCMC/ArtWorks/IMG_7271.JPG"
+                "/assets/images/TUCMC/ArtWorks/IMG_7271.JPG",
               ].map((imgURL) => {
                 return (
                   <SwiperSlide key={imgURL} style={{ width: "256px" }}>
