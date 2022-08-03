@@ -28,7 +28,7 @@ export const AnnouncementSection: FC<{
                     src={imgSrc}
                     layout="intrinsic"
                     width={400}
-                    height={400}
+                    height={500}
                     placeholder="blur"
                     blurDataURL={imgSrc.blurDataURL}
                     alt={title}
