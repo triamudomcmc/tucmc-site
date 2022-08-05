@@ -24,7 +24,7 @@ const sortByDate = (works: TTUCMCWork[]) => {
   return works.sort(dateSortFunc)
 }
 
-export const TUCMCProjectsSection: FC = () => {
+export const TUCMCProjectsSection = () => {
   const { query, replace } = useRouter()
 
   const [tab, setTab] = useState(YEARS[0])

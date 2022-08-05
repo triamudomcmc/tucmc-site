@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 import { combine } from "@services/tailwind"
 import { useRouter } from "next/router"
 
-const ReviewItem: FC<{ review: Review }> = ({ review }) => {
+const ReviewItem = ({ review }: { review: Review }) => {
   return (
     <>
       <div>
@@ -71,7 +71,7 @@ const variants = {
   },
 }
 
-export const PositionsPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
+export const PositionsPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }) => {
   const [tab, setTab] = useState<string>("GeneralCommittee")
   const [positionData, setPositionData] = useState<PositionData>(Positions.GeneralCommittee)
   const { query, replace } = useRouter()

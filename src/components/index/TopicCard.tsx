@@ -3,13 +3,21 @@ import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 import { FC } from "react"
 
-export const TopicCard: FC<{
-  title: string
-  actionText: string
-  imgSrc: StaticImageData
-  href: string
-  className?: string
-}> = ({ title, actionText, imgSrc, href, className }) => {
+export const TopicCard = (
+  {
+    title,
+    actionText,
+    imgSrc,
+    href,
+    className
+  }: {
+    title: string,
+    actionText: string,
+    imgSrc: StaticImageData,
+    href: string,
+    className?: string
+  }
+) => {
   return (
     <article
       className={combine(

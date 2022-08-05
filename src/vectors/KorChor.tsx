@@ -1,6 +1,12 @@
 import { FC } from "react"
 
-export const KorChor: FC<{ className: string }> = ({ className }) => {
+export const KorChor = (
+  {
+    className
+  }: {
+    className: string
+  }
+) => {
   return (
     <svg
       className={className}

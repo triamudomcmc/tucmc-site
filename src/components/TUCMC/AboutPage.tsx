@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 
-export const AboutPage: FC<{ setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }> = ({ setZoomOverlay }) => {
+export const AboutPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<SetStateAction<JSX.Element>> }) => {
   return (
     <>
       <main className="space-y-36 bg-white pb-20 text-TUCMC-pink-500 md:space-y-44">

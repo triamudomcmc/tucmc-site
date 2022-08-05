@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 // import { useAuth } from "@client/auth"
 import classnames from "classnames"
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 
 const variants = {
   initial: { y: -20, opacity: 0 },
@@ -13,12 +13,20 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 }
 
-const PageContainer: FC<{ footer?: boolean; hide?: boolean }> = ({ children, footer = true, hide = false }) => {
+const PageContainer = ({
+  children,
+  footer = true,
+  hide = false,
+}: {
+  footer?: boolean
+  hide?: boolean
+  children: ReactNode
+}) => {
   const router = useRouter()
 
   return (

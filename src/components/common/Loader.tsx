@@ -3,7 +3,13 @@ import { useWindowDimensions } from "@utilities/document"
 import { FC } from "react"
 import Image from "next/image"
 
-export const Loader: FC<{ display: boolean }> = ({ display }) => {
+export const Loader = (
+  {
+    display
+  }: {
+    display: boolean
+  }
+) => {
   const { width } = useWindowDimensions()
 
   return (

@@ -4,13 +4,19 @@ import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 import { FC } from "react"
 
-export const AnnouncementSection: FC<{
+export const AnnouncementSection = ({
+  title,
+  body,
+  actionText,
+  imgSrc,
+  href,
+}: {
   title: string
   body: string | JSX.Element
   actionText: string
   imgSrc: StaticImageData
   href: string
-}> = ({ title, body, actionText, imgSrc, href }) => {
+}) => {
   const { width } = useWindowDimensions()
 
   return (

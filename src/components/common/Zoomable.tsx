@@ -6,7 +6,16 @@ import classnames from "classnames"
 import { combine } from "@services/tailwind"
 import { SM } from "@utilities/constants"
 
-export const Zoomable: FC<{
+export const Zoomable = ({
+  src,
+  width,
+  height,
+  onLoad = () => {},
+  priority = false,
+  className = "",
+  updateOverlay = null,
+  alt = "",
+}: {
   src: string
   width: number
   height: number
@@ -15,7 +24,7 @@ export const Zoomable: FC<{
   className: string
   updateOverlay: Dispatch<SetStateAction<JSX.Element>> | null
   alt?: string
-}> = ({ src, width, height, onLoad = () => {}, priority = false, className = "", updateOverlay = null, alt = "" }) => {
+}) => {
   const [zoom, toggleZoom] = useState(false)
   const ref = useRef(null)
   const [zoomedWidth, setZW] = useState(0)
