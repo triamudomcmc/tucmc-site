@@ -3,7 +3,15 @@ import Image from "next/image"
 import { FC } from "react"
 import { BackgroundImageType } from "./types"
 
-export const StickerImage: FC<{ src: string; name: string }> = ({ src, name }) => {
+export const StickerImage = (
+  {
+    src,
+    name
+  }: {
+    src: string,
+    name: string
+  }
+) => {
   function downloadFile() {
     // @ts-ignore
     window.gtag("event", `download_sticker_${name}`, { name })
@@ -37,7 +45,13 @@ export const StickerImage: FC<{ src: string; name: string }> = ({ src, name }) =
   )
 }
 
-export const BackgroundImage: FC<{ img: BackgroundImageType }> = ({ img }) => {
+export const BackgroundImage = (
+  {
+    img
+  }: {
+    img: BackgroundImageType
+  }
+) => {
   function downloadFile(src: string, name: string) {
     // @ts-ignore
     window.gtag("event", `download_background_${name}`, { name })

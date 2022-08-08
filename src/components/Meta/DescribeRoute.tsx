@@ -1,12 +1,17 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 
-export const DescribeRoute: FC<{ title: string; description: string; imgURL: string }> = ({
+export const DescribeRoute = ({
   title,
   description,
   imgURL,
-  children
+  children,
+}: {
+  title: string
+  description: string
+  imgURL: string
+  children: ReactNode
 }) => {
   const router = useRouter()
 

@@ -10,12 +10,17 @@ import { Router, useRouter } from "next/router"
 import { SM } from "@utilities/constants"
 import { useWindowDimensions } from "@utilities/document"
 
-const PersonCard: FC<{
+const PersonCard = ({
+  setZoomOverlay,
+  imgURL,
+  name,
+  role,
+}: {
   setZoomOverlay: Dispatch<SetStateAction<JSX.Element>>
   imgURL: string
   name: string
   role: string
-}> = ({ setZoomOverlay, imgURL, name, role }) => {
+}) => {
   return (
     <div className="flex flex-col items-center space-y-4 md:items-start">
       <Zoomable
@@ -42,9 +47,9 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 }
 
 const YEARS = Object.keys(StudentMembers).sort((a, b) => +b - +a)

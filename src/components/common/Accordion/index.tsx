@@ -1,4 +1,4 @@
-import { Children, FC, ReactElement, useEffect } from "react"
+import { Children, FC, ReactElement, ReactNode, useEffect } from "react"
 import { ChevronUpIcon } from "@heroicons/react/outline"
 import { motion, Variants } from "framer-motion"
 import { useState } from "react"
@@ -12,21 +12,30 @@ const DivVariants: Variants = {
     paddingTop: 0,
     paddingBottom: 0,
     overflow: "hidden",
-    transition: { duration: DURATION, type: "tween" }
+    transition: { duration: DURATION, type: "tween" },
   },
   active: {
     height: "unset",
     overflow: "auto",
     paddingTop: "unset",
     paddingBottom: "unset",
-    transition: { duration: DURATION, type: "tween" }
-  }
+    transition: { duration: DURATION, type: "tween" },
+  },
 }
 
-export const Accordion: FC<{ defaultExpanded?: boolean; title: string; id?: string; Icon?: TAccordionIcon }> & {
-  Answer: FC
-  NestedAnswer: FC
-} = ({ defaultExpanded, children, title, id, Icon = AccordionIcon.Chevron }) => {
+export const Accordion = ({
+  defaultExpanded,
+  children,
+  title,
+  id,
+  Icon = AccordionIcon.Chevron,
+}: {
+  defaultExpanded?: boolean
+  title: string
+  id?: string
+  Icon?: TAccordionIcon
+  children: ReactNode
+}) => {
   const [expanded, setExpand] = useState(defaultExpanded ?? false)
 
   return (
@@ -61,7 +70,7 @@ export const Accordion: FC<{ defaultExpanded?: boolean; title: string; id?: stri
   )
 }
 
-const Answer: FC = ({ children }) => (
+const Answer = ({ children }: { children: string }) => (
   <div
     className="accordion-text px-8 py-4 text-TUCMC-gray-600"
     dangerouslySetInnerHTML={{ __html: String(children) }}
@@ -70,6 +79,6 @@ const Answer: FC = ({ children }) => (
 Answer.displayName = "Answer"
 Accordion.Answer = Answer
 
-const NestedAnswer: FC = ({ children }) => <div className="">{children}</div>
+const NestedAnswer = ({ children }: { children: ReactNode }) => <div className="">{children}</div>
 Answer.displayName = "NestedAnswer"
 Accordion.NestedAnswer = NestedAnswer

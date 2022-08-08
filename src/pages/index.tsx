@@ -7,7 +7,6 @@ import peopleSrc from "@images/index/people.jpg"
 import clubsSrc from "@images/index/clubs.jpg"
 import WhatIsTUCMCSrc from "@images/index/whatistucmc.jpg"
 import TUCMCSrc from "@images/index/tucmc.jpg"
-import TUCMCSQSrc from "@images/index/tucmc-sq.jpg"
 import { TopicCard } from "@components/IndexPage/TopicCard"
 import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import Link from "next/link"
@@ -17,8 +16,6 @@ import { AnnouncementSection } from "@components/IndexPage/AnnoucementSection"
 import { KorChor } from "@vectors/KorChor"
 
 const Landing: FC = () => {
-  const { width } = useWindowDimensions()
-
   return (
     <DescribeRoute
       title="TUCMC"
@@ -53,13 +50,13 @@ const Landing: FC = () => {
           <div className="max-h-6xl h-[75vh]">
             <Image
               className="w-full object-cover brightness-95"
-              src={width > SM ? TUCMCSrc : TUCMCSQSrc}
+              src={TUCMCSrc}
               layout="fill"
               // layout="responsive"
               // width={400}
               // height={450}
               placeholder="blur"
-              blurDataURL={(width > SM ? TUCMCSrc : TUCMCSQSrc).blurDataURL}
+              blurDataURL={TUCMCSrc.blurDataURL}
               alt="กช. background"
             />
           </div>

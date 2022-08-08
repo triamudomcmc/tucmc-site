@@ -6,9 +6,13 @@ import { DownloadIcon } from "@heroicons/react/solid"
 import { BackgroundImageType } from "./types"
 import { BackgroundImage, StickerImage } from "./Elements"
 
-const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: string }[]> }> = ({
-  stickerImgPaths
-}) => {
+const PNGGiveaway = (
+  {
+    stickerImgPaths
+  }: {
+    stickerImgPaths: Record<string, { name: string; path: string }[]>
+  }
+) => {
   const [show, setShow] = useState(true)
 
   function downloadFile(imgCategoryPath: string) {
@@ -94,7 +98,13 @@ const PNGGiveaway: FC<{ stickerImgPaths: Record<string, { name: string; path: st
   )
 }
 
-const BGGiveaway: FC<{ backgroundImgPaths: Record<string, BackgroundImageType[]> }> = ({ backgroundImgPaths }) => {
+const BGGiveaway = (
+  {
+    backgroundImgPaths
+  }: {
+    backgroundImgPaths: Record<string, BackgroundImageType[]>
+  }
+) => {
   const [show, setShow] = useState(true)
 
   return (
@@ -158,10 +168,15 @@ const BGGiveaway: FC<{ backgroundImgPaths: Record<string, BackgroundImageType[]>
   )
 }
 
-export const GiveawaySection: FC<{
-  stickerImgPaths: Record<string, { name: string; path: string }[]>
-  backgroundImgPaths: Record<string, BackgroundImageType[]>
-}> = ({ stickerImgPaths, backgroundImgPaths }) => {
+export const GiveawaySection = (
+  {
+    stickerImgPaths,
+    backgroundImgPaths
+  }: {
+    stickerImgPaths: Record<string, { name: string; path: string }[]>,
+    backgroundImgPaths: Record<string, BackgroundImageType[]>
+  }
+) => {
   return (
     <>
       <PNGGiveaway stickerImgPaths={stickerImgPaths} />
