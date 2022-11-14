@@ -104,6 +104,7 @@ export const PositionsPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<Set
               onClick={() => {
                 setTab(pos)
                 replace({ query: { ...query, pos } }, undefined, { shallow: true })
+                // @ts-ignore
                 if (typeof window !== "undefined" && window.gtag) {
                   // @ts-ignore
                   window.gtag("event", "tucmc_position_tab", {
