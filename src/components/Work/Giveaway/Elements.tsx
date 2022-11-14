@@ -5,10 +5,10 @@ import { BackgroundImageType } from "./types"
 
 export const StickerImage = ({ src, name }: { src: string; name: string }) => {
   function downloadFile() {
-    console.log(window)
+    // @ts-ignore
     if (typeof window !== "undefined" && window.gtag) {
       // @ts-ignore
-      // window.gtag("event", `download_background_${name}`, { name })
+      window.gtag("event", `download_background_${name}`, { name })
     }
     const a = document.createElement("a")
     a.href = src

@@ -10,6 +10,7 @@ const PNGGiveaway = ({ stickerImgPaths }: { stickerImgPaths: Record<string, { na
   const [show, setShow] = useState(true)
 
   function downloadFile(imgCategoryPath: string) {
+    // @ts-ignore
     if (typeof window !== "undefined" && window.gtag) {
       // @ts-ignore
       window.gtag("event", "download_all_stickers")

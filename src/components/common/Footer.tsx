@@ -31,6 +31,7 @@ const Footer = () => {
             <div className="flex flex-row space-x-6 md:space-x-3">
               <a
                 onClick={(e) => {
+                  // @ts-ignore
                   if (typeof window !== "undefined" && window.gtag) {
                     // @ts-ignore
                     window.gtag("event", "social_click", {
@@ -48,6 +49,7 @@ const Footer = () => {
               </a>
               <a
                 onClick={(e) => {
+                  // @ts-ignore
                   if (typeof window !== "undefined" && window.gtag) {
                     // @ts-ignore
                     window.gtag("event", "social_click", {
@@ -65,6 +67,7 @@ const Footer = () => {
               </a>
               <a
                 onClick={(e) => {
+                  // @ts-ignore
                   if (typeof window !== "undefined" && window.gtag) {
                     // @ts-ignore
                     window.gtag("event", "social_click", {
