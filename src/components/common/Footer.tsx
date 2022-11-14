@@ -31,12 +31,14 @@ const Footer = () => {
             <div className="flex flex-row space-x-6 md:space-x-3">
               <a
                 onClick={(e) => {
-                  // @ts-ignore
-                  window.gtag("event", "social_click", {
-                    event_category: "social_click",
-                    event_label: "Facebook",
-                    type: "Facebook"
-                  })
+                  if (typeof window !== "undefined" && window.gtag) {
+                    // @ts-ignore
+                    window.gtag("event", "social_click", {
+                      event_category: "social_click",
+                      event_label: "Facebook",
+                      type: "Facebook",
+                    })
+                  }
                 }}
                 rel="noreferrer"
                 target="_blank"
@@ -46,12 +48,14 @@ const Footer = () => {
               </a>
               <a
                 onClick={(e) => {
-                  // @ts-ignore
-                  window.gtag("event", "social_click", {
-                    event_category: "social_click",
-                    event_label: "Instagram",
-                    type: "Instagram"
-                  })
+                  if (typeof window !== "undefined" && window.gtag) {
+                    // @ts-ignore
+                    window.gtag("event", "social_click", {
+                      event_category: "social_click",
+                      event_label: "Instagram",
+                      type: "Instagram",
+                    })
+                  }
                 }}
                 rel="noreferrer"
                 target="_blank"
@@ -61,12 +65,14 @@ const Footer = () => {
               </a>
               <a
                 onClick={(e) => {
-                  // @ts-ignore
-                  window.gtag("event", "social_click", {
-                    event_category: "social_click",
-                    event_label: "GitHub",
-                    type: "GitHub"
-                  })
+                  if (typeof window !== "undefined" && window.gtag) {
+                    // @ts-ignore
+                    window.gtag("event", "social_click", {
+                      event_category: "social_click",
+                      event_label: "GitHub",
+                      type: "GitHub",
+                    })
+                  }
                 }}
                 rel="noreferrer"
                 target="_blank"
