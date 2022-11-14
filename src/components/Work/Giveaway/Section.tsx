@@ -6,18 +6,14 @@ import { DownloadIcon } from "@heroicons/react/solid"
 import { BackgroundImageType } from "./types"
 import { BackgroundImage, StickerImage } from "./Elements"
 
-const PNGGiveaway = (
-  {
-    stickerImgPaths
-  }: {
-    stickerImgPaths: Record<string, { name: string; path: string }[]>
-  }
-) => {
+const PNGGiveaway = ({ stickerImgPaths }: { stickerImgPaths: Record<string, { name: string; path: string }[]> }) => {
   const [show, setShow] = useState(true)
 
   function downloadFile(imgCategoryPath: string) {
-    // @ts-ignore
-    window.gtag("event", `download_all_stickers`)
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore
+      window.gtag("event", "download_all_stickers")
+    }
 
     const a = document.createElement("a")
     // a.href = `/api/stickers/${imgCategoryPath}`
@@ -38,11 +34,11 @@ const PNGGiveaway = (
         <motion.button
           variants={{
             show: {
-              rotate: 0
+              rotate: 0,
             },
             hide: {
-              rotate: 180
-            }
+              rotate: 180,
+            },
           }}
           animate={show ? "show" : "hide"}
           onClick={() => setShow(!show)}
@@ -58,15 +54,15 @@ const PNGGiveaway = (
           <motion.section
             initial={{
               opacity: 0,
-              height: "0"
+              height: "0",
             }}
             animate={{
               opacity: 1,
-              height: "auto"
+              height: "auto",
             }}
             exit={{
               opacity: 0,
-              height: "0"
+              height: "0",
             }}
             className="my-4"
           >
@@ -98,13 +94,7 @@ const PNGGiveaway = (
   )
 }
 
-const BGGiveaway = (
-  {
-    backgroundImgPaths
-  }: {
-    backgroundImgPaths: Record<string, BackgroundImageType[]>
-  }
-) => {
+const BGGiveaway = ({ backgroundImgPaths }: { backgroundImgPaths: Record<string, BackgroundImageType[]> }) => {
   const [show, setShow] = useState(true)
 
   return (
@@ -115,11 +105,11 @@ const BGGiveaway = (
         <motion.button
           variants={{
             show: {
-              rotate: 0
+              rotate: 0,
             },
             hide: {
-              rotate: 180
-            }
+              rotate: 180,
+            },
           }}
           animate={show ? "show" : "hide"}
           onClick={() => setShow(!show)}
@@ -135,15 +125,15 @@ const BGGiveaway = (
           <motion.section
             initial={{
               opacity: 0,
-              height: "0"
+              height: "0",
             }}
             animate={{
               opacity: 1,
-              height: "auto"
+              height: "auto",
             }}
             exit={{
               opacity: 0,
-              height: "0"
+              height: "0",
             }}
             className="my-4 flex flex-col"
           >
@@ -168,15 +158,13 @@ const BGGiveaway = (
   )
 }
 
-export const GiveawaySection = (
-  {
-    stickerImgPaths,
-    backgroundImgPaths
-  }: {
-    stickerImgPaths: Record<string, { name: string; path: string }[]>,
-    backgroundImgPaths: Record<string, BackgroundImageType[]>
-  }
-) => {
+export const GiveawaySection = ({
+  stickerImgPaths,
+  backgroundImgPaths,
+}: {
+  stickerImgPaths: Record<string, { name: string; path: string }[]>
+  backgroundImgPaths: Record<string, BackgroundImageType[]>
+}) => {
   return (
     <>
       <PNGGiveaway stickerImgPaths={stickerImgPaths} />

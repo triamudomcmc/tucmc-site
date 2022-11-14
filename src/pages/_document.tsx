@@ -101,19 +101,6 @@ export default class Document extends NextDocument {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-M6QG2P5KQQ" />
-          <Script
-            id="google-analytics"
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-M6QG2P5KQQ');
-          `,
-            }}
-          />
         </Head>
         <body>
           <Main />

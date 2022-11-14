@@ -3,18 +3,13 @@ import Image from "next/image"
 import { FC } from "react"
 import { BackgroundImageType } from "./types"
 
-export const StickerImage = (
-  {
-    src,
-    name
-  }: {
-    src: string,
-    name: string
-  }
-) => {
+export const StickerImage = ({ src, name }: { src: string; name: string }) => {
   function downloadFile() {
-    // @ts-ignore
-    window.gtag("event", `download_sticker_${name}`, { name })
+    console.log(window)
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore
+      // window.gtag("event", `download_background_${name}`, { name })
+    }
     const a = document.createElement("a")
     a.href = src
     a.download = `TUCMC-sticker-${name}`
@@ -45,16 +40,13 @@ export const StickerImage = (
   )
 }
 
-export const BackgroundImage = (
-  {
-    img
-  }: {
-    img: BackgroundImageType
-  }
-) => {
+export const BackgroundImage = ({ img }: { img: BackgroundImageType }) => {
   function downloadFile(src: string, name: string) {
     // @ts-ignore
-    window.gtag("event", `download_background_${name}`, { name })
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore
+      window.gtag("event", `download_background_${name}`, { name })
+    }
     const a = document.createElement("a")
     a.href = src
     a.download = `TUCMC-background-${name}`

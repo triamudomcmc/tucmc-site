@@ -104,12 +104,14 @@ export const PositionsPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<Set
               onClick={() => {
                 setTab(pos)
                 replace({ query: { ...query, pos } }, undefined, { shallow: true })
-                // @ts-ignore
-                window.gtag("event", "tucmc_position_tab", {
-                  event_category: "tucmc_position_tab",
-                  event_label: pos,
-                  position: pos,
-                })
+                if (typeof window !== "undefined" && window.gtag) {
+                  // @ts-ignore
+                  window.gtag("event", "tucmc_position_tab", {
+                    event_category: "tucmc_position_tab",
+                    event_label: pos,
+                    position: pos,
+                  })
+                }
               }}
               className={combine(
                 getTab(pos),
