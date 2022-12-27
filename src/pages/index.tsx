@@ -22,10 +22,10 @@ const Landing: FC = () => {
       description="คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน โรงเรียนเตรียมอุดมศึกษา"
       imgURL="/meta/banner.jpg"
     >
-      <div className="flex flex-col min-h-screen pb-8">
+      <div className="flex min-h-screen flex-col pb-8">
         <main className="relative">
           <h1 className="hidden">กช.</h1>
-          <div className="absolute z-10 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+          <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
             <div className="flex flex-col justify-center space-x-0 space-y-4 text-center sm:flex-row sm:items-center sm:space-x-10 sm:space-y-0 sm:text-left">
               <Link href="/TUCMC" passHref>
                 <a className="transition-transform hover:scale-105">
@@ -34,12 +34,12 @@ const Landing: FC = () => {
               </Link>
 
               <div className="flex flex-col justify-center">
-                <p className="mt-4 text-4xl font-medium text-center text-white sm:text-left">คืออะไร ?</p>
-                <p className="mb-4 text-lg font-light text-center text-white whitespace-nowrap sm:text-left">
+                <p className="mt-4 text-center text-4xl font-medium text-white sm:text-left">คืออะไร ?</p>
+                <p className="mb-4 whitespace-nowrap text-center text-lg font-light text-white sm:text-left">
                   ทำอะไร ? มีตำแหน่งอะไรบ้าง ?
                 </p>
                 <Link href="/TUCMC" passHref>
-                  <a className="px-6 py-3 mt-4 text-xl font-medium text-center transition-all bg-white rounded-full text-TUCMC-pink-500 hover:scale-105 hover:bg-gray-100">
+                  <a className="mt-4 rounded-full bg-white px-6 py-3 text-center text-xl font-medium text-TUCMC-pink-500 transition-all hover:scale-105 hover:bg-gray-100">
                     หาคำตอบได้ที่นี่
                   </a>
                 </Link>
@@ -49,7 +49,7 @@ const Landing: FC = () => {
 
           <div className="max-h-6xl h-[75vh]">
             <Image
-              className="object-cover w-full brightness-95"
+              className="w-full object-cover brightness-95"
               src={TUCMCSrc}
               layout="fill"
               // layout="responsive"
@@ -62,15 +62,18 @@ const Landing: FC = () => {
           </div>
         </main>
 
-        <section className="py-6 announcement-section">
+        <section className="announcement-section py-6">
           <AnnouncementSection
             title="Giveaway: ตารางสอบ Sum 2/2565"
             body={
               <div>
-                <p>⛄ "Ho Ho Ho... Sum crisis is coming to Triam!" 🎅</p>
-                <br/>
-                <p>✱ Giveaway ✱ ตารางสอบ Summative 2/2565 พร้อมใช้งานแล้ว สามารถดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR code ในโพสต์ได้เลย ⁎⁺˳</p>
-                <br/>
+                <p>⛄ &quot;Ho Ho Ho... Sum crisis is coming to Triam!&quot; 🎅</p>
+                <br />
+                <p>
+                  ✱ Giveaway ✱ ตารางสอบ Summative 2/2565 พร้อมใช้งานแล้ว สามารถดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR
+                  code ในโพสต์ได้เลย ⁎⁺˳
+                </p>
+                <br />
                 <p>🎄 All I want for Christmas is A+ 💯. ミ</p>
               </div>
             }
@@ -80,7 +83,7 @@ const Landing: FC = () => {
           />
         </section>
 
-        <section className="grid grid-cols-1 mt-12 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
+        <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 sm:px-6 md:px-24 lg:px-80">
           <TopicCard href="/TUCMC" title="กช. คืออะไร​ ?" actionText="เกี่ยวกับ กช." imgSrc={WhatIsTUCMCSrc} />
           <TopicCard href="/committee" title="ทำความรู้จักพวกเรา" actionText="บุคลากร" imgSrc={peopleSrc} />
         </section>
