@@ -26,7 +26,7 @@ const Landing: FC = () => {
         <main className="relative">
           <h1 className="hidden">กช.</h1>
           <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex flex-col justify-center space-y-4 space-x-0 text-center sm:flex-row sm:items-center sm:space-x-10 sm:space-y-0 sm:text-left">
+            <div className="flex flex-col justify-center space-x-0 space-y-4 text-center sm:flex-row sm:items-center sm:space-x-10 sm:space-y-0 sm:text-left">
               <Link href="/TUCMC" passHref>
                 <a className="transition-transform hover:scale-105">
                   <KorChor className="h-full w-[250px] text-white sm:w-[300px] xl:w-[350px]" />
@@ -39,7 +39,7 @@ const Landing: FC = () => {
                   ทำอะไร ? มีตำแหน่งอะไรบ้าง ?
                 </p>
                 <Link href="/TUCMC" passHref>
-                  <a className="mt-4 rounded-full bg-white py-3 px-6 text-center text-xl font-medium text-TUCMC-pink-500 transition-all hover:scale-105 hover:bg-gray-100">
+                  <a className="mt-4 rounded-full bg-white px-6 py-3 text-center text-xl font-medium text-TUCMC-pink-500 transition-all hover:scale-105 hover:bg-gray-100">
                     หาคำตอบได้ที่นี่
                   </a>
                 </Link>
@@ -64,18 +64,22 @@ const Landing: FC = () => {
 
         <section className="announcement-section py-6">
           <AnnouncementSection
-            title="Giveaway: ตารางเรียนภาคเรียนที่ 2/2565"
+            title="Giveaway: ตารางสอบ Sum 2/2565"
             body={
               <div>
-                <p>✶ ตารางเรียน แบบใหม่ แบบสับ ✶</p>
-                <p>ᯤ Giveaway ᯤ ตารางเรียนภาคเรียนที่ 2/2565 สำหรับนักเรียนทุกระดับชั้น พร้อมให้ดาวน์โหลดแล้วที่ลิงก์บน bio หรือสแกน QR code ในโพสต์ได้เลย 🧤</p>
-                <p>! update ! ตารางเรียน new version ✨ มีคาบเรียนที่ลดเวลาเรียนเรียบร้อยแล้ว❗️มาในธีมใหม่ล่าสุด COOL KIDS starter pack 🛼 และ Dans le Jardin 🌸</p>
-                <p>ꔛ If knowledge is power, then learning is a superpower. 🎓</p>
+                <p>⛄ &quot;Ho Ho Ho... Sum crisis is coming to Triam!&quot; 🎅</p>
+                <br />
+                <p>
+                  ✱ Giveaway ✱ ตารางสอบ Summative 2/2565 พร้อมใช้งานแล้ว สามารถดาวน์โหลดได้ที่ลิงก์บน bio หรือสแกน QR
+                  code ในโพสต์ได้เลย ⁎⁺˳
+                </p>
+                <br />
+                <p>🎄 All I want for Christmas is A+ 💯. ミ</p>
               </div>
             }
-            actionText="ตารางเรียน"
+            actionText="ตารางสอบ"
             imgSrc={announcementSrc}
-            href="https://schedule.tucm.cc/?type=learn"
+            href="https://schedule.tucm.cc/"
           />
         </section>
 
