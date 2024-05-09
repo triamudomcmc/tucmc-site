@@ -33,7 +33,11 @@ export const splitArray = <T>(arr: T[], n: number): T[][] => {
   const out: Record<number, T[]> = {}
 
   for (let i = 0; i < arr.length; i++) {
-    out.hasOwnProperty(i % n) ? out[i % n].push(arr[i]) : (out[i % n] = [arr[i]])
+    if (i % n in out) {
+      out[i % n].push(arr[i])
+    } else {
+      out[i % n] = [arr[i]]
+    }
   }
 
   return Object.values(out)

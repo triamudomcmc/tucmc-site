@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from "react"
-import { detectOuside, useWindowDimensions } from "@utilities/document"
+import { useDetectOutside, useWindowDimensions } from "@utilities/document"
 import { XIcon } from "@heroicons/react/solid"
 import classnames from "classnames"
 import { combine } from "@services/tailwind"
@@ -36,7 +36,7 @@ export const Zoomable = ({
 
   const dimension = useWindowDimensions()
 
-  detectOuside(ref, true, () => {
+  useDetectOutside(ref, true, () => {
     toggleZoom(false)
   })
 
