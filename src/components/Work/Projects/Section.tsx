@@ -6,7 +6,7 @@ import { splitArray } from "@utilities/splitArray"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { FC, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 const YEARS = Object.keys(TUCMCWork).sort((a, b) => +b - +a)
 

@@ -1,5 +1,4 @@
 import nextPwa from "next-pwa"
-import { join } from "path"
 
 const withPWA = nextPwa({
   dest: "public",

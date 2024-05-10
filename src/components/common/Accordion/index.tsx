@@ -1,4 +1,4 @@
-import { Children, FC, ReactElement, ReactNode, useEffect } from "react"
+import { Children, ReactElement, ReactNode, useEffect } from "react"
 import { ChevronUpIcon } from "@heroicons/react/outline"
 import { motion, Variants } from "framer-motion"
 import { useState } from "react"

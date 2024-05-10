@@ -4,9 +4,7 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 // import { useAuth } from "@client/auth"
 import classnames from "classnames"
-import { FC, ReactNode } from "react"
-import Head from "next/head"
-import Script from "next/script"
+import { ReactNode } from "react"
 
 const variants = {
   initial: { y: -20, opacity: 0 },

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from "react"
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { useDetectOutside, useWindowDimensions } from "@utilities/document"
 import { XIcon } from "@heroicons/react/solid"
 import classnames from "classnames"

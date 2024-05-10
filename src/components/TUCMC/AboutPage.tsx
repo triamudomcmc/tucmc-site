@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from "react"
 import { Zoomable } from "@components/common/Zoomable"
 import { useState } from "react"
 

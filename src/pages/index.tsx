@@ -15,7 +15,7 @@ import { SM } from "@utilities/constants"
 import { AnnouncementSection } from "@components/IndexPage/AnnoucementSection"
 import { KorChor } from "@vectors/KorChor"
 
-const Landing: FC = () => {
+const Landing = () => {
   return (
     <DescribeRoute
       title="TUCMC"

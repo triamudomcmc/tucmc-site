@@ -1,6 +1,6 @@
 import { BackgroundNames, StickerNames } from "@map/tucmcWork"
 import { ChevronDownIcon } from "@heroicons/react/outline"
-import { FC, useState } from "react"
+import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { DownloadIcon } from "@heroicons/react/solid"
 import { BackgroundImageType } from "./types"
