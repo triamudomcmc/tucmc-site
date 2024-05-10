@@ -126,13 +126,16 @@ export const AboutPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<SetStat
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               {[
-                "/assets/images/TUCMC/OpenHouse/IMG_7263.png",
+                "/assets/images/TUCMC/OpenHouse/DSC_4073.jpg",
                 "/assets/images/TUCMC/OpenHouse/IMG_7264.JPG",
                 "/assets/images/TUCMC/OpenHouse/IMG_7265.png",
                 "/assets/images/TUCMC/OpenHouse/IMG_7266.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_7263.png",
+                "/assets/images/TUCMC/OpenHouse/IMG_1979.jpg",
+                "/assets/images/TUCMC/OpenHouse/EPRI6725.jpg",
+                "/assets/images/TUCMC/OpenHouse/EPRI6359.jpg",
+                "/assets/images/TUCMC/OpenHouse/EPRI6579.jpg",
                 "/assets/images/TUCMC/OpenHouse/IMG_7267.JPG",
-                "/assets/images/TUCMC/OpenHouse/5802DF05-5722-4164-BBA6-CE4BCB82B0C7-min.jpg",
-                "/assets/images/TUCMC/OpenHouse/DSCF4135-min.JPG",
                 "/assets/images/TUCMC/OpenHouse/DSCF4309-min.JPG",
                 "/assets/images/TUCMC/OpenHouse/DSCF3957-min.JPG",
                 "/assets/images/TUCMC/OpenHouse/DSCF4393-min.JPG",
@@ -192,6 +195,8 @@ export const AboutPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<SetStat
                 "/assets/images/TUCMC/ArtWorks/IMG_7274.JPG",
                 "/assets/images/TUCMC/ArtWorks/sum_1_2564.jpg",
                 "/assets/images/TUCMC/ArtWorks/sum_1_2565.jpg",
+                "/assets/images/TUCMC/ArtWorks/final_1_2566.png",
+                "/assets/images/TUCMC/ArtWorks/2566_schedule.jpg",
                 "/assets/images/TUCMC/ArtWorks/final_1_2564.jpg",
                 "/assets/images/TUCMC/ArtWorks/final_2_2564.jpg",
                 "/assets/images/TUCMC/ArtWorks/saphap.jpg",
