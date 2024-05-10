@@ -1,8 +1,8 @@
-import { Children, ReactElement, ReactNode, useEffect } from "react"
+import React, { Children, ReactElement, ReactNode, useEffect }  from "react"
 import { ChevronUpIcon } from "@heroicons/react/outline"
 import { motion, Variants } from "framer-motion"
 import { useState } from "react"
-import { AccordionIcon, TAccordionIcon } from "./Icons"
+import { AccordionIcon, AccordionIconProps } from "./Icons"
 
 const DURATION = 0.2
 
@@ -33,7 +33,7 @@ export const Accordion = ({
   defaultExpanded?: boolean
   title: string
   id?: string
-  Icon?: TAccordionIcon
+  Icon?: React.ComponentType<AccordionIconProps>
   children: ReactNode
 }) => {
   const [expanded, setExpand] = useState(defaultExpanded ?? false)
