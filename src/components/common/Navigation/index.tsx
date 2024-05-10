@@ -3,7 +3,7 @@ import NavButton from "@components/common/Navigation/NavButton"
 import React, { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { detectOuside } from "@utilities/document"
+import { useDetectOutside } from "@utilities/document"
 import Router, { useRouter } from "next/router"
 // import { useAuth } from "@client/auth"
 import { ClipboardListIcon, HomeIcon, MailIcon, UsersIcon, DocumentSearchIcon } from "@heroicons/react/outline"
@@ -20,7 +20,7 @@ const Navigation = () => {
 
   const { pathname } = useRouter()
 
-  detectOuside(panel, reveal, () => {
+  useDetectOutside(panel, reveal, () => {
     setReveal(false)
   })
 
