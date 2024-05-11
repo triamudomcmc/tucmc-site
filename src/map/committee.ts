@@ -27,6 +27,68 @@ export const Teachers: Array<{ name: string; role: string; imgURL: string }> = [
 ]
 
 export const StudentMembers: Record<string, Array<{ name: string; role: string; imgURL: string }>> = {
+  2565: [
+    {
+      name: "นายธณฏฐ์ หริ่มเจริญ",
+      role: "ประธานคณะกรรมการ",
+      imgURL: "/assets/images/_committee/2565/1.jpg"
+    },
+    {
+      name: "นางสาวณัฐฏ์ณิชชา อัครปิยโภคิน",
+      role: "รองประธานคณะกรรมการ",
+      imgURL: "/assets/images/_committee/2565/2.jpg"
+    },
+    {
+      name: "นางสาวจิรัชญา ชุนหชัย",
+      role: "กรรมการกลาง",
+      imgURL: "/assets/images/_committee/2565/3.jpg"
+    },
+    {
+      name: "นายกันตภณ พีรเมธางกูร",
+      role: "กรรมการกลาง",
+      imgURL: "/assets/images/_committee/2565/4.jpg"
+    },
+    {
+      name: "นายปกรณ์ อิทธิฉันทกิจ",
+      role: "กรรมการกลาง",
+      imgURL: "/assets/images/_committee/2565/5.jpg"
+    },
+    {
+      name: "นางสาวณภัทร ทรัพย์ธนะอุดม",
+      role: "เลขานุการ",
+      imgURL: "/assets/images/_committee/2565/6.jpg"
+    },
+    {
+      name: "นางสาวสุทธิชา สีผาย",
+      role: "กราฟิกดีไซเนอร์",
+      imgURL: "/assets/images/_committee/2565/7.jpg"
+    },
+    {
+      name: "นางสาววรกนิษฐ์ ธารสุวรรณวงศ์",
+      role: "กราฟิกดีไซเนอร์",
+      imgURL: "/assets/images/_committee/2565/8.jpg"
+    },
+    {
+      name: "นางสาวธรรม์ฤทัย เหลืองสุรีย์",
+      role: "กราฟิกดีไซเนอร์",
+      imgURL: "/assets/images/_committee/2565/9.jpg"
+    },
+    {
+      name: "นายภาคิน ธนูวัฒนา",
+      role: "ประชาสัมพันธ์",
+      imgURL: "/assets/images/_committee/2565/10.jpg"
+    },
+    {
+      name: "นางสาวพัทธ์ธีรา ชัยศิริถาวรกุล",
+      role: "ผู้ดูแลระบบเว็บไซต์",
+      imgURL: "/assets/images/_committee/2565/11.jpg"
+    },
+    {
+      name: "นายภารัล ศิริตระกูล",
+      role: "ผู้ดูแลระบบเว็บไซต์",
+      imgURL: "/assets/images/_committee/2565/12.jpg"
+    }
+  ],
   2564: [
     {
       name: "นายพงศ์ภัค เต็งพิพัฒน์",
