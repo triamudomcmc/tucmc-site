@@ -66,9 +66,10 @@ const TUCMC: NextPage = () => {
             objectFit="cover"
             layout="fill"
             quality={100}
+            className="brightness-[.65]"
           />
           <h1 className="z-10 pt-6 text-center text-4xl text-[5rem] font-bold">กช.</h1>
-          <p className="text-md z-10 mx-auto max-w-lg text-center md:text-lg">
+          <p className="text-md z-10 mx-auto max-w-lg text-center md:text-lg lg:text-xl">
             คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) คือ องค์กรนักเรียนที่บริหารจัดการดูแลชมรมทุกชมรม (ตามชื่อเดิม กช. =
             คณะกรรมการกิจกรรมชมรม) กช. จึงเป็นผู้ดูแลระบบลงทะเบียนชมรม
             และกิจกรรมที่เกี่ยวกับชมรมในโรงเรียนเตรียมอุดมศึกษา รวมถึงดูแลเกี่ยวกับกิจกรรมเพื่อสังคมและสาธารณประโยชน์
@@ -123,7 +124,7 @@ const TUCMC: NextPage = () => {
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-center text-2xl font-bold text-white">อยากเป็น กช. ต้องทำยังไง ?</h1>
             <p className="mx-auto max-w-2xl px-5 pb-4 text-center text-white">
-              คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2567 จะเปิดรับสมัครเร็ว ๆ นี้
+              คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน (กช.) ประจำปีการศึกษา 2568 จะเปิดรับสมัครเร็ว ๆ นี้
             </p>
           </div>
 
