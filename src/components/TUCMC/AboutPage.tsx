@@ -126,11 +126,15 @@ export const AboutPage = ({ setZoomOverlay }: { setZoomOverlay: Dispatch<SetStat
               pagination={{ clickable: true, bulletActiveClass: "swiper-pink" }}
             >
               {[
-                "/assets/images/TUCMC/OpenHouse/DSC_4073.jpg",
-                "/assets/images/TUCMC/OpenHouse/IMG_7264.JPG",
                 "/assets/images/TUCMC/OpenHouse/IMG_7265.png",
+                "/assets/images/TUCMC/OpenHouse/DSC_4073.jpg",
                 "/assets/images/TUCMC/OpenHouse/IMG_7266.png",
                 "/assets/images/TUCMC/OpenHouse/IMG_7263.png",
+                "/assets/images/TUCMC/OpenHouse/67_4.jpg",
+                "/assets/images/TUCMC/OpenHouse/67_1.jpg",
+                "/assets/images/TUCMC/OpenHouse/67_2.jpg",
+                "/assets/images/TUCMC/OpenHouse/67_3.jpg",
+                "/assets/images/TUCMC/OpenHouse/IMG_7264.JPG",
                 "/assets/images/TUCMC/OpenHouse/IMG_1979.jpg",
                 "/assets/images/TUCMC/OpenHouse/EPRI6725.jpg",
                 "/assets/images/TUCMC/OpenHouse/EPRI6359.jpg",
