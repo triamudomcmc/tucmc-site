@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       acc[folderName] = currFileNames
         .filter((fileName) => fileName !== ".DS_Store")
         .map((f) => {
-          return { name: path.parse(f).name, path: path.join("/assets/images/work/stickers", folderName, f) }
+          return { name: path.parse(f).name, path: path.posix.join("/assets/images/work/stickers", folderName, f) }
         })
 
       return acc
@@ -64,7 +64,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
               return {
                 name: `${f1}-${path.parse(f2).name}`,
                 type: path.parse(f2).name,
-                path: path.join("/assets/images/work/backgrounds", folderName, f1, f2)
+                path: path.posix.join("/assets/images/work/backgrounds", folderName, f1, f2),
               }
             })
         })
@@ -75,8 +75,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       stickerImgPaths: allStickerFileNames,
-      backgroundImgPaths: allBackgroundFileNames
-    }
+      backgroundImgPaths: allBackgroundFileNames,
+    },
   }
 }
 
@@ -87,9 +87,9 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 }
 
 type TabType = "projects" | "giveaway"
