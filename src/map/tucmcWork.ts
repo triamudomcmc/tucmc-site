@@ -8,6 +8,7 @@ export type TTUCMCWork = {
 }
 
 export const StickerNames: Record<string, string> = {
+  "25-12-20":"Sum Crisis PNG Stickers 2/2568",
   "22-07-10": "Sum Crisis PNG Stickers 1/2565",
   "21-07-19": "Sum Crisis PNG Stickers 1/2564",
   "21-07-06": "Giveaway PNG Stickers",
