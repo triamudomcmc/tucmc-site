@@ -1,10 +1,10 @@
-import { BackgroundNames, StickerNames } from "@map/tucmcWork"
+import { BackgroundNames, StickerNames, MapNames } from "@map/tucmcWork"
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { DownloadIcon } from "@heroicons/react/solid"
-import { BackgroundImageType } from "./types"
-import { BackgroundImage, StickerImage } from "./Elements"
+import { BackgroundImageType, MapImageType } from "./types"
+import { BackgroundImage, StickerImage, MapImage } from "./Elements"
 
 const PNGGiveaway = ({ stickerImgPaths }: { stickerImgPaths: Record<string, { name: string; path: string }[]> }) => {
   const [show, setShow] = useState(true)
@@ -159,17 +159,84 @@ const BGGiveaway = ({ backgroundImgPaths }: { backgroundImgPaths: Record<string,
   )
 }
 
+const MapGiveaway = ({ mapImgPaths }: { mapImgPaths: Record<string, MapImageType[]> }) => {
+  const [show, setShow] = useState(true)
+
+  return (
+    <>
+      <div className="flex items-end justify-between">
+        <h2 className="mt-6 text-lg font-light text-TUCMC-gray-700">แจกแผนผังโรงเรียน</h2>
+
+        <motion.button
+          variants={{
+            show: {
+              rotate: 0,
+            },
+            hide: {
+              rotate: 180,
+            },
+          }}
+          animate={show ? "show" : "hide"}
+          onClick={() => setShow(!show)}
+        >
+          <ChevronDownIcon className="h-6 w-6 text-TUCMC-gray-500" />
+        </motion.button>
+      </div>
+
+      <hr className="mt-4 text-TUCMC-gray-600" />
+
+      <AnimatePresence>
+        {show && (
+          <motion.section
+            initial={{
+              opacity: 0,
+              height: "0",
+            }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+            }}
+            exit={{
+              opacity: 0,
+              height: "0",
+            }}
+            className="my-4 flex w-full flex-col gap-4 md:flex-row"
+          >
+            {Object.keys(mapImgPaths).map((imgArrName) => {
+              return (
+                <article className="my-4 w-full" key={imgArrName}>
+                  <div className="mb-6 flex flex-col justify-center gap-2 sm:flex-row sm:items-center sm:justify-start sm:gap-6">
+                    <h3 className="text-lg font-light text-TUCMC-gray-600">{MapNames[imgArrName]}</h3>
+                  </div>
+                  {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2"> */}
+                  {mapImgPaths[imgArrName].map((img) => {
+                    return <MapImage key={img[1].path} img={img} />
+                  })}
+                  {/* </div> */}
+                </article>
+              )
+            })}
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </>
+  )
+}
+
 export const GiveawaySection = ({
   stickerImgPaths,
   backgroundImgPaths,
+  mapImgPaths,
 }: {
   stickerImgPaths: Record<string, { name: string; path: string }[]>
   backgroundImgPaths: Record<string, BackgroundImageType[]>
+  mapImgPaths: Record<string, MapImageType[]>
 }) => {
   return (
     <>
       <PNGGiveaway stickerImgPaths={stickerImgPaths} />
       <BGGiveaway backgroundImgPaths={backgroundImgPaths} />
+      <MapGiveaway mapImgPaths={mapImgPaths} />
     </>
   )
 }

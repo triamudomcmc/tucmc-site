@@ -2,7 +2,7 @@ import { DescribeRoute } from "@components/Meta/DescribeRoute"
 import { GetStaticProps, NextPage } from "next"
 import path from "path"
 import { readdir } from "fs/promises"
-import { BackgroundImageType } from "@components/Work/Giveaway/types"
+import { BackgroundImageType, MapImageType } from "@components/Work/Giveaway/types"
 import { GiveawaySection } from "@components/Work/Giveaway/Section"
 import { TUCMCProjectsSection } from "@components/Work/Projects/Section"
 import { motion } from "framer-motion"
@@ -72,10 +72,42 @@ export const getStaticProps: GetStaticProps = async (context) => {
       return acc
     }, {})
 
+  const mapDirectory = path.join(process.cwd(), "public/assets/images/work/maps")
+  const mapFolderNames = await readdir(mapDirectory)
+
+  const allMapFileNames = mapFolderNames
+    .filter((folderName) => folderName !== ".DS_Store")
+    .sort(sortByDate)
+    .reduce((acc: Record<string, any[]>, folderName) => {
+      const currFolderPath = path.join(mapDirectory, folderName)
+      const currFileNames = readdirSync(currFolderPath)
+
+      acc[folderName] = currFileNames
+        .filter((folderName2) => folderName2 !== ".DS_Store")
+        .map((f1) => {
+          // map/{time}/{fileName}
+          const newCurrFolderPath = path.join(mapDirectory, folderName, f1)
+          const newCurrFileNames = readdirSync(newCurrFolderPath)
+
+          return newCurrFileNames
+            .filter((fileName2) => fileName2 !== ".DS_Store")
+            .map((f2) => {
+              return {
+                name: `${f1}-${path.parse(f2).name}`,
+                type: path.parse(f2).name,
+                path: path.posix.join("/assets/images/work/maps", folderName, f1, f2),
+              }
+            })
+        })
+
+      return acc
+    }, {})
+
   return {
     props: {
       stickerImgPaths: allStickerFileNames,
       backgroundImgPaths: allBackgroundFileNames,
+      mapImgPaths: allMapFileNames,
     },
   }
 }
@@ -97,7 +129,8 @@ type TabType = "projects" | "giveaway"
 const WorkPage: NextPage<{
   stickerImgPaths: Record<string, { name: string; path: string }[]>
   backgroundImgPaths: Record<string, BackgroundImageType[]>
-}> = ({ stickerImgPaths, backgroundImgPaths }) => {
+  mapImgPaths: Record<string, MapImageType[]>
+}> = ({ stickerImgPaths, backgroundImgPaths, mapImgPaths }) => {
   const { replace, query } = useRouter()
 
   const [workTab, setWorkTab] = useState<TabType>("projects")
@@ -156,7 +189,11 @@ const WorkPage: NextPage<{
           <motion.div initial="initial" animate="animate" variants={variants} key={workTab}>
             {workTab === "projects" && <TUCMCProjectsSection />}
             {workTab === "giveaway" && (
-              <GiveawaySection stickerImgPaths={stickerImgPaths} backgroundImgPaths={backgroundImgPaths} />
+              <GiveawaySection
+                stickerImgPaths={stickerImgPaths}
+                backgroundImgPaths={backgroundImgPaths}
+                mapImgPaths={mapImgPaths}
+              />
             )}
           </motion.div>
         </div>

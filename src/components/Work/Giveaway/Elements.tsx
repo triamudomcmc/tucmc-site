@@ -1,7 +1,7 @@
 import { DesktopComputerIcon, DeviceMobileIcon, DownloadIcon } from "@heroicons/react/solid"
 import Image from "next/image"
 import { FC } from "react"
-import { BackgroundImageType } from "./types"
+import { BackgroundImageType, MapImageType } from "./types"
 
 export const StickerImage = ({ src, name }: { src: string; name: string }) => {
   function downloadFile() {
@@ -56,7 +56,7 @@ export const BackgroundImage = ({ img }: { img: BackgroundImageType }) => {
   }
 
   return (
-    <div className="relative flex flex-col items-center justify-center rounded-md border border-gray-300">
+    <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md border border-gray-300">
       <div className="relative h-full min-h-[400px] w-full">
         <Image
           className="object-cover"
@@ -97,6 +97,64 @@ export const BackgroundImage = ({ img }: { img: BackgroundImageType }) => {
             Portrait
             <br />
             &#40;โทรศัพท์&#41;
+          </p>
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export const MapImage = ({ img }: { img: MapImageType }) => {
+  function downloadFile(src: string, name: string) {
+    // @ts-ignore
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore
+      window.gtag("event", `download_map_${name}`, { name })
+    }
+    const a = document.createElement("a")
+    a.href = src
+    a.download = `TUCMC-map-${name}`
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
+
+  return (
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-md border border-gray-300">
+      <div className="relative h-full min-h-[400px] w-full">
+        <Image
+          className="top-0 object-cover object-top"
+          layout="fill"
+          src={img.find((i) => i.type === "jpg")?.path ?? ""}
+          alt={img.find((i) => i.type === "jpg")?.name ?? ""}
+        />
+      </div>
+
+      <div className="absolute bottom-0 grid w-full grid-cols-2">
+        <button
+          onClick={() => {
+            downloadFile(`${img.find((i) => i.type === "pdf")?.path}`, `${img.find((i) => i.type === "pdf")?.name}`)
+          }}
+          className="flex w-full flex-col items-center justify-center gap-1 rounded-bl-md border-r border-gray-300 bg-gray-500 bg-opacity-60 py-3 px-4 text-center text-white backdrop-blur-md transition-all hover:brightness-110"
+        >
+          {/* <DesktopComputerIcon className="h-8 w-8" /> */}
+          <p className="text-sm md:text-base">
+            ดาวน์โหลด PDF
+            {/* <br />
+            &#40;คอมพิวเตอร์, iPad&#41; */}
+          </p>
+        </button>
+        <button
+          onClick={() => {
+            downloadFile(`${img.find((i) => i.type === "jpg")?.path}`, `${img.find((i) => i.type === "jpg")?.name}`)
+          }}
+          className="flex w-full flex-col items-center justify-center gap-1  rounded-br-md bg-gray-500 bg-opacity-60 py-6 px-4 text-center text-white backdrop-blur-md transition-all hover:brightness-110"
+        >
+          {/* <DeviceMobileIcon className="h-8 w-8" /> */}
+          <p className="text-sm md:text-base">
+            ดาวน์โหลด JPEG
+            {/* <br />
+            &#40;โทรศัพท์&#41; */}
           </p>
         </button>
       </div>
