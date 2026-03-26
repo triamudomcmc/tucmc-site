@@ -234,9 +234,9 @@ export const GiveawaySection = ({
 }) => {
   return (
     <>
+      <MapGiveaway mapImgPaths={mapImgPaths} />
       <PNGGiveaway stickerImgPaths={stickerImgPaths} />
       <BGGiveaway backgroundImgPaths={backgroundImgPaths} />
-      <MapGiveaway mapImgPaths={mapImgPaths} />
     </>
   )
 }
