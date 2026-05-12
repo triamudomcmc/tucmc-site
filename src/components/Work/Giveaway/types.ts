@@ -4,6 +4,6 @@ export type BackgroundImageType = [
 ]
 
 export type MapImageType = [
-  { name: string; type: "PDF_Map of Triamudom Suksa School"; path: string },
-  { name: string; type: "JPEG_Map of Triamudom Suksa School"; path: string }
+  { name: string; type: "PDF_Map of Triam Udom Suksa School"; path: string },
+  { name: string; type: "JPEG_Map of Triam Udom Suksa School"; path: string }
 ]
